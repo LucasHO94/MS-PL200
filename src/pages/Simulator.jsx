@@ -62,8 +62,20 @@ export default function Simulator({ session }) {
       };
 
       if (type === 'geral') {
-        selectedQuestions = shuffleArray(questionsData).slice(0, 50);
+        selectedQuestions = questionsData; // Carrega todas (250+)
         setTimeLeft(null); // Sem limite
+        
+        // Busca progresso salvo no banco
+        const { data: progressData } = await supabase
+          .from('study_progress')
+          .select('*')
+          .eq('user_id', session.user.id)
+          .single();
+          
+        if (progressData) {
+          setProgress(progressData.answers || {});
+          setCurrentQuestionIndex(progressData.last_question_index || 0);
+        }
       } else if (type === 'avancado') {
         // Algoritmo de Pesos Oficiais PL-200 (Prova de 50 questoes)
         // Dataverse: 12, P.Apps: 10, Automate: 10, Pages/BI: 10, Agents/Env: 8
@@ -226,6 +238,48 @@ export default function Simulator({ session }) {
         }
     } else {
         setShowExplanation(true);
+    }
+
+    // Persistência Se for Modo Geral (Salva no Banco de Dados)
+    if (type === 'geral') {
+      const updateDB = async () => {
+          const newProgress = {
+            ...progress,
+            [currentQuestion.id]: {
+              selectedOption,
+              isCorrect
+            }
+          };
+
+          const { error } = await supabase
+            .from('study_progress')
+            .upsert({
+              user_id: session.user.id,
+              last_question_index: currentQuestionIndex,
+              answers: newProgress,
+              updated_at: new Date().toISOString()
+            });
+          
+          if (error) console.error("Erro ao salvar progresso:", error);
+      };
+      updateDB();
+    }
+  };
+
+  const resetProgressGeral = async () => {
+    if (!window.confirm('Tem certeza que deseja zerar sua evolução no Modo Geral e começar do zero?')) return;
+    
+    const { error } = await supabase
+      .from('study_progress')
+      .delete()
+      .eq('user_id', session.user.id);
+    
+    if (error) {
+       alert("Erro ao zerar progresso.");
+    } else {
+       setProgress({});
+       setCurrentQuestionIndex(0);
+       alert("Progresso zerado com sucesso!");
     }
   };
 
@@ -400,6 +454,16 @@ export default function Simulator({ session }) {
             <CheckCircle2 size={18} />
             Finalizar Simulado
           </button>
+          
+          {type === 'geral' && (
+            <button
+              onClick={resetProgressGeral}
+              className="w-full flex items-center justify-center gap-2 py-3 px-4 mt-2 text-red-600 bg-red-50 hover:bg-red-100 border border-red-100 rounded-xl font-bold transition-all"
+            >
+              <RotateCcw size={18} />
+              Zerar Estudo Geral
+            </button>
+          )}
         </div>
       </div>
 

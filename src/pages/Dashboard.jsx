@@ -549,6 +549,21 @@ export default function Dashboard({ session }) {
                   </button>
                 </div>
               </div>
+
+              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full relative overflow-hidden transform md:col-span-2 hover:border-blue-300">
+                <div className="flex justify-between items-start mb-6">
+                  <div className="max-w-md">
+                    <h3 className="font-black text-xl text-slate-800 group-hover:text-blue-700 transition-colors">Modo Estudo Permanente (Geral)</h3>
+                    <p className="text-sm text-slate-500 mt-2 font-medium leading-relaxed">Pratique com todas as questões do banco de dados (250+), sem limite de tempo. Sua evolução fica salva na conta para você continuar depois.</p>
+                  </div>
+                  <span className="bg-blue-50 border border-blue-100 text-blue-700 text-xs font-black px-3 py-1.5 rounded-lg shadow-sm">250+ Q.</span>
+                </div>
+                <div className="mt-auto pt-5 border-t border-slate-100 relative z-0">
+                  <button onClick={() => startSimulator('geral', 'tutorial')} className="w-full bg-slate-800 hover:bg-slate-900 text-white font-black py-4 rounded-xl transition-all shadow-md flex justify-center items-center gap-2">
+                    <BookOpen size={20} /> Entrar no Modo Permanente
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
 
