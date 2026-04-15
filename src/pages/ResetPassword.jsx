@@ -12,15 +12,22 @@ export default function ResetPassword() {
   const [errorMsg, setErrorMsg] = useState(null);
   const [isUpdating, setIsUpdating] = useState(false);
 
-  useEffect(() => {
-    // Escuta eventos de autenticação para detectar recuperação de senha
+   useEffect(() => {
+    // Verifica se há um sinal de recuperação na memória (localStorage)
+    const recoveryMode = localStorage.getItem('sb-recovery-mode');
+    if (recoveryMode === 'true') {
+      setIsUpdating(true);
+    }
+
+    // Escuta eventos de autenticação para detectar recuperação de senha em tempo real
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === 'PASSWORD_RECOVERY') {
         setIsUpdating(true);
+        localStorage.setItem('sb-recovery-mode', 'true');
       }
     });
 
-    // Fallback: Verifica se há erro na URL (como link expirado)
+    // Fallback: Verifica se há parâmetros na URL
     const hash = window.location.hash;
     if (hash.includes('error_description')) {
       const params = new URLSearchParams(hash.replace('#', '?'));
@@ -70,7 +77,11 @@ export default function ResetPassword() {
     try {
       const { error } = await supabase.auth.updateUser({ password });
       if (error) throw error;
-      alert('Senha atualizada com sucesso!');
+      
+      // Limpa o modo de recuperação após sucesso
+      localStorage.removeItem('sb-recovery-mode');
+      
+      alert('Senha atualizada com sucesso! Agora você já pode entrar com sua nova senha.');
       navigate('/');
     } catch (err) {
       setErrorMsg(err.message);

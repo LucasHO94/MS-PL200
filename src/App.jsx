@@ -29,8 +29,13 @@ export default function App() {
     initSession();
 
     // Escuta mudanças de autenticação (Login/Logout)
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       setSession(session);
+      
+      // Se for um evento de recuperação de senha, salva na memória temporária para o ResetPassword.jsx
+      if (event === 'PASSWORD_RECOVERY') {
+        localStorage.setItem('sb-recovery-mode', 'true');
+      }
     });
 
     return () => subscription.unsubscribe();
