@@ -34,6 +34,7 @@ export default function LandingPage() {
             email, 
             password,
             options: {
+                emailRedirectTo: window.location.origin, // Força o link de e-mail a voltar para o site atual
                 data: {
                     isPremium: true, // Modo de Teste: Ativando Premium para todos
                     nickname: generatedNickname
