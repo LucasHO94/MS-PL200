@@ -493,32 +493,26 @@ export default function Dashboard({ session }) {
           
           {/* Welcome Banner */}
           <div className="bg-gradient-to-r from-blue-700 via-blue-800 to-slate-900 rounded-3xl p-8 md:p-10 text-white shadow-xl relative overflow-hidden">
-            <div className="relative z-10">
-              <div className="flex items-center gap-3 mb-2">
-                <Medal className="text-amber-400" size={28} />
-                <span className="text-blue-200 font-bold tracking-widest uppercase text-sm">Painel do Aluno</span>
-              </div>
-              <h1 className="text-3xl md:text-5xl font-black text-white leading-tight mb-4 animate-fade-in group-hover:scale-[1.01] transition-transform">
-               Painel do Especialista Microsoft
+            <div className="absolute top-4 left-6 z-10">
+               <span className="text-blue-100 font-bold text-xs uppercase tracking-widest flex items-center gap-2">
+                  <Medal size={14} className="text-amber-400" /> {t('student_panel')}
+               </span>
+            </div>
+            
+            <h1 className="text-3xl md:text-5xl font-black text-white mt-8 mb-4 max-w-2xl leading-tight">
+               {t('expert_panel')}
             </h1>
-            <p className="text-blue-100 text-lg md:text-xl font-medium max-w-2xl opacity-90">
-               Central de comando para alta performance em exames MS PL-200. Seus dados e evolução em tempo real.
+            
+            <p className="text-blue-100 text-lg max-w-xl md:max-w-2xl font-medium leading-relaxed mb-8">
+               {t('expert_desc')}
             </p>
-              
-              {!isPremium ? (
-                <div className="bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl flex flex-col sm:flex-row justify-between items-center gap-4">
-                  <div>
-                    <span className="font-black text-amber-300 block text-lg">Conta Limitada (Freemium)</span>
-                    <span className="text-sm text-blue-100 font-medium">Você tem acesso apenas a provas iniciantes incompletas.</span>
-                  </div>
-                  <button onClick={() => navigate('/')} className="w-full sm:w-auto bg-amber-400 hover:bg-amber-500 text-amber-900 px-6 py-3 rounded-xl font-black text-sm transition-all shadow-[0_0_20px_rgba(251,191,36,0.3)] hover:scale-105">Evoluir para Premium</button>
-                </div>
-              ) : (
-                <div className="bg-white/10 backdrop-blur-md border border-white/20 p-4 px-6 rounded-2xl inline-flex items-center gap-3">
-                    <Check className="text-emerald-400" size={24} />
-                    <span className="font-bold text-white">Assinatura Premium Ativa</span>
-                </div>
-              )}
+
+            <div className="flex flex-wrap items-center gap-4 mt-auto">
+               <span className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold shadow-md
+                  ${isPremium ? 'bg-blue-600/50 text-blue-50 border border-blue-400/30' : 'bg-slate-800/80 text-slate-300 border border-slate-700'}`}>
+                  <Check size={16} className={isPremium ? 'text-blue-300' : 'text-slate-500'} /> 
+                  {isPremium ? t('active_subscription') : t('free_plan')}
+               </span>
             </div>
             
             {/* Decorações do Banner */}
@@ -528,43 +522,39 @@ export default function Dashboard({ session }) {
           </div>
 
           {/* Cards de Simulados */}
-          <div>
-            <h2 className="text-2xl font-black mb-6 flex items-center gap-3 text-slate-800">
-                <BookOpen className="text-blue-600" size={28} /> Central de Simulados
-            </h2>
+          <div className="mb-8">
+           <h2 className="text-xl font-black text-slate-800 flex items-center gap-3 mb-6">
+              <BookOpen className="text-blue-600" size={24} /> {t('simulator_center')}
+           </h2>
             <div className="grid md:grid-cols-2 gap-5">
               
-              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full hover:border-blue-300 relative">
-                <div className="flex justify-between items-start mb-6">
-                  <div>
-                    <h3 className="font-black text-xl text-slate-800 group-hover:text-blue-700 transition-colors">Iniciante</h3>
-                    <p className="text-sm text-slate-500 mt-2 font-medium">Questões conceituais. Aprenda a base e a nomenclatura MS.</p>
-                  </div>
-                  <span className="bg-emerald-50 border border-emerald-100 text-emerald-700 text-xs font-black px-3 py-1.5 rounded-lg shadow-sm">50 Q.</span>
+              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full transform hover:-translate-y-1 hover:border-emerald-300">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="font-black text-xl text-slate-800">{t('beginner')}</h3>
+                  <span className="bg-emerald-50 text-emerald-600 text-xs font-black px-3 py-1.5 rounded-lg shadow-sm">50 Q.</span>
                 </div>
+                <p className="text-sm text-slate-500 mb-8 font-medium leading-relaxed flex-1">{t('beginner_desc')}</p>
                 <div className="mt-auto pt-4 border-t border-slate-100">
-                  <button onClick={() => startSimulator('iniciante')} className="w-full bg-slate-100 hover:bg-blue-600 hover:text-white text-slate-700 font-bold py-3 text-sm rounded-xl transition-all flex justify-center items-center gap-2 group-hover:shadow-md">
-                    <Play size={18} /> Iniciar Treino
+                  <button onClick={() => startSimulator('iniciante', 'exam')} className="w-full bg-slate-50 hover:bg-emerald-50 text-slate-700 hover:text-emerald-700 font-bold py-3.5 rounded-xl transition-colors flex justify-center items-center gap-2">
+                    <Play size={18} /> {t('start_training')}
                   </button>
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full relative overflow-hidden">
+              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full relative overflow-hidden transform hover:-translate-y-1 hover:border-amber-300">
                 {!isPremium && <div className="absolute inset-0 bg-slate-50/90 backdrop-blur-[2px] z-10 flex flex-col items-center justify-center text-center p-4">
                   <Trophy className="text-amber-500 mb-3" size={36} />
-                  <span className="font-black text-slate-800 text-lg">Bloqueado Freemium</span>
-                  <span className="text-sm text-slate-500 mt-1">Exclusivo Planos Pagos</span>
+                  <span className="font-black text-slate-800 text-lg">{t('locked_freemium')}</span>
+                  <span className="text-sm text-slate-500 mt-1">{t('premium_exclusive')}</span>
                 </div>}
-                <div className="flex justify-between items-start mb-6">
-                  <div>
-                    <h3 className="font-black text-xl text-slate-800 group-hover:text-blue-700 transition-colors">Intermediário</h3>
-                    <p className="text-sm text-slate-500 mt-2 font-medium">Conceitos práticos profundos, relacionamentos e lógicas.</p>
-                  </div>
-                  <span className="bg-amber-50 border border-amber-100 text-amber-700 text-xs font-black px-3 py-1.5 rounded-lg shadow-sm">50 Q.</span>
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="font-black text-xl text-slate-800">{t('intermediate')}</h3>
+                  <span className="bg-amber-50 text-amber-600 text-xs font-black px-3 py-1.5 rounded-lg shadow-sm">50 Q.</span>
                 </div>
-                <div className="mt-auto pt-4 border-t border-slate-100 relative z-0">
-                  <button onClick={() => startSimulator('intermediario')} className="w-full bg-slate-100 hover:bg-blue-600 hover:text-white text-slate-700 font-bold py-3 text-sm rounded-xl transition-all flex justify-center items-center gap-2">
-                    <Play size={18} /> Iniciar Treino
+                <p className="text-sm text-slate-500 mb-8 font-medium leading-relaxed flex-1">{t('intermediate_desc')}</p>
+                <div className="mt-auto pt-4 border-t border-slate-100 relative z-10">
+                  <button onClick={() => startSimulator('intermediario', 'exam')} className="w-full bg-slate-50 hover:bg-amber-50 text-slate-700 hover:text-amber-700 font-bold py-3.5 rounded-xl transition-colors flex justify-center items-center gap-2">
+                    <Play size={18} /> {t('start_training')}
                   </button>
                 </div>
               </div>
@@ -618,8 +608,8 @@ export default function Dashboard({ session }) {
                      <div className="w-20 h-20 bg-blue-100 text-blue-600 rounded-3xl flex items-center justify-center mx-auto mb-6">
                         <Trophy size={40} />
                      </div>
-                     <h2 className="text-3xl font-black text-slate-800 mb-3">Como deseja encarar o desafio?</h2>
-                     <p className="text-slate-500 font-medium mb-10">O simulado avançado possui 50 questões baseadas no peso oficial da Microsoft. Escolha sua estratégia:</p>
+                     <h2 className="text-3xl font-black text-slate-800 mb-3">{t('choose_strategy')}</h2>
+                     <p className="text-slate-500 font-medium mb-10">{t('strategy_desc')}</p>
                      
                      <div className="grid gap-4">
                         <button 
@@ -631,8 +621,8 @@ export default function Dashboard({ session }) {
                                  <BookOpen size={24} />
                               </div>
                               <div>
-                                 <p className="font-black text-slate-800">Modo Estudo (Tutorial)</p>
-                                 <p className="text-xs text-slate-400 font-bold uppercase tracking-wider">Ver resposta na hora + Explicações</p>
+                                 <p className="font-black text-slate-800">{t('study_mode')}</p>
+                                 <p className="text-xs text-slate-400 font-bold uppercase tracking-wider">{t('study_mode_desc')}</p>
                               </div>
                            </div>
                            <ChevronRight size={20} className="text-slate-300 group-hover:text-blue-500" />
@@ -647,15 +637,15 @@ export default function Dashboard({ session }) {
                                  <Target size={24} />
                               </div>
                               <div>
-                                 <p className="font-black text-white">Modo Prova Real (Exam)</p>
-                                 <p className="text-xs text-blue-300 font-bold uppercase tracking-wider">Cronômetro rígido • Sem feedback imediato</p>
+                                 <p className="font-black text-white">{t('exam_mode')}</p>
+                                 <p className="text-xs text-blue-300 font-bold uppercase tracking-wider">{t('exam_mode_desc')}</p>
                               </div>
                            </div>
                            <ChevronRight size={20} className="text-white/30 group-hover:text-white" />
                         </button>
                      </div>
 
-                     <button onClick={() => setShowModeSelector(false)} className="mt-8 text-slate-400 font-black text-xs uppercase tracking-widest hover:text-slate-600 transition-colors">Cancelar e Voltar</button>
+                     <button onClick={() => setShowModeSelector(false)} className="mt-8 text-slate-400 font-black text-xs uppercase tracking-widest hover:text-slate-600 transition-colors">{t('cancel')}</button>
                   </div>
                </div>
             </div>
@@ -671,7 +661,7 @@ export default function Dashboard({ session }) {
              {/* Gráfico de Radar: Desempenho Setorial */}
              <div className="mb-8 p-4 bg-slate-50 rounded-2xl border border-slate-100">
                 <h3 className="font-black text-slate-800 flex items-center gap-2 text-sm mb-4 uppercase tracking-wider">
-                    <PieChart className="text-blue-600" size={18} /> Performance por Domínio
+                    <PieChart className="text-blue-600" size={18} /> {t('performance_domain')}
                 </h3>
                 
                 <div className="h-[250px] w-full">
@@ -693,42 +683,75 @@ export default function Dashboard({ session }) {
                     ) : (
                         <div className="h-full flex flex-col items-center justify-center text-center p-4">
                             <AlertCircle size={32} className="text-slate-300 mb-2" />
-                            <p className="text-xs text-slate-400 font-bold">Faça um simulado para gerar seu mapa de competências.</p>
+                            <p className="text-xs text-slate-400 font-bold">{t('no_radar_data')}</p>
                         </div>
                     )}
                 </div>
              </div>
 
-             <div className="flex items-center justify-between mb-5 px-1">
-                <h2 className="font-black text-slate-800 flex items-center gap-2 text-lg">
-                    <Award className="text-purple-600" size={22} /> Suas Conquistas
-                </h2>
-                <span className="text-xs font-bold bg-purple-100 text-purple-700 px-2 py-1 rounded-md">{selos.length} Desbloqueadas</span>
-             </div>
-             
-             <div className="grid grid-cols-3 gap-3">
-                 {selos.map((s, idx) => (
-                    <div key={idx} onClick={() => setSeloAberto(s)} className="flex flex-col items-center gap-1 group cursor-pointer relative">
-                        <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${s.grad} p-0.5 shadow-md group-hover:scale-110 group-hover:shadow-lg transition-all`}>
-                            <div className="w-full h-full bg-white rounded-[14px] flex items-center justify-center">
-                                {s.icone}
-                            </div>
-                        </div>
-                        <span className="text-[10px] font-bold text-slate-600 text-center leading-tight mt-1">{s.titulo}</span>
-                    </div>
-                 ))}
-             </div>
-              <p className="text-[11px] text-center text-slate-400 font-medium mt-6 pt-4 border-t border-slate-100">Clique nos selos para visualizar detalhes e progresso.</p>
+             <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
+                 <div className="flex justify-between items-center mb-6">
+                    <h3 className="font-black text-slate-800 flex items-center gap-2 text-sm uppercase tracking-wider">
+                        <Medal className="text-purple-600" size={18} /> {t('achievements')}
+                    </h3>
+                    <span className="bg-purple-50 text-purple-700 text-[10px] font-black px-2 py-1 rounded-lg uppercase tracking-widest">{selosConfig.filter(s => s.conquistado).length} {t('unlocked')}</span>
+                 </div>
+                 
+                 <div className="grid grid-cols-3 md:grid-cols-4 gap-4">
+                    {selosConfig.map(selo => (
+                      <div 
+                        key={selo.id}
+                        onMouseEnter={() => setSeloAberto(selo.id)}
+                        onMouseLeave={() => setSeloAberto(null)}
+                        className={`relative cursor-pointer transition-all duration-300 flex flex-col items-center justify-center p-4 rounded-2xl border-2
+                          ${selo.conquistado ? 'border-transparent bg-gradient-to-br shadow-md hover:shadow-lg ' + selo.grad : 'border-dashed border-slate-200 bg-slate-50 opacity-40 hover:opacity-100'}`}
+                      >
+                         <div className="bg-white p-3 rounded-2xl shadow-sm mb-3">
+                           {selo.icone}
+                         </div>
+                         <span className={`text-[10px] font-black uppercase text-center tracking-wider max-w-[80px] leading-tight
+                           ${selo.conquistado ? 'text-slate-800' : 'text-slate-400'}`}>
+                           {selo.id === 'pioneer' ? t('badge_pioneer') :
+                            selo.id === 'marathon' ? t('badge_marathon') :
+                            selo.id === 'precision' ? t('badge_precision') :
+                            selo.id === 'perfectionist' ? t('badge_perfectionist') :
+                            selo.id === 'owl' ? t('badge_owl') :
+                            selo.id === 'earlybird' ? t('badge_early_bird') :
+                            selo.id === 'shield' ? t('badge_unshakable') :
+                            selo.id === 'award' ? t('badge_master') : selo.titulo}
+                         </span>
+                         
+                         {/* Tooltip Hover */}
+                         <div className={`absolute -top-2 left-1/2 -mt-2 -translate-x-1/2 -translate-y-full w-48 bg-slate-800 text-white text-xs p-3 rounded-xl shadow-xl transition-all duration-200 z-50 pointer-events-none text-center
+                           ${seloAberto === selo.id ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-2'}`}>
+                            <p className="font-bold mb-1 text-purple-300">{selo.id === 'pioneer' ? t('badge_pioneer') :
+                            selo.id === 'marathon' ? t('badge_marathon') :
+                            selo.id === 'precision' ? t('badge_precision') :
+                            selo.id === 'perfectionist' ? t('badge_perfectionist') :
+                            selo.id === 'owl' ? t('badge_owl') :
+                            selo.id === 'earlybird' ? t('badge_early_bird') :
+                            selo.id === 'shield' ? t('badge_unshakable') :
+                            selo.id === 'award' ? t('badge_master') : selo.titulo}</p>
+                            <p className="text-[10px] text-slate-300 leading-tight">{selo.desc}</p>
+                            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 border-spacing-x-4 border-t-[8px] border-t-slate-800 border-x-[8px] border-x-transparent border-b-0 w-0 h-0"></div>
+                         </div>
+                      </div>
+                    ))}
+                 </div>
+                 <p className="text-center text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-6">
+                    {t('click_badges')}
+                 </p>
+              </div>
           </div>
 
           {/* NOVO: Ranking Global (Etapa 6.5) */}
-          <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm">
-             <div className="flex items-center justify-between mb-6">
-                <h2 className="font-black text-slate-800 flex items-center gap-2 text-xl tracking-tight">
-                    <Users className="text-blue-600" size={24} /> Ranking Global
-                </h2>
-                <span className="text-[10px] bg-blue-100 text-blue-700 font-black px-2 py-1 rounded">TOTAL PONTOS</span>
-             </div>
+          <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden">
+                 <div className="flex justify-between items-center mb-6">
+                    <h3 className="font-black text-slate-800 flex items-center gap-2 text-sm uppercase tracking-wider">
+                        <Users className="text-blue-600" size={18} /> {t('global_ranking')}
+                    </h3>
+                    <span className="bg-blue-50 text-blue-700 text-[10px] font-black px-2 py-1 rounded-lg uppercase tracking-widest">{t('total_points')}</span>
+                 </div>
 
              <div className="space-y-4">
                 {loadingRanking ? (
@@ -746,41 +769,46 @@ export default function Dashboard({ session }) {
                                     {idx + 1}
                                 </div>
                                 <div>
-                                    <p className="font-black text-slate-800 text-sm leading-none">{user.name}</p>
-                                    <p className="text-[10px] font-bold text-slate-400 mt-1 uppercase tracking-tighter">Best: {user.bestScore}%</p>
+                                    <p className="font-black text-slate-800 truncate pr-2 max-w-[120px] sm:max-w-[180px]">{user.profile?.full_name?.split(' ')[0] || user.email?.split('@')[0] || "Usuário Anônimo"}</p>
+                                       <div className="flex items-center gap-1 mt-0.5">
+                                          <TrendingUp size={10} className="text-slate-400" />
+                                          <p className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Best: {user.best_score}%</p>
+                                       </div>
                                 </div>
                             </div>
-                            <div className="text-right">
-                                <p className="font-black text-blue-600 text-lg leading-none">{user.points}</p>
-                                <p className="text-[9px] font-black text-slate-300 uppercase">QUESTÕES</p>
-                            </div>
+                            <div className="flex flex-col items-end">
+                                   <p className="text-xl font-black text-blue-600 leading-none">{user.total_correct}</p>
+                                   <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-1">{t('questions')}</p>
+                               </div>
                         </div>
                     ))
                 ) : (
                     <div className="py-10 text-center text-slate-400 font-medium">
-                        Aguardando competidores...
+                        {t('waiting_competitors')}
                     </div>
                 )}
              </div>
              
-             <p className="text-[10px] text-center text-slate-400 font-bold mt-6 italic">Em caso de empate, o maior "Best Score" prevalece.</p>
+             <p className="text-center text-[10px] text-slate-400 italic mt-6 mt-auto">
+                    {t('tie_breaker')}
+                 </p>
           </div>
 
           <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm sticky top-24">
             <h2 className="font-black text-xl text-slate-800 mb-6 pb-4 border-b border-slate-100 flex items-center gap-2">
-              <TrendingUp className="text-blue-600" size={24} /> Desempenho PL-200
+              <TrendingUp className="text-blue-600" size={24} /> {t('performance_pl200')}
             </h2>
 
             {loadingHistory ? (
               <div className="text-center py-10">
                   <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-2"></div>
-                  <p className="text-xs text-slate-400 font-bold">Consultando banco de dados...</p>
+                  <p className="text-xs text-slate-400 font-bold">{t('consulting_db')}</p>
               </div>
             ) : history.length === 0 ? (
               <div className="text-center py-10 bg-slate-50 rounded-2xl border border-slate-100 border-dashed">
                   <div className="text-slate-400 mb-3"><Star size={32} className="mx-auto opacity-50" /></div>
-                  <p className="text-slate-500 font-medium">Nenhum simulado finalizado ainda.</p>
-                  <p className="text-xs text-slate-400 mt-1">Sua jornada começa hoje.</p>
+                  <p className="text-slate-500 font-medium">{t('no_simulations')}</p>
+                  <p className="text-xs text-slate-400 mt-1">{t('journey_starts_today')}</p>
               </div>
             ) : (
               <div className="space-y-6">
@@ -793,11 +821,11 @@ export default function Dashboard({ session }) {
                     <div className="flex items-center gap-5 mt-1">
                       <div className={`flex flex-col items-center justify-center w-16 h-16 rounded-2xl shrink-0 ${h.passed ? 'bg-emerald-50 text-emerald-600' : 'bg-red-50 text-red-500'}`}>
                         {h.passed ? <Check className="mb-0.5" size={24} /> : <X className="mb-0.5" size={24} />}
-                        <span className="text-[11px] font-black uppercase text-center leading-none">{h.passed ? 'Aprovado' : 'Falha'}</span>
+                        <span className="text-[11px] font-black uppercase text-center leading-none">{h.passed ? t('passed') : t('failed')}</span>
                       </div>
                       <div className="flex-1 flex flex-col gap-2 w-full">
                         <div className="flex justify-between items-end">
-                            <span className="text-slate-500 text-xs font-bold uppercase tracking-wide">Pontuação</span>
+                            <span className="text-slate-500 text-xs font-bold uppercase tracking-wide">{t('score')}</span>
                             <span className={`text-xl font-black ${h.passed ? 'text-emerald-600' : 'text-slate-700'}`}>{h.score * 10} / 1000</span>
                         </div>
                         <div className="h-2.5 w-full bg-slate-100 rounded-full relative overflow-hidden shadow-inner">
@@ -812,7 +840,7 @@ export default function Dashboard({ session }) {
             )}
             {history.length > 0 && (
                 <button onClick={() => setHistoricoCompletoAberto(true)} className="w-full mt-6 py-3 bg-slate-50 hover:bg-slate-100 text-blue-700 font-bold rounded-xl transition-colors text-sm border border-slate-200">
-                    Ver Histórico Completo
+                    {t('view_full_history')}
                 </button>
             )}
           </div>
@@ -835,8 +863,8 @@ export default function Dashboard({ session }) {
                             <Trophy size={32} />
                         </div>
                         <div>
-                            <h2 className="text-2xl font-black">Sua Galeria de Conquistas</h2>
-                            <p className="text-blue-100 font-medium text-sm">Certificados oficiais de proficiência PL-200</p>
+                            <h2 className="text-2xl font-black">{t('achievements_gallery')}</h2>
+                            <p className="text-blue-100 font-medium text-sm">{t('official_certificates')}</p>
                         </div>
                     </div>
                 </div>
@@ -851,11 +879,11 @@ export default function Dashboard({ session }) {
                                             <Award className="text-blue-600" size={28} />
                                         </div>
                                         <div>
-                                            <p className="font-black text-slate-800">Certificado de Especialista</p>
+                                            <p className="font-black text-slate-800">{t('specialist_cert')}</p>
                                             <div className="flex items-center gap-3 text-xs font-bold text-slate-400 mt-1 uppercase tracking-wider">
                                                 <span>{cert.date}</span>
                                                 <span className="w-1 h-1 bg-slate-300 rounded-full"></span>
-                                                <span className="text-blue-600">{cert.score}% de Aproveitamento</span>
+                                                <span className="text-blue-600">{cert.score}% {t('performance')}</span>
                                             </div>
                                         </div>
                                     </div>
