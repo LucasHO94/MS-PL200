@@ -3176,8 +3176,8 @@ export const questionsDataEn = [
             "correctAnswer": "classic workflow",
             "proTip": "The certification will always associate the expression 'Block User Interface' or robust 'Synchronous/Real-time' execution in Dataverse with 'Classic Real-time Workflows' due to their ability to act in the exact same database transaction, locking the return to the visual layer (UI) until effective conclusion.",
             "pitfalls": [
-               "Power Fx and cloud/instant flows: Execute largely asynchronously or in client-side in a permissive way without single-thread UI locking behavior.",
-               "Business process flows (BPF): These are just sequential phase guidance tracks. They are unable to perform complex back-end mathematical calculations on their own."
+                "Power Fx and cloud/instant flows: Execute largely asynchronously or in client-side in a permissive way without single-thread UI locking behavior.",
+                "Business process flows (BPF): These are just sequential phase guidance tracks. They are unable to perform complex back-end mathematical calculations on their own."
             ],
             "goldenTip": "Actively block/lock the user interface DURING the wait for logic/calculations = Classic Workflow (in Real-time)."
         },
