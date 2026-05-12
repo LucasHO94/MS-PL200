@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
+import { isAdminEmail } from '../lib/auth';
 import { Shield, User, Star, Check, X, ArrowLeft, Users, Trophy, Mail, Calendar, Trash2, MessageSquare, CheckCircle, Clock, AlertCircle } from 'lucide-react';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { useContext } from 'react';
@@ -14,7 +15,7 @@ export default function Admin({ session }) {
   const [stats, setStats] = useState({ total: 0, premium: 0 });
   const [activeTab, setActiveTab] = useState('users'); // 'users' ou 'support'
 
-  const isAdmin = session?.user?.email === 'lucasho94@hotmail.com';
+  const isAdmin = isAdminEmail(session?.user?.email);
 
   useEffect(() => {
     if (isAdmin) {

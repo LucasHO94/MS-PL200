@@ -196,7 +196,7 @@ export default function Profile({ session }) {
                     <div className="flex items-center gap-4 p-3 bg-slate-50 rounded-2xl border border-slate-100">
                         <div className="p-2 bg-white rounded-xl shadow-sm"><Trophy size={18} className="text-amber-500" /></div>
                         <div className="flex-1">
-                            <p className="text-[10px] font-black text-slate-800 uppercase">Mestre dos Dados</p>
+                            <p className="text-[10px] font-black text-slate-800 uppercase">{t('badge_data_master')}</p>
                             <div className="w-full bg-slate-200 h-1.5 rounded-full mt-1">
                                 <div className="bg-blue-600 h-1.5 rounded-full" style={{ width: '45%' }}></div>
                             </div>
@@ -225,7 +225,7 @@ export default function Profile({ session }) {
                                 value={formData.nickname}
                                 onChange={(e) => setFormData({ ...formData, nickname: e.target.value.replace(/\s/g, '').toLowerCase() })}
                                 className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl pl-10 pr-5 py-4 font-black text-slate-800 focus:border-blue-500 focus:bg-white outline-none transition-all placeholder:text-slate-300 shadow-sm"
-                                placeholder="ex: ninja_pl200"
+                                placeholder={t('nickname_placeholder')}
                                 maxLength={15}
                             />
                         </div>
@@ -239,7 +239,7 @@ export default function Profile({ session }) {
                             value={formData.full_name}
                             onChange={(e) => setFormData({ ...formData, full_name: e.target.value })}
                             className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl px-5 py-4 font-bold text-slate-800 focus:border-blue-500 focus:bg-white outline-none transition-all placeholder:text-slate-300 shadow-sm"
-                            placeholder="Ex: Lucas Oliveira"
+                            placeholder={t('fullname_placeholder')}
                         />
                     </div>
                     

@@ -5,6 +5,8 @@ import { questionsData } from '../questions';
 import { questionsDataEn } from '../questions_en';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { supabase } from '../lib/supabase';
+import { isAdminEmail } from '../lib/auth';
+import { useIsPremium } from '../hooks/useIsPremium';
 import { generateCertificate } from '../utils/certificate';
 import { useSearchParams } from 'react-router-dom';
 
@@ -32,8 +34,8 @@ export default function Simulator({ session }) {
   const [finalScore, setFinalScore] = useState(0);
 
   const userEmail = session?.user?.email || '';
-  const isAdmin = userEmail === 'lucasho94@hotmail.com';
-  const isPremium = profile?.is_premium || session?.user?.user_metadata?.isPremium || isAdmin;
+  const isAdmin = isAdminEmail(session?.user?.email);
+  const isPremium = useIsPremium(session, profile);
 
   // Guarda de Rota (Segurança por URL)
   useEffect(() => {
@@ -77,6 +79,7 @@ export default function Simulator({ session }) {
           .from('simulator_history')
           .select('*')
           .eq('id', historyId)
+          .eq('user_id', session.user.id)
           .single();
 
         if (hError || !hData) {
@@ -93,7 +96,7 @@ export default function Simulator({ session }) {
            setQuestions(reconstructed);
         } else {
            // Fallback se não tiver IDs (em versões antigas)
-           alert("Este simulado antigo não possui dados de revisão detalhada.");
+           alert(t('alert_review_no_data'));
            navigate('/dashboard');
            return;
         }
@@ -182,22 +185,6 @@ export default function Simulator({ session }) {
     loadSimulator();
   }, [type, session.user.id, isAdmin, navigate]);
 
-  // Proteção Anti-Cópia (Etapa 5)
-  useEffect(() => {
-    const preventActions = (e) => {
-      e.preventDefault();
-      // alert("Proteção de Conteúdo: A cópia e o menu de contexto estão desativados neste simulador.");
-    };
-
-    document.addEventListener('contextmenu', preventActions);
-    document.addEventListener('copy', preventActions);
-    
-    return () => {
-      document.removeEventListener('contextmenu', preventActions);
-      document.removeEventListener('copy', preventActions);
-    };
-  }, []);
-
   // Cronometro Logic
   useEffect(() => {
     if (timeLeft === null || simuladorFinalizado || isPaused) return;
@@ -227,10 +214,10 @@ export default function Simulator({ session }) {
     if (type === 'avancado') {
       // Auto submit no avancado
       finalizarSimulado();
-      alert("Tempo Esgotado! Seu simulado foi submetido automaticamente.");
+      alert(t('alert_time_expired'));
     } else {
       // Iniciante e Intermediario apenas muda cor do relogio
-      alert("Seu tempo ideal acabou! O cronômetro ficará vermelho, mas você pode continuar para fins didáticos.");
+      alert(t('alert_time_ideal_over'));
     }
   };
 
@@ -335,7 +322,7 @@ export default function Simulator({ session }) {
   };
 
   const resetProgressGeral = async () => {
-    if (!window.confirm('Tem certeza que deseja zerar sua evolução no Modo Geral e começar do zero?')) return;
+    if (!window.confirm(t('alert_reset_progress_confirm'))) return;
     
     const { error } = await supabase
       .from('study_progress')
@@ -343,11 +330,11 @@ export default function Simulator({ session }) {
       .eq('user_id', session.user.id);
     
     if (error) {
-       alert("Erro ao zerar progresso.");
+       alert(t('alert_reset_progress_err'));
     } else {
        setProgress({});
        setCurrentQuestionIndex(0);
-       alert("Progresso zerado com sucesso!");
+       alert(t('alert_reset_progress_ok'));
     }
   };
 
@@ -407,18 +394,14 @@ export default function Simulator({ session }) {
     return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
   };
 
-  // Melhoria de espaçamento inteligente (Parser Textual)
-  const formatQuestionText = (text) => {
+  const formatQuestionText = useMemo(() => (text) => {
     if (!text) return text;
-    let formatted = text
-      .replace(/\] Cenario:/gi, ']\nCenário:') // Casos de bracket
-      .replace(/(?<=\? )|(?<=:\s)/g, '\n\n') // Adiciona quebra após dois pontos ou interrogação
-      .replace(/\s?- /g, '\n  • ') // transforma  hífens soltos em bullets
-      .replace(/(Você precisa |Qual |Como você |O que você |Como deve |Selecione |Por que |Qual a )/g, '\n$1') // quebra quando tem diretiva de ação
+    return text
+      .replace(/\] (Cenário:|Cenario:)/gi, ']\n$1')
+      .replace(/(^|\n)\s*-\s+/g, '$1• ')
       .replace(/\n\n+/g, '\n\n')
       .trim();
-    return formatted;
-  };
+  }, []);
 
   if (loading || !currentQuestion) {
     return (
@@ -547,7 +530,7 @@ export default function Simulator({ session }) {
                     </div>
                     
                     <h1 className="text-4xl font-black text-slate-900 mb-2">{t('performance_report')}</h1>
-                    <p className="text-slate-500 font-medium mb-8 uppercase tracking-widest text-xs">{t('question')} {type} • Modo {mode === 'exam' ? t('exam_real_mode') : t('exam_study_mode')}</p>
+                    <p className="text-slate-500 font-medium mb-8 uppercase tracking-widest text-xs">{t('question')} {type} • {t('mode_label')} {mode === 'exam' ? t('exam_real_mode') : t('exam_study_mode')}</p>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
                         <div className="bg-slate-50 p-4 rounded-2xl">
@@ -559,7 +542,7 @@ export default function Simulator({ session }) {
                         <div className="bg-slate-50 p-4 rounded-2xl">
                             <p className="text-[10px] font-bold text-slate-400 uppercase mb-1">{t('status')}</p>
                             <p className={`text-[10px] font-black p-1 rounded-lg ${finalScore >= 70 ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'}`}>
-                                {finalScore >= 70 ? t('approved') : t('failed')}
+                                {finalScore >= 70 ? t('approved') : t('failed_upper')}
                             </p>
                         </div>
                         <div className="bg-slate-50 p-4 rounded-2xl">
@@ -761,7 +744,7 @@ export default function Simulator({ session }) {
                         {t('question')} {currentQuestionIndex + 1} {t('of')} {questions.length}
                     </span>
                     <span className="px-3 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold rounded-full uppercase tracking-tight">
-                        {currentQuestion.domain || 'Microsoft Power Platform'}
+                        {currentQuestion.domain || t('domain_default')}
                     </span>
                 </div>
                 <div className="text-[1.15rem] text-slate-800 whitespace-pre-wrap leading-relaxed font-medium no-copy">

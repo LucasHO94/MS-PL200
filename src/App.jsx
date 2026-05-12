@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
-import Dashboard from './pages/Dashboard';
-import Simulator from './pages/Simulator';
-import Admin from './pages/Admin';
-import Profile from './pages/Profile';
-import Settings from './pages/Settings';
-import ResetPassword from './pages/ResetPassword';
 import { supabase } from './lib/supabase';
 import { LanguageProvider } from './contexts/LanguageContext';
+
+const Dashboard = lazy(() => import('./pages/Dashboard'));
+const Simulator = lazy(() => import('./pages/Simulator'));
+const Admin = lazy(() => import('./pages/Admin'));
+const Profile = lazy(() => import('./pages/Profile'));
+const Settings = lazy(() => import('./pages/Settings'));
+const ResetPassword = lazy(() => import('./pages/ResetPassword'));
 
 export default function App() {
   const [session, setSession] = useState(null);
@@ -61,12 +62,13 @@ export default function App() {
   }, []);
 
   if (loading) {
-    return <div className="h-screen bg-slate-50 flex items-center justify-center">Carregando Plataforma...</div>;
+    return <div className="h-screen bg-slate-50 flex items-center justify-center">Carregando...</div>;
   }
 
   return (
     <LanguageProvider>
       <BrowserRouter>
+        <Suspense fallback={<div className="h-screen bg-slate-50 flex items-center justify-center">Carregando...</div>}>
         <Routes>
           <Route 
             path="/" 
@@ -98,6 +100,7 @@ export default function App() {
           />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+        </Suspense>
       </BrowserRouter>
     </LanguageProvider>
   );

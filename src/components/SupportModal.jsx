@@ -62,8 +62,8 @@ export default function SupportModal({ isOpen, onClose, userSession, initialSubj
               <MessageSquare size={24} />
             </div>
             <div>
-              <h2 className="font-black text-xl text-slate-800">Fale Conosco</h2>
-              <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">Suporte Direto & Relatos</p>
+              <h2 className="font-black text-xl text-slate-800">{t('contact_us_title')}</h2>
+              <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">{t('contact_us_subtitle')}</p>
             </div>
           </div>
           <button 

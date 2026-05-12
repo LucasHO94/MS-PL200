@@ -1,7 +1,9 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useMemo } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { BookOpen, Target, Flame, Trophy, Play, LogOut, Check, X, Medal, Star, Award, TrendingUp, Settings, User, PieChart, AlertCircle, Shield, Clock, Sun, Users, ChevronRight, Mail, Zap } from 'lucide-react';
+import { BookOpen, Target, Flame, Trophy, Play, LogOut, Check, CheckCircle, X, Medal, Star, Award, TrendingUp, Settings, User, PieChart, AlertCircle, Shield, Clock, Sun, Users, ChevronRight, Mail, Zap } from 'lucide-react';
 import { supabase } from '../lib/supabase';
+import { isAdminEmail } from '../lib/auth';
+import { useIsPremium } from '../hooks/useIsPremium';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 import { generateCertificate } from '../utils/certificate';
 import SupportModal from '../components/SupportModal';
@@ -228,12 +230,12 @@ export default function Dashboard({ session }) {
           id: session.user.id,
           email: session.user.email,
           nickname: session.user.user_metadata?.nickname || `Aluno_${Math.floor(Math.random() * 9000) + 1000}`,
-          is_premium: true
+          is_premium: false
         });
       }
     };
     checkAndCreateProfile();
-  }, [session]);
+  }, [session?.user?.id]);
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
@@ -245,8 +247,8 @@ export default function Dashboard({ session }) {
   };
 
   const userEmail = session?.user?.email || 'Aluno';
-  const isAdmin = userEmail === 'lucasho94@hotmail.com';
-  const isPremium = profile?.is_premium || session?.user?.user_metadata?.isPremium || isAdmin;
+  const isAdmin = isAdminEmail(session?.user?.email);
+  const isPremium = useIsPremium(session, profile);
   const userInitial = userEmail.charAt(0).toUpperCase();
 
   const handleStripeCheckout = async (planType) => {
@@ -263,12 +265,12 @@ export default function Dashboard({ session }) {
       if (data?.url) window.location.href = data.url;
     } catch (err) {
       console.error("Erro ao iniciar checkout:", err);
-      alert("Houve um erro ao conectar com o provedor de pagamento. Tente novamente em instantes.");
+      alert(t('alert_payment_error'));
     }
   };
 
   // Badges Dinamicos Reais (Expandidos)
-  const selos = [
+  const selos = useMemo(() => [
       { 
           id: 'fogo', 
           icone: <Flame size={28} className={history.length > 0 ? "text-orange-500" : "text-slate-300"} fill={history.length > 0 ? "currentColor" : "none"}/>, 
@@ -345,13 +347,13 @@ export default function Dashboard({ session }) {
       },
        { 
         id: 'award', 
-        icone: <Award size={28} className={history.some(h => h.exam_type === 'avançado' && h.passed) ? "text-red-600" : "text-slate-300"}/>, 
-        titulo: t('ach_award_title'), 
-        desc: t('ach_award_desc'), 
-        grad: history.some(h => h.exam_type === 'avançado' && h.passed) ? 'from-red-400 to-red-700' : 'from-slate-100 to-slate-200',
-        conquistado: history.some(h => h.exam_type === 'avançado' && h.passed)
+        icone: <Award size={28} className={history.some(h => h.exam_type === 'avancado' && h.passed) ? "text-red-600" : "text-slate-300"}/>,
+        titulo: t('ach_award_title'),
+        desc: t('ach_award_desc'),
+        grad: history.some(h => h.exam_type === 'avancado' && h.passed) ? 'from-red-400 to-red-700' : 'from-slate-100 to-slate-200',
+        conquistado: history.some(h => h.exam_type === 'avancado' && h.passed)
       },
-  ];
+  ], [history, streak, t]);
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 font-sans pb-16 relative">
@@ -359,7 +361,7 @@ export default function Dashboard({ session }) {
       <nav className="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm relative">
         <div className="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
           <div className="flex items-center gap-2 text-blue-700 font-black text-xl hover:opacity-80 transition-opacity cursor-pointer">
-            <Target size={24} /> PL-200 <span className="text-slate-800 hidden md:inline">Dashboard</span>
+            <Target size={24} /> PL-200 <span className="text-slate-800 hidden md:inline">{t('dashboard_short')}</span>
           </div>
           <div className="flex items-center gap-4 md:gap-6">
             <div className="flex items-center gap-2 bg-gradient-to-r from-orange-100 to-orange-50 text-orange-600 px-4 py-1.5 rounded-full font-bold text-sm shadow-sm border border-orange-100">
@@ -473,7 +475,7 @@ export default function Dashboard({ session }) {
           <div className="fixed inset-0 z-30" onClick={() => setMenuAberto(false)}></div>
       )}
 
-      {/* MODAL DE SELOS GAAMIFICATION */}
+      {/* MODAL DE SELOS GAMIFICATION */}
       {seloModal && (
         <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 overflow-y-auto" onClick={() => setSeloModal(null)}>
             <div className="min-h-full flex justify-center items-center p-4">
@@ -502,7 +504,7 @@ export default function Dashboard({ session }) {
         </div>
       )}
 
-      {/* MODAL DE HISTÃ“RICO COMPLETO */}
+      {/* MODAL DE HISTÓRICO COMPLETO */}
       {historicoCompletoAberto && (
         <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex justify-end">
             <div className="bg-white w-full max-w-md h-full shadow-2xl flex flex-col animate-fade-in-up">
@@ -973,7 +975,7 @@ export default function Dashboard({ session }) {
                         </div>
                         <div className="h-2.5 w-full bg-slate-100 rounded-full relative overflow-hidden shadow-inner">
                           <div className={`h-full rounded-full transition-all duration-1000 ${h.passed ? 'bg-emerald-500' : 'bg-slate-400'}`} style={{ width: `${h.score}%` }}></div>
-                          <div className="absolute top-0 bottom-0 left-[70%] w-1 bg-white border-l border-red-500/20 z-10" title="Nota de Corte Oficial (700 Pontos)"></div>
+                          <div className="absolute top-0 bottom-0 left-[70%] w-1 bg-white border-l border-red-500/20 z-10" title={t('cut_off_tooltip')}></div>
                         </div>
                       </div>
                     </div>
@@ -1034,7 +1036,7 @@ export default function Dashboard({ session }) {
                                         onClick={() => generateCertificate(profile?.nickname || profile?.full_name || userEmail.split('@')[0], cert.score, cert.date)}
                                         className="w-full sm:w-auto px-6 py-3 bg-slate-900 hover:bg-blue-600 text-white font-black rounded-xl text-xs flex items-center justify-center gap-2 transition-all shadow-lg shadow-slate-200"
                                     >
-                                        <TrendingUp size={16} /> DOWNLOAD PDF
+                                        <TrendingUp size={16} /> {t('download_pdf')}
                                     </button>
                                 </div>
                             ))}

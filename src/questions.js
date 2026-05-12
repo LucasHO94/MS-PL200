@@ -297,7 +297,7 @@ export const questionsData = [
             "intro": "Esta questão trata do compartilhamento e da visibilidade de aplicativos orientados por modelo (Model-driven apps).",
             "papoReto": "Você construiu um app excelente e os vendedores dizem que o ícone dele não aparece. O que faltou? Você precisa ir nas opções do Aplicativo que você criou, clicar nele e usar a opção de associar o app às funções (roles) que a galera de vendas tem. O nome clássico desse botão na interface do Power Apps para definir quem vê o app é 'Manage Roles'.",
             "respostaCerta": "Gerenciar Funções (Manage Roles)",
-            "puloDoGato": "Embora os usuários precisem de um 'Security Role' (Direito de Acesso) para ler e escrever os dados, a ação específica de VINCULAR o aplicativo a essa função para que o app apareça na lista do usuário é feita selecionando o App e clicando em 'Manage Roles' (Gerenciar Funções ou Compartilhar).",
+            "puloDoGato": "Embora os usuários precisem de um 'Security Role' (Direito de Acesso) para ler e escrever os dados, a ação específica de VINCULAR o aplicativo a essa função para que o app apareça na lista do usuário é feita selecionando o App e clicando em 'Manage Roles' (Gerenciar Funções ou Comcompartilhar).",
             "cascasDeBanana": [
                 "Funções de Segurança (Security Roles): É lá que você cria e define as permissões (ex: Vendedor tem acesso de leitura de contatos). Mas a pergunta foca em 'onde configurar as permissões DO APLICATIVO', ou seja, amarrar o app à função já criada.",
                 "Centro de administração do Dynamics: Você não gerencia o compartilhamento de um aplicativo específico no centro de administração global."
@@ -321,7 +321,7 @@ export const questionsData = [
             "intro": "Esta questão testa o conhecimento sobre Comportamento de Relacionamento (Relationship Behaviors) entre tabelas no Dataverse.",
             "papoReto": "Imagina que você tem a tabela 'Conta' (pai) e 'Contatos' (filhos). Se o vendedor João for demitido e você passar a conta da 'na empresa' para a vendedora Maria, você quer que todos os contatos vinculados a essa conta também passem a ser da Maria automaticamente. Esse comportamento de 'passar adiante em cascata' (cascading) é a marca registrada do relacionamento 'Parental'.",
             "respostaCerta": "Parental",
-            "puloDoGato": "O comportamento 'Parental' significa dependência total. Qualquer ação feita no registro pai (Atribuir a outro dono, Compartilhar, Repassar, Excluir) desce em cascata (cascade) e é aplicada automaticamente a todos os registros filhos.",
+            "puloDoGato": "O comportamento 'Parental' significa dependência total. Qualquer ação feita no registro pai (Atribuir a outro dono, Comcompartilhar, Repassar, Excluir) desce em cascata (cascade) e é aplicada automaticamente a todos os registros filhos.",
             "cascasDeBanana": [
                 "Referencial: Significa que as tabelas apenas estão ligadas, mas são independentes. Se mudar o dono do pai, não muda o do filho.",
                 "Referencial, Restringir Exclusão: Impede que o registro pai seja apagado se houver filhos vinculados a ele, mas não transfere a propriedade (owner) em cascata."
@@ -431,9 +431,9 @@ export const questionsData = [
             "intro": "A terceira e última parte da série de questões de acesso a aplicativos. Aqui temos a solução correta.",
             "papoReto": "Agora sim! Você fez exatamente o que precisava: pegou o aplicativo, compartilhou com o gerente e deu a ele um 'crachá' (Direito de Acesso) que permite usar aquele app e ver os dados certinhos. Sem superpoderes de criador, apenas o necessário.",
             "respostaCerta": "Sim",
-            "puloDoGato": "Para um usuário comum usar um aplicativo orientado por modelo, são necessários dois passos fundamentais dentro do ambiente: 1. Compartilhar (Share) o aplicativo ou associar o app à função do usuário. 2. Atribuir ao usuário o Direito de Acesso (Security Role) correspondente que dá privilégios às tabelas.",
+            "puloDoGato": "Para um usuário comum usar um aplicativo orientado por modelo, são necessários dois passos fundamentais dentro do ambiente: 1. Comcompartilhar (Share) o aplicativo ou associar o app à função do usuário. 2. Atribuir ao usuário o Direito de Acesso (Security Role) correspondente que dá privilégios às tabelas.",
             "cascasDeBanana": [],
-            "dicaOuro": "Compartilhar App + Atribuir Security Role = Receita do sucesso para acesso a Model-driven apps no Dataverse."
+            "dicaOuro": "Comcompartilhar App + Atribuir Security Role = Receita do sucesso para acesso a Model-driven apps no Dataverse."
         },
         "difficulty": "iniciante",
         "domain": "Microsoft Dataverse"
@@ -464,7 +464,7 @@ export const questionsData = [
     },
     {
         "id": "q21_topic1",
-        "text": "Uma empresa pretende utilizar uma base de dados do Common Data Service (Dataverse) já existente. Você precisa garantir que o usuário consiga criar aplicativos de tela (canvas apps) que consumam dados do Dataverse. Você não deve conceder mais permissões do que as estritamente necessárias (princípio do menor privilégio). Qual direito de acesso (security role) padrão (padr�o) deve atribuir ao usuário?",
+        "text": "Uma empresa pretende utilizar uma base de dados do Common Data Service (Dataverse) já existente. Você precisa garantir que o usuário consiga criar aplicativos de tela (canvas apps) que consumam dados do Dataverse. Você não deve conceder mais permissões do que as estritamente necessárias (princípio do menor privilégio). Qual direito de acesso (security role) padrão (padrão) deve atribuir ao usuário?",
         "options": [
             "Administrador de Ambiente (Environment Admin)",
             "Personalizador de Sistema (System Customizer)",
@@ -488,7 +488,7 @@ export const questionsData = [
     },
     {
         "id": "q22_topic1",
-        "text": "Uma empresa implementa vários aplicativos orientados por modelo (model-driven apps) em dispositivos partilhados no armazém. Os dispositivos estão sempre ligados. Um usuário afastou-se recentemente de um dispositivo sem terminar a sessão e outro usuário acessou à sua conta. Além disso, a empresa quer impedir o upload de arquivos com extensões perigosas. Você precisa configurar a solução para evitar estes incidentes de segurança. Selecione as ações corretas para cada requisito, respectivamente: 1. Prevenir acesso não autorizado aos dispositivos deixados ligados. 2. Prevenir que os usuários façam upload de um tipo específico de arquivo.",
+        "text": "Uma empresa implementa vários aplicativos orientados por modelo (model-driven apps) em dispositivos comcompartilhados no armazém. Os dispositivos estão sempre ligados. Um usuário se afastou recentemente de um dispositivo sem terminar a sessão e outro usuário acessou à sua conta. Além disso, a empresa quer impedir o upload de arquivos com extensões perigosas. Você precisa configurar a solução para evitar estes incidentes de segurança. Selecione as ações corretas para cada requisito, respectivamente: 1. Prevenir acesso não autorizado aos dispositivos deixados ligados. 2. Prevenir que os usuários façam upload de um tipo específico de arquivo.",
         "options": [
             "1. Configurar controles de acesso no Azure Active Directory | 2. Inserir os tipos de arquivo restritos no SharePoint admin center",
             "1. Definir um limite de inatividade (timeout) no Power Platform admin center | 2. Inserir os tipos de arquivo restritos no Power Platform admin center",
@@ -512,7 +512,7 @@ export const questionsData = [
     },
     {
         "id": "q23_topic1",
-        "text": "A equipe de vendas de uma empresa quer uma forma simplificada de gerenciar as oportunidades no Dynamics 365 Sales, sem adicionar código personalizado. Você tem de fornecer uma solução para cada requisito. Quais soluções deve fornecer na seguinte ordem? 1. Arrastar e soltar (drag and drop) oportunidades para mudar de fase. 2. Mostrar a cada vendedor as suas oportunidades na vista de Calendário e Kanban. 3. Mostrar o número de oportunidades abertas por fase numa vista padrão.",
+        "text": "A equipe de vendas de uma empresa quer uma forma simplificada de gerenciar as oportunidades no Dynamics 365 Sales, sem adicionar código personalizado. Você deve fornecer uma solução para cada requisito. Quais soluções deve fornecer na seguinte ordem? 1. Arrastar e soltar (drag and drop) oportunidades para mudar de fase. 2. Mostrar a cada vendedor as suas oportunidades na vista de Calendário e Kanban. 3. Mostrar o número de oportunidades abertas por fase numa vista padrão.",
         "options": [
             "1. Adicionar o controle Kanban | 2. Adicionar ambos os controles (Calendário e Kanban) à vista 'As Minhas Oportunidades' | 3. Utilizar o painel de gráficos (chart pane) na vista",
             "1. Adicionar a Linha do Tempo (Timeline) | 2. Adicionar os controles a uma vista customizada | 3. Utilizar a vista de Lista",
@@ -521,13 +521,13 @@ export const questionsData = [
         ],
         "correctAnswer": 0,
         "explanation": {
-            "intro": "Uma ótima questão sobre como melhorar a interface e a experiência de usuário (UX) com controles visuais padr�o (nativos).",
+            "intro": "Uma ótima questão sobre como melhorar a interface e a experiência de usuário (UX) com controles visuais padrão (nativos).",
             "papoReto": "Se os vendedores querem arrastar os 'cartões' de oportunidades pelas colunas (fases) tal como se faz no Trello, isso chama-se 'Kanban'. Se eles querem que isso apareça só para as oportunidades deles, adicionamos esses controles visuais (Kanban e Calendário) diretamente na vista 'As Minhas Oportunidades'. E para ver gráficos rápidos de quantas vendas estão em cada fase? Basta abrir a gaveta de gráficos (Chart pane) que já vem colada ao lado da lista.",
             "respostaCerta": "1. Adicionar o controle Kanban | 2. Adicionar ambos os controles (Calendário e Kanban) à vista 'As Minhas Oportunidades' | 3. Utilizar o painel de gráficos (chart pane) na vista",
             "puloDoGato": "O controle Kanban no Dynamics 365 permite a funcionalidade de arrastar e soltar (Drag and Drop) baseada no Fluxo de Processo Empresarial (BPF) ou no Status da Oportunidade. Ao configurar controles, podemos adicioná-los a vistas específicas (como 'My Opportunities') em vez de a todas as vistas.",
             "cascasDeBanana": [
                 "Editable Grid (Grade Editável): Permite editar campos rapidamente como no Excel, mas NÃO permite 'arrastar e soltar' entre colunas/fases.",
-                "Timeline (Linha de Tempo): Serve para registar e-mails, tarefas e notas cronologicamente, não para gerenciar as fases das oportunidades."
+                "Timeline (Linha de Tempo): Serve para registrar e-mails, tarefas e notas cronologicamente, não para gerenciar as fases das oportunidades."
             ],
             "dicaOuro": "Arrastar e soltar (Drag and Drop) oportunidades = Controle Kanban. Ver dados resumidos em barras/pizza sem sair da lista = Chart Pane (Painel de Gráficos)."
         },
@@ -557,7 +557,7 @@ export const questionsData = [
     },
     {
         "id": "q25_topic1",
-        "text": "Você planeia implementar o Microsoft Dataverse. Você deve rastrear as alterações feitas a duas colunas específicas na tabela Conta (Account). Você tem de manter um log histórico destas alterações e rastrear APENAS o necessário. Você já ativou as definições globais de auditoria da organização. Você precisa configurar o sistema para rastrear estas duas colunas. Qual combinação de ações deve executar?",
+        "text": "Você planeja implementar o Microsoft Dataverse. Você deve rastrear as alterações feitas a duas colunas específicas na tabela Conta (Account). Você precisa manter um log histórico destas alterações e rastrear APENAS o necessário. Você já ativou as definições globais de auditoria da organização. Você precisa configurar o sistema para rastrear estas duas colunas. Qual combinação de ações deve executar?",
         "options": [
             "1. Ativar o controle de alterações (change tracking) para a tabela Conta E 2. Ativar a auditoria (auditing) para as colunas.",
             "1. Ativar a auditoria (auditing) para a tabela Conta E 2. Ativar a auditoria para as duas colunas específicas.",
@@ -642,7 +642,7 @@ export const questionsData = [
     },
     {
         "id": "q29_topic1",
-        "text": "Você está a implementar um aplicativo orientado por modelo (model-driven app) e precisa aplicar lógica de negócios em vários locais sem escrever código personalizado. Selecione o método correto para cada requisito, respectivamente: 1. Tornar um campo só de leitura (read-only) até que um valor pré-determinado seja excedido. 2. Enviar um e-mail automaticamente quando o status de um registro for alterado para desativado. 3. Usar o valor anterior (previous value) de um campo quando o valor for automaticamente atualizado.",
+        "text": "Você está implementando um aplicativo orientado por modelo (model-driven app) e precisa aplicar lógica de negócios em vários locais sem escrever código personalizado. Selecione o método correto para cada requisito, respectivamente: 1. Tornar um campo só de leitura (read-only) até que um valor pré-determinado seja excedido. 2. Enviar um e-mail automaticamente quando o status de um registro for alterado para desativado. 3. Usar o valor anterior (previous value) de um campo quando o valor for automaticamente atualizado.",
         "options": [
             "1. Fluxo de Trabalho (Workflow) | 2. Regra de Negócios (Business Rule) | 3. Regra de Negócios",
             "1. Regra de Negócios | 2. Fluxo de Trabalho em Tempo Real (Real-time workflow) | 3. Fluxo de Trabalho em Tempo Real",
@@ -652,13 +652,13 @@ export const questionsData = [
         "correctAnswer": 1,
         "explanation": {
             "intro": "Uma excelente questão para diferenciar as várias ferramentas de automação low-code/no-code disponíveis no Dataverse.",
-            "papoReto": "Tornar um campo só de leitura no tela é trabalho exclusivo para a Regra de Negócios (Business Rule). Mandar um e-mail automaticamente quando o status muda é automação de backend (Real-time Workflow). E para conseguir ver 'qual era o valor antes da alteração' (o famoso 'before and after'), apenas os Workflows clássicos em tempo real conseguem capturar com facilidade essa imagem antes de se gravar na base de dados.",
+            "papoReto": "Tornar um campo só de leitura na tela é trabalho exclusivo para a Regra de Negócios (Business Rule). Mandar um e-mail automaticamente quando o status muda é automação de backend (Real-time Workflow). E para conseguir ver 'qual era o valor antes da alteração' (o famoso 'before and after'), apenas os Workflows clássicos em tempo real conseguem capturar com facilidade essa imagem antes de se gravar na base de dados.",
             "respostaCerta": "1. Regra de Negócios | 2. Fluxo de Trabalho em Tempo Real | 3. Fluxo de Trabalho em Tempo Real",
             "puloDoGato": "Regras de negócios controlam o comportamento da Interface de Usuário (formulário). Os Workflows em tempo real operam de forma síncrona (no servidor) e conseguem capturar o estado exato dos dados ('pre-image') antes da transação ser confirmada na base de dados, o que responde perfeitamente ao requisito 3 de usar o valor 'anterior'.",
             "cascasDeBanana": [
                 "Power Automate Instant Flow (Fluxo Instantâneo): Este fluxo é disparado manualmente (quando alguém clica ativamente num botão). Não serve para automatizar uma reação em segundo plano imediata a uma mudança de status."
             ],
-            "dicaOuro": "Ações no tela/formulário (Ocultar, Bloquear, Tornar Obrigatório) = Business Rule. Capturar o 'valor anterior' do campo numa automação síncrona = Real-time Workflow."
+            "dicaOuro": "Ações na tela/formulário (Ocultar, Bloquear, Tornar Obrigatório) = Business Rule. Capturar o 'valor anterior' do campo numa automação síncrona = Real-time Workflow."
         },
         "difficulty": "iniciante",
         "domain": "Aplicativos do Microsoft Power"
@@ -675,11 +675,11 @@ export const questionsData = [
         "correctAnswer": 1,
         "explanation": {
             "intro": "Esta questão é uma variação exata da Questão 2 deste simulador, mas com opções de resposta ligeiramente diferentes. A Microsoft adora fazer isto!",
-            "papoReto": "Se a visualização é para *todos*, é uma Visualização Pública (Public View). Onde é que construímos e guardamos as coisas para a empresa inteira usar de forma consolidada e estruturada? Dentro de uma Solução, acedendo à seção de Tabelas/Entidades. Nada de criar visualizações pessoais isoladas.",
+            "papoReto": "Se a visualização é para *todos*, é uma Visualização Pública (Public View). Onde é que construímos e guardamos as coisas para a empresa inteira usar de forma consolidada e estruturada? Dentro de uma Solução, acessando à seção de Tabelas/Entidades. Nada de criar visualizações pessoais isoladas.",
             "respostaCerta": "No componente de Entidades dentro de uma Solução (Entities component of a solution)",
             "puloDoGato": "Para criar componentes globais sem usar código, deve criar ou editar a Tabela (Entidade) diretamente nas configurações do sistema ou através de uma Solução no portal do criador (make.powerapps.com). Nas opções dadas, 'Componente de Entidades dentro de uma solução' é a única resposta que descreve a customização oficial da arquitetura do sistema.",
             "cascasDeBanana": [
-                "Localização Avançada (Advanced Find): Permite criar visualizações *pessoais*. Para partilhar com toda a empresa daria imenso trabalho (teria que partilhar a view manualmente com cada equipe/usuário) e não faria parte da customização base do sistema (Solution)."
+                "Localização Avançada (Advanced Find): Permite criar visualizações *pessoais*. Para compartilhar com toda a empresa daria muito trabalho (teria que compartilhar a view manualmente com cada equipe/usuário) e não faria parte da customização base do sistema (Solution)."
             ],
             "dicaOuro": "Visualizações para 'todos os usuários' (Public Views) devem ser sempre criadas através de uma Solução no componente da Entidade (Tabela)."
         },
@@ -688,7 +688,7 @@ export const questionsData = [
     },
     {
         "id": "q31_topic1",
-        "text": "Você desenvolve um aplicativo Power Apps (model-driven). Os usuários relatam que o formulário principal não exibe dados de outras entidades (tabelas) nem lhes permite editar dados de outras entidades. Você precisa de incorporar (embed) informações de outras entidades no formulário e permitir que os usuários editem os dados. Quais ações deve executar? Selecione a opção correta para cada requisito na ordem: 1. Editar dados (Edit data). 2. Visualizar dados (View data).",
+        "text": "Você desenvolve um aplicativo Power Apps (model-driven). Os usuários relatam que o formulário principal não exibe dados de outras entidades (tabelas) nem lhes permite editar dados de outras entidades. Você precisa incorporar (embed) informações de outras entidades no formulário e permitir que os usuários editem os dados. Quais ações deve executar? Selecione a opção correta para cada requisito na ordem: 1. Editar dados (Edit data). 2. Visualizar dados (View data).",
         "options": [
             "1. Adicionar uma subgrade (sub-grid) | 2. Adicionar um painel de referência (reference panel)",
             "1. Adicionar um formulário de criação rápida (quick create form) | 2. Adicionar uma visualização rápida (quick view)",
@@ -698,7 +698,7 @@ export const questionsData = [
         "correctAnswer": 1,
         "explanation": {
             "intro": "Esta questão aborda como mostrar e introduzir dados de tabelas relacionadas dentro do formulário principal de uma tabela no Dynamics 365 / Dataverse.",
-            "papoReto": "Se está a olhar para a ficha de uma Conta e quer ver os dados do Contato Principal sem sair da página, adiciona um 'Formulário de Visualização Rápida' (Quick View Form). E se, a partir dessa mesma Conta, quiser introduzir rapidamente os dados de um novo registro relacionado (ex: um novo Caso/Ocorrência) sem ter de navegar para outro tela, utiliza o 'Formulário de Criação Rápida' (Quick Create Form).",
+            "papoReto": "Se está olhando para a ficha de uma Conta e quer ver os dados do Contato Principal sem sair da página, adiciona um 'Formulário de Visualização Rápida' (Quick View Form). E se, a partir dessa mesma Conta, quiser introduzir rapidamente os dados de um novo registro relacionado (ex: um novo Caso/Ocorrência) sem ter de navegar para outra tela, utiliza o 'Formulário de Criação Rápida' (Quick Create Form).",
             "respostaCerta": "1. Adicionar um formulário de criação rápida (quick create form) | 2. Adicionar uma visualização rápida (quick view)",
             "puloDoGato": "Os formulários 'Quick View' são sempre de leitura (read-only) e servem para mostrar dados de um registro pai/relacionado. Para permitir a introdução/edição simplificada e rápida de novos dados sem perder o contexto da página atual, o Microsoft Learn recomenda nativamente os 'Quick Create Forms'.",
             "cascasDeBanana": [
@@ -712,7 +712,7 @@ export const questionsData = [
     },
     {
         "id": "q32_topic1",
-        "text": "Uma empresa utiliza um canvas app (aplicativo de tela) para gerenciar recursos de produção numa região específica. Os colaboradores devem estar nas instalações da empresa para utilizar o aplicativo. Devido a uma necessidade repentina de trabalho remoto, os colaboradores deixaram de se deslocar a um local específico e não conseguem acessar ao canvas app. Você deve reconfigurar o aplicativo para garantir que os colaboradores apenas acedem a partir de um número limitado de localizações. Quais componentes deve configurar para cada requisito, respectivamente? 1. Garantir que os colaboradores só podem acessar a partir de uma região específica. 2. Especificar as localizações a partir das quais um usuário pode acessar ao aplicativo.",
+        "text": "Uma empresa utiliza um canvas app (aplicativo de tela) para gerenciar recursos de produção numa região específica. Os colaboradores devem estar nas instalações da empresa para utilizar o aplicativo. Devido a uma necessidade repentina de trabalho remoto, os colaboradores deixaram de se deslocar a um local específico e não conseguem acessar o canvas app. Você deve reconfigurar o aplicativo para garantir que os colaboradores apenas acessam a partir de um número limitado de localizações. Quais componentes deve configurar para cada requisito, respectivamente? 1. Garantir que os colaboradores só podem acessar a partir de uma região específica. 2. Especificar as localizações a partir das quais um usuário pode acessar o aplicativo.",
         "options": [
             "1. Definições do Canvas app | 2. Política de Conformidade (Compliance policy)",
             "1. Power Platform admin center | 2. Política de Segurança Local (Local Security policy)",
@@ -722,7 +722,7 @@ export const questionsData = [
         "correctAnswer": 2,
         "explanation": {
             "intro": "Uma questão fundamental sobre a segurança baseada na localização (geofencing) e quem é responsável por essa barreira no ecossistema Microsoft.",
-            "papoReto": "O Power Apps por si só não sabe proibir alguém de entrar com base na endereço ou no IP. Quem faz o papel de 'segurança do edifício' a verificar a sua identidade e a localização de onde está a tentar entrar é o Azure Active Directory (atualmente Microsoft Entra ID). Lá dentro, o segurança tem um manual de regras chamado 'Política de Acesso Condicional', onde diz: 'Se ele não estiver na região X, bloqueia a entrada'.",
+            "papoReto": "O Power Apps por si só não sabe proibir alguém de entrar com base na endereço ou no IP. Quem faz o papel de 'segurança do edifício' a verificar a sua identidade e a localização de onde está tentando entrar é o Azure Active Directory (atualmente Microsoft Entra ID). Lá dentro, o segurança tem um manual de regras chamado 'Política de Acesso Condicional', onde diz: 'Se ele não estiver na região X, bloqueia a entrada'.",
             "respostaCerta": "1. Azure Active Directory | 2. Política de Acesso Condicional (Conditional Access policy)",
             "puloDoGato": "O acesso condicional (Conditional Access) avalia sinais como o local (endereço IP), o estado do dispositivo e o usuário para tomar decisões de segurança (ex: exigir MFA ou bloquear o acesso). Esta funcionalidade é exclusiva do Microsoft Entra ID (Azure AD), e não é configurada no Power Platform Admin Center nem dentro do próprio Canvas App.",
             "cascasDeBanana": [
@@ -760,7 +760,7 @@ export const questionsData = [
     },
     {
         "id": "q34_topic1",
-        "text": "Um usuário tem acesso a uma base de dados existente do Microsoft Dataverse. Você precisa garantir que o usuário consiga criar aplicativos de tela (canvas apps) que consumam dados do Dataverse. Você não deve conceder permissões que não sejam necessárias (princípio do menor privilégio). Qual direito de acesso (security role) padrão (padr�o) deve atribuir ao usuário?",
+        "text": "Um usuário tem acesso a uma base de dados existente do Microsoft Dataverse. Você precisa garantir que o usuário consiga criar aplicativos de tela (canvas apps) que consumam dados do Dataverse. Você não deve conceder permissões que não sejam necessárias (princípio do menor privilégio). Qual direito de acesso (security role) padrão (padrão) deve atribuir ao usuário?",
         "options": [
             "Administrador de Ambiente (Environment Admin)",
             "Usuário Básico (Basic User)",
@@ -784,7 +784,7 @@ export const questionsData = [
     },
     {
         "id": "q35_topic1",
-        "text": "Você está a configurar a segurança do Microsoft Dataverse e planeia atribuir usuários a Equipes (Teams). A propriedade de registros (ownership) e as permissões baseiam-se em requisitos de negócio. Você precisa determinar qual tipo de equipe deve usar para cada requisito. Selecione a combinação correta para os seguintes requisitos na ordem: 1. Capacidade de ser a proprietária (owner) de registros no Dataverse. 2. Fornece permissões aos membros sem ter um direito de acesso (security role) atribuído à própria equipe.",
+        "text": "Você está configurando a segurança do Microsoft Dataverse e planeja atribuir usuários a Equipes (Teams). A propriedade de registros (ownership) e as permissões baseiam-se em requisitos de negócio. Você precisa determinar qual tipo de equipe deve usar para cada requisito. Selecione a combinação correta para os seguintes requisitos na ordem: 1. Capacidade de ser a proprietária (owner) de registros no Dataverse. 2. Fornece permissões aos membros sem ter um direito de acesso (security role) atribuído à própria equipe.",
         "options": [
             "1. Equipe de Acesso (Access team) | 2. Equipe de Grupo do Azure AD (AAD group team)",
             "1. Equipe do Microsoft Teams | 2. Equipe de Proprietário (Owner team)",
@@ -794,9 +794,9 @@ export const questionsData = [
         "correctAnswer": 2,
         "explanation": {
             "intro": "Uma questão essencial sobre os Tipos de Equipes (Team Types) disponíveis na arquitetura de segurança do Dataverse.",
-            "papoReto": "Se quer que uma equipe seja 'dona' de um cliente ou fatura, tem de ser uma Equipe de Proprietário (Owner Team) ou uma Equipe ligada ao Azure AD (AAD Group Team). Agora, se quer apenas juntar 5 pessoas de departamentos diferentes para lerem e editarem um registro específico, sem ter de lhes dar uma nova função de segurança complexa, você junta-os numa 'Equipe de Acesso' (Access Team) e partilha o registro com eles.",
+            "papoReto": "Se quer que uma equipe seja 'dona' de um cliente ou fatura, precisa ser uma Equipe de Proprietário (Owner Team) ou uma Equipe ligada ao Azure AD (AAD Group Team). Agora, se quer apenas juntar 5 pessoas de departamentos diferentes para lerem e editarem um registro específico, sem ter de lhes dar uma nova função de segurança complexa, você junta-os numa 'Equipe de Acesso' (Access Team) e partilha o registro com eles.",
             "respostaCerta": "1. Equipe de Grupo do Azure AD (AAD group team) | 2. Equipe de Acesso (Access team)",
-            "puloDoGato": "No Dataverse, APENAS as 'Owner Teams' (Equipes de Proprietários) e as 'AAD Group Teams' (Equipes de Grupo do Azure AD) podem ser donas de registros e TÊM de ter um Security Role atribuído à equipe. As 'Access Teams' (Equipes de Acesso) NÃO são donas de registros e NÃO têm Security Roles atribuídos; os privilégios vêm da partilha (sharing) direta do registro com essa equipe de acesso baseando-se nos privilégios individuais de cada membro.",
+            "puloDoGato": "No Dataverse, APENAS as 'Owner Teams' (Equipes de Proprietários) e as 'AAD Group Teams' (Equipes de Grupo do Azure AD) podem ser donas de registros e PRECISAM ter um Security Role atribuído à equipe. As 'Access Teams' (Equipes de Acesso) NÃO são donas de registros e NÃO têm Security Roles atribuídos; os privilégios vêm da partilha (sharing) direta do registro com essa equipe de acesso baseando-se nos privilégios individuais de cada membro.",
             "cascasDeBanana": [
                 "Inverter os conceitos: Se atribuir uma Access Team para ser dona de um registro, o sistema dará erro, pois as Equipes de Acesso não foram feitas para Ownership (propriedade)."
             ],
@@ -841,9 +841,9 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Esta questão foca nos modelos avançados de segurança do Dataverse: Hierarquias (Hierarchical Security) e Equipes de Acesso (Access Teams).",
-            "papoReto": "Para a chefia ver os dados de quem está abaixo deles de forma automática, ativamos a 'Hierarquia' (a chefia herda a visão dos subordinados). Mas a hierarquia só funciona de cima para baixo! Se os vendedores (que estão em baixo) precisam de ver dados da gestão (que estão em cima), a hierarquia não ajuda. Aí temos de usar as 'Equipes de Acesso' (Access Teams) para partilhar registros específicos com eles de forma dinâmica.",
+            "papoReto": "Para a chefia ver os dados de quem está abaixo deles de forma automática, ativamos a 'Hierarquia' (a chefia herda a visão dos subordinados). Mas a hierarquia só funciona de cima para baixo! Se os vendedores (que estão em baixo) precisam de ver dados da gestão (que estão em cima), a hierarquia não ajuda. Aí temos de usar as 'Equipes de Acesso' (Access Teams) para compartilhar registros específicos com eles de forma dinâmica.",
             "respostaCerta": "1. Configurar uma hierarquia de posições (Position hierarchy) | 2. Adicionar a equipe de vendas ao modelo de equipe de acesso da gestão.",
-            "puloDoGato": "A segurança hierárquica (Manager ou Position Hierarchy) permite que os usuários num nível superior acedam aos dados dos usuários num nível inferior de forma automática. O inverso não é verdadeiro. Para partilhar dados lateralmente ou de baixo para cima de forma ágil e caso a caso, as Equipes de Acesso (Access Teams) são a melhor prática nativa.",
+            "puloDoGato": "A segurança hierárquica (Manager ou Position Hierarchy) permite que os usuários num nível superior acessem aos dados dos usuários num nível inferior de forma automática. O inverso não é verdadeiro. Para compartilhar dados lateralmente ou de baixo para cima de forma ágil e caso a caso, as Equipes de Acesso (Access Teams) são a melhor prática nativa.",
             "cascasDeBanana": [
                 "Alterar os direitos de acesso (Security Roles): Como pertencem à mesma Business Unit, dar permissões de leitura no nível da Unidade de Negócios faria com que todos vissem absolutamente tudo de todos, o que violaria o isolamento e as regras de restrição base do cenário.",
                 "Usar hierarquia para vendas ver gestão: A hierarquia nunca concede acesso a quem está num nível inferior para ver os dados de quem está no topo."
@@ -855,7 +855,7 @@ export const questionsData = [
     },
     {
         "id": "q38_topic1",
-        "text": "Você gere um ambiente do Dynamics 365 e cria um conjunto de opções global (global option set / choice) para uma solução personalizada. Mais tarde, repara que o prefixo padrão (default prefix) está incorreto e que os valores numéricos das opções (option values) são demasiado longos. Você precisa de alterar o valor numérico do conjunto de opções e garantir que o prefixo fica correto. Quais são as DUAS ações conjugadas que deve executar?",
+        "text": "Você gere um ambiente do Dynamics 365 e cria um conjunto de opções global (global option set / choice) para uma solução personalizada. Mais tarde, repara que o prefixo padrão (default prefix) está incorreto e que os valores numéricos das opções (option values) são demasiado longos. Você precisa alterar o valor numérico do conjunto de opções e garantir que o prefixo fica correto. Quais são as DUAS ações conjugadas que deve executar?",
         "options": [
             "A) Alterar o prefixo nas definições do sistema E B) Editar o conjunto de opções diretamente.",
             "A) Alterar o prefixo do publicador (publisher's prefix) E B) Excluir (Delete) e recriar o conjunto de opções.",
@@ -865,12 +865,12 @@ export const questionsData = [
         "correctAnswer": 1,
         "explanation": {
             "intro": "Esta questão avalia o conhecimento sobre como as soluções (Solutions), os publicadores (Publishers) e os valores internos das colunas funcionam no Dataverse.",
-            "papoReto": "Quando cria um campo de escolha (Option Set), o sistema gera um valor numérico oculto (ex: 100000001). Esse '10000' é o prefixo que vem do Publicador da Solução em que está a trabalhar. Se esse número ficou errado ou é demasiado longo, não dá para simplesmente clicar e editar. Tem de se excluir o campo, consertar o prefixo no cadastro do Publicador da Solução, e criar o campo de novo a partir do zero.",
+            "papoReto": "Quando cria um campo de escolha (Option Set), o sistema gera um valor numérico oculto (ex: 100000001). Esse '10000' é o prefixo que vem do Publicador da Solução em que está trabalhando. Se esse número ficou errado ou é demasiado longo, não dá para simplesmente clicar e editar. É necessário excluir o campo, consertar o prefixo no cadastro do Publicador da Solução, e criar o campo de novo a partir do zero.",
             "respostaCerta": "A) Alterar o prefixo do publicador (publisher's prefix) E B) Excluir (Delete) e recriar o conjunto de opções.",
             "puloDoGato": "No Dataverse, NÃO é possível alterar o valor numérico base (value) de um Global Option Set após a sua criação (embora possa alterar o texto visível/label). Para corrigir um prefixo ou um valor numérico gerado, a única solução é excluir o campo e recriar. O prefixo (tanto de texto como 'cr435_' quanto o prefixo numérico base de opções) é definido exclusivamente nas propriedades do Publicador (Publisher) da solução.",
             "cascasDeBanana": [
                 "Editar o conjunto de opções: O sistema bloqueia a edição do valor numérico base após a criação para garantir a integridade da base de dados.",
-                "Alterar nas definições do sistema: O prefixo não é uma configuração global do sistema, é controlado pela Solução/Publicador específico onde o componente está a ser criado."
+                "Alterar nas definições do sistema: O prefixo não é uma configuração global do sistema, é controlado pela Solução/Publicador específico onde o componente está sendo criado."
             ],
             "dicaOuro": "Errou o prefixo (nome ou número) de um Option Set (Choice)? A única solução do sistema é Delete & Recreate (Excluir e Recriar). Definir Prefixos = Configurações do Publicador (Publisher)."
         },
@@ -879,7 +879,7 @@ export const questionsData = [
     },
     {
         "id": "q39_topic1",
-        "text": "Você precisa de exibir a receita (revenue) de todas as oportunidades associadas a uma Conta (Account) específica diretamente no formulário da própria Conta. Qual tipo de campo (coluna) deve criar?",
+        "text": "Você precisa exibir a receita (revenue) de todas as oportunidades associadas a uma Conta (Account) específica diretamente no formulário da própria Conta. Qual tipo de campo (coluna) deve criar?",
         "options": [
             "Campo Calculado (Calculated field)",
             "Campo de Pesquisa (Lookup field)",
@@ -889,11 +889,11 @@ export const questionsData = [
         "correctAnswer": 3,
         "explanation": {
             "intro": "Uma questão fundamental e muito frequente no exame sobre agregação de dados entre tabelas relacionadas (1:N) no Dataverse.",
-            "papoReto": "Imagine a Conta como uma capa de um dossier. Dentro dela existem várias folhas, que são as Oportunidades de negócio. Se você quer somar o valor em euros de todas essas folhas e mostrar o Total na capa do dossier, tem de 'enrolar'/'consolidar' os valores de baixo para cima. A coluna que faz isso chama-se Campo de Consolidação (Rollup field).",
+            "papoReto": "Imagine a Conta como uma capa de um dossier. Dentro dela existem várias folhas, que são as Oportunidades de negócio. Se você quer somar o valor em euros de todas essas folhas e mostrar o Total na capa do dossier, precisa 'enrolar'/'consolidar' os valores de baixo para cima. A coluna que faz isso chama-se Campo de Consolidação (Rollup field).",
             "respostaCerta": "Campo de Consolidação (Rollup field)",
             "puloDoGato": "Rollup Fields (Campos de Consolidação) são utilizados para agregar valores matemáticos de múltiplos registros filhos (relação 1:N). Eles fazem operações como Sum (soma), Min, Max ou Count. Eles são calculados de forma assíncrona (a cada 12 horas ou por clique manual).",
             "cascasDeBanana": [
-                "Campo Calculado (Calculated field): Um campo calculado consegue fazer matemática dentro do MESMO registro (Ex: Quantidade * Preço Unitário), ou ir a um registro Pai buscar um dado, mas NÃO consegue olhar para 'baixo' e somar múltiplos registros filhos. Para N registros, tem de ser sempre Rollup."
+                "Campo Calculado (Calculated field): Um campo calculado consegue fazer matemática dentro do MESMO registro (Ex: Quantidade * Preço Unitário), ou ir a um registro Pai buscar um dado, mas NÃO consegue olhar para 'baixo' e somar múltiplos registros filhos. Para N registros, precisa ser sempre Rollup."
             ],
             "dicaOuro": "Somar/Contar NÚMEROS de vários registros filhos (1:N) = Rollup Field (Campo de Consolidação). Lógica/Matemática na mesma linha = Calculated Field."
         },
@@ -912,7 +912,7 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Esta questão explora os pré-requisitos técnicos ocultos para que as integrações nativas com o Outlook funcionem.",
-            "papoReto": "Para o Dynamics permitir que você guarde um e-mail do Outlook a apontar para o seu registro personalizado (ex: guardar e-mail num 'Contrato'), essa tabela do Contrato TEM de estar configurada para aceitar anexar 'Atividades'. Além disso, como o painel lateral da App do Outlook é construído com base nas regras do celular, a tabela tem de estar obrigatoriamente ativada para a interface 'Mobile', caso contrário, nem aparece no painel de pesquisa do Outlook.",
+            "papoReto": "Para o Dynamics permitir que você guarde um e-mail do Outlook a apontar para o seu registro personalizado (ex: guardar e-mail num 'Contrato'), essa tabela do Contrato PRECISA estar configurada para aceitar anexar 'Atividades'. Além disso, como o painel lateral da App do Outlook é construído com base nas regras do celular, a tabela precisa estar obrigatoriamente ativada para a interface 'Mobile', caso contrário, nem aparece no painel de pesquisa do Outlook.",
             "respostaCerta": "1. Ativar para atividades (Enable for activities) | 2. Ativar para celular (Enable for mobile)",
             "puloDoGato": "A App do Dynamics 365 para Outlook é desenvolvida sobre a Interface Unificada (Unified Interface). Para que as tabelas apareçam lá, elas devem estar explicitamente ativadas no cliente Mobile ('Enable for mobile'). Para permitir o rastreamento (tracking) de e-mails, compromissos ou tarefas contra a tabela, é imperativo ativar as Atividades ('Enable for activities'). IMPORTANTE: Ativar 'Atividades' é uma ação irreversível na tabela!",
             "cascasDeBanana": [
@@ -946,7 +946,7 @@ export const questionsData = [
     },
     {
         "id": "q42_topic1",
-        "text": "Você está a utilizar o assistente de Importação de Dados (Data import wizard) para importar registros de contas a partir de um arquivo CSV. O mapeamento é o seguinte: - A coluna 'Name' no CSV representa o nome da conta e mapeia para a coluna 'Account Name'. - A coluna 'Parent Name' no CSV representa a empresa holding (Conta Pai) com subsidiárias associadas. Os registros importados apenas têm relação com outros registros que também estão dentro do próprio arquivo CSV. Você precisa configurar a importação para que as relações (pais e filhos) sejam criadas automaticamente entre estes registros. O que deve fazer?",
+        "text": "Você está utilizando o assistente de Importação de Dados (Data import wizard) para importar registros de contas a partir de um arquivo CSV. O mapeamento é o seguinte: - A coluna 'Name' no CSV representa o nome da conta e mapeia para a coluna 'Account Name'. - A coluna 'Parent Name' no CSV representa a empresa holding (Conta Pai) com subsidiárias associadas. Os registros importados apenas têm relação com outros registros que também estão dentro do próprio arquivo CSV. Você precisa configurar a importação para que as relações (pais e filhos) sejam criadas automaticamente entre estes registros. O que deve fazer?",
         "options": [
             "Mapear 'Parent Name' do CSV para a coluna 'Parent Account'. Selecionar 'Account Name' como critério de pesquisa (lookup criteria).",
             "Mapear 'Parent Name' do CSV para a coluna 'Parent Account'. Selecionar 'Parent Account' como critério de pesquisa.",
@@ -956,11 +956,11 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Questão técnica excelente sobre a importação de dados complexos (com relacionamentos na mesma tabela) usando o Assistente de Importação nativo.",
-            "papoReto": "Tem um arquivo Excel/CSV com uma lista de empresas. Algumas são 'filhas' de outras que também estão nessa mesma lista. Para o sistema ligar a filha à mãe durante a importação, tem de lhe dizer: 'A coluna *Parent Name* do Excel vai ligar-se à coluna *Parent Account* do sistema. E para encontrar qual é a empresa mãe certa dentro do arquivo, procura pelo nome dela (*Account Name*)'.",
+            "papoReto": "Tem um arquivo Excel/CSV com uma lista de empresas. Algumas são 'filhas' de outras que também estão nessa mesma lista. Para o sistema ligar a filha à mãe durante a importação, precisa dizer: 'A coluna *Parent Name* do Excel vai ligar-se à coluna *Parent Account* do sistema. E para encontrar qual é a empresa mãe certa dentro do arquivo, procura pelo nome dela (*Account Name*)'.",
             "respostaCerta": "Mapear 'Parent Name' do CSV para a coluna 'Parent Account'. Selecionar 'Account Name' como critério de pesquisa (lookup criteria).",
-            "puloDoGato": "Como os registros estão todos no mesmo arquivo (pais e filhos), o Assistente de Importação de Dados do Dynamics é suficientemente inteligente para processar isto, mas precisa que o Lookup Criteria (critério de busca) seja exato. O campo 'Parent Account' é um Lookup. O Lookup precisa de saber que campo textual vai usar para encontrar o registro. Como no CSV só temos Nomes (não temos GUIDs), o critério de pesquisa TEM de ser o 'Account Name' (Nome da Conta principal).",
+            "puloDoGato": "Como os registros estão todos no mesmo arquivo (pais e filhos), o Assistente de Importação de Dados do Dynamics é suficientemente inteligente para processar isto, mas precisa que o Lookup Criteria (critério de busca) seja exato. O campo 'Parent Account' é um Lookup. O Lookup precisa de saber que campo textual vai usar para encontrar o registro. Como no CSV só temos Nomes (não temos GUIDs), o critério de pesquisa PRECISA ser o 'Account Name' (Nome da Conta principal).",
             "cascasDeBanana": [
-                "Procurar IDs no Dataverse (opção D): Daria um trabalho infernal e nem funcionaria bem porque as contas mães ainda não existem no sistema (estão a ser importadas simultaneamente no mesmo arquivo).",
+                "Procurar IDs no Dataverse (opção D): Daria um trabalho infernal e nem funcionaria bem porque as contas mães ainda não existem no sistema (estão sendo importadas simultaneamente no mesmo arquivo).",
                 "Selecionar 'Parent Account' como critério de pesquisa (opção B): Errado. Você procura a empresa mãe pelo seu Nome (Account Name), e não pelo nome do pai da mãe."
             ],
             "dicaOuro": "Ao importar dados com relacionamentos internos (Conta Pai/Filho no mesmo CSV), mapeie a coluna do Pai para o campo Lookup e use SEMPRE o Campo Principal (Primary Name Column) como o Critério de Pesquisa (Lookup Criteria)."
@@ -993,21 +993,21 @@ export const questionsData = [
     },
     {
         "id": "q44_topic1",
-        "text": "Você está a configurar um ambiente no Microsoft Dataverse. Você precisa garantir que os acessos estão configurados corretamente para os seguintes requisitos: 1. Garantir que um usuário consiga acessar a um aplicativo (App) específico. 2. Garantir que um usuário consiga visualizar uma entidade (Tabela) específica. Quais ações deve executar, respectivamente?",
+        "text": "Você está configurando um ambiente no Microsoft Dataverse. Você precisa garantir que os acessos estão configurados corretamente para os seguintes requisitos: 1. Garantir que um usuário consiga acessar a um aplicativo (App) específico. 2. Garantir que um usuário consiga visualizar uma entidade (Tabela) específica. Quais ações deve executar, respectivamente?",
         "options": [
             "1. Gerenciar Funções (Manage Roles) do aplicativo | 2. Atribuir um direito de acesso (Security Role) ao usuário",
-            "1. Atribuir um direito de acesso (Security Role) ao usuário | 2. Partilhar o registro (Share record)",
-            "1. Partilhar o registro (Share record) | 2. Gerenciar Funções (Manage Roles) da entidade",
+            "1. Atribuir um direito de acesso (Security Role) ao usuário | 2. Comcompartilhar o registro (Share record)",
+            "1. Comcompartilhar o registro (Share record) | 2. Gerenciar Funções (Manage Roles) da entidade",
             "1. Adicionar o usuário a uma Equipe de Acesso (Access Team) | 2. Gerenciar Funções (Manage Roles) do aplicativo"
         ],
         "correctAnswer": 0,
         "explanation": {
             "intro": "Uma questão fundamental sobre a diferença entre a visibilidade de um Aplicativo (App) e a visibilidade de Dados (Tabelas/Entidades).",
-            "papoReto": "Se um colega não vê o ícone do aplicativo na página inicial, você tem de ir às configurações do App e ligá-lo à função dele (Gerenciar Funções / Manage Roles). Se ele consegue abrir o aplicativo, mas não vê a tabela 'Clientes' lá dentro (ou recebe um erro de permissão), ele precisa de um Direito de Acesso (Security Role) que lhe dê permissão de Leitura nessa entidade.",
+            "papoReto": "Se um colega não vê o ícone do aplicativo na página inicial, você precisa ir às configurações do App e ligá-lo à função dele (Gerenciar Funções / Manage Roles). Se ele consegue abrir o aplicativo, mas não vê a tabela 'Clientes' lá dentro (ou recebe um erro de permissão), ele precisa de um Direito de Acesso (Security Role) que lhe dê permissão de Leitura nessa entidade.",
             "respostaCerta": "1. Gerenciar Funções (Manage Roles) do aplicativo | 2. Atribuir um direito de acesso (Security Role) ao usuário",
             "puloDoGato": "O acesso à Interface (o Model-driven app em si) é gerido partilhando o aplicativo e associando-o a Security Roles (Manage Roles). O acesso aos Dados (as Tabelas/Entidades) é gerido através da atribuição desses mesmos Security Roles diretamente ao Usuário ou à sua Equipe.",
             "cascasDeBanana": [
-                "Partilhar o registro (Share record): Isto dá acesso a uma única linha de dados (ex: o cliente João), mas não dá acesso à Entidade inteira de forma estrutural nem ao Aplicativo."
+                "Comcompartilhar o registro (Share record): Isto dá acesso a uma única linha de dados (ex: o cliente João), mas não dá acesso à Entidade inteira de forma estrutural nem ao Aplicativo."
             ],
             "dicaOuro": "Acesso ao App = Manage Roles (no App). Acesso à Entidade/Tabela = Assign Security Role (ao Usuário)."
         },
@@ -1039,7 +1039,7 @@ export const questionsData = [
     },
     {
         "id": "q46_topic1",
-        "text": "Você está a criar um aplicativo para uma clínica de massagens. Os registros de Contato representam os pacientes da clínica. Os formulários devem cumprir os seguintes requisitos: - Tipo de Caso A: Um usuário visualiza informações detalhadas sobre um registro principal. - Tipo de Caso B: Um usuário visualiza registros num formulário que se adapta (escala) para ser usado num dispositivo móvel. - Tipo de Caso C: Um usuário cria rapidamente um registro sem sair do tela atual. Qual o tipo de formulário que deve utilizar para cada requisito? Selecione a combinação correta na ordem (A, B e C):",
+        "text": "Você está criando um aplicativo para uma clínica de massagens. Os registros de Contato representam os pacientes da clínica. Os formulários devem cumprir os seguintes requisitos: - Tipo de Caso A: Um usuário visualiza informações detalhadas sobre um registro principal. - Tipo de Caso B: Um usuário visualiza registros num formulário que se adapta (escala) para ser usado num dispositivo móvel. - Tipo de Caso C: Um usuário cria rapidamente um registro sem sair da tela atual. Qual o tipo de formulário que deve utilizar para cada requisito? Selecione a combinação correta na ordem (A, B e C):",
         "options": [
             "1. Formulário Principal (Main) | 2. Formulário Principal (Main) | 3. Criação Rápida (Quick Create)",
             "1. Formulário Principal (Main) | 2. Formulário Móvel (Mobile Form) | 3. Criação Rápida (Quick Create)",
@@ -1049,7 +1049,7 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Uma questão essencial sobre os tipos de formulários disponíveis no Model-driven App e as suas responsabilidades.",
-            "papoReto": "Se precisa de ver toda a informação da Conta, usa o formulário 'Principal' (Main). E se for para usar no celular? Hoje em dia não precisa criar um formulário à parte! A Interface Unificada (Unified Interface) faz com que o formulário 'Principal' se adapte automaticamente ao celular. E se quiser criar um registro super rápido sem sair do tela onde está? 'Criação Rápida' (Quick Create).",
+            "papoReto": "Se precisa de ver toda a informação da Conta, usa o formulário 'Principal' (Main). E se for para usar no celular? Hoje em dia não precisa criar um formulário à parte! A Interface Unificada (Unified Interface) faz com que o formulário 'Principal' se adapte automaticamente ao celular. E se quiser criar um registro super rápido sem sair da tela onde está? 'Criação Rápida' (Quick Create).",
             "respostaCerta": "1. Formulário Principal (Main) | 2. Formulário Principal (Main) | 3. Criação Rápida (Quick Create)",
             "puloDoGato": "Historicamente, o Dynamics exigia o design de um 'Mobile Form'. Hoje, com a Unified Interface, o Formulário Principal (Main Form) é totalmente responsivo e escala para baixo (scales down) para caber num tela de dispositivo móvel. Já para pop-ups laterais ou superiores que não fecham a janela principal, usa-se o Quick Create Form.",
             "cascasDeBanana": [
@@ -1063,7 +1063,7 @@ export const questionsData = [
     },
     {
         "id": "q47_topic1",
-        "text": "Você é um programador/configurador do Dynamics 365 Customer Service. Um vendedor cria uma nova Oportunidade. Você precisa garantir que o vendedor preenche todos os campos necessários antes de guardar o registro. Você precisa de exibir uma mensagem de aviso/erro aos usuários se um campo específico for deixado em branco. Você deve impor este requisito sem escrever código personalizado. Quais as DUAS ações que deve executar em sequência?",
+        "text": "Você é um programador/configurador do Dynamics 365 Customer Service. Um vendedor cria uma nova Oportunidade. Você precisa garantir que o vendedor preenche todos os campos necessários antes de guardar o registro. Você precisa exibir uma mensagem de aviso/erro aos usuários se um campo específico for deixado em branco. Você deve impor este requisito sem escrever código personalizado. Quais as DUAS ações que deve executar em sequência?",
         "options": [
             "1. Criar um Fluxo de Trabalho (Workflow) e configurar a condição. 2. Selecionar a ação 'Parar Fluxo de Trabalho' com o status Cancelado.",
             "1. Criar uma Regra de Negócios (Business Rule) e configurar a condição. 2. Selecionar a ação 'Mostrar Mensagem de Erro' (Show error message).",
@@ -1097,11 +1097,11 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Conhecer as capacidades e, principalmente, as limitações do controle 'Grade Editável' (Editable Grid) é um tópico muito comum no exame PL-200.",
-            "papoReto": "A Grade Editável é como ter um mini-Excel dentro do Dynamics. Pode agrupar linhas por país? Sim. As regras de negócio (como dar erro) funcionam lá dentro? Sim. Funciona no celular? Sim. Mas pode editar um campo 'Composto' (aqueles campos que juntam Rua, Cidade e Código Postal num só, como o Endereço)? Não! A grade confunde-se com campos misturados, você tem de os editar campo a campo separadamente.",
+            "papoReto": "A Grade Editável é como ter um mini-Excel dentro do Dynamics. Pode agrupar linhas por país? Sim. As regras de negócio (como dar erro) funcionam lá dentro? Sim. Funciona no celular? Sim. Mas pode editar um campo 'Composto' (aqueles campos que juntam Rua, Cidade e Código Postal num só, como o Endereço)? Não! A grade confunde-se com campos misturados, você precisa editá-los campo a campo separadamente.",
             "respostaCerta": "1. Agrupar: Sim | 2. Regras: Sim | 3. Editar campo composto: Não | 4. Celular: Sim",
             "puloDoGato": "Editable Grids suportam agrupamento (Grouping), execução de Business Rules no cliente, e são compatíveis com mobile. No entanto, NÃO suportam a edição nativa de 'Composite Fields' (Campos Compostos, como o Nome Completo ou Endereço Completo), nem campos de Estado (State/Status) ou campos do tipo Cliente (Customer/PartyList).",
             "cascasDeBanana": [
-                "Achar que a Editable Grid suporta campos compostos (Composite Fields). Este é o erro mais comum. Para editar uma endereço na grade, tem de colocar as colunas individuais (Rua 1, Cidade, País) em vez da coluna agrupada (Endereço Completo)."
+                "Achar que a Editable Grid suporta campos compostos (Composite Fields). Este é o erro mais comum. Para editar uma endereço na grade, precisa colocar as colunas individuais (Rua 1, Cidade, País) em vez da coluna agrupada (Endereço Completo)."
             ],
             "dicaOuro": "Grades Editáveis suportam quase tudo (Regras, Agrupamentos, Mobile), EXCETO: Campos Compostos, Status, e campos de Cliente."
         },
@@ -1110,7 +1110,7 @@ export const questionsData = [
     },
     {
         "id": "q49_topic1",
-        "text": "Você é um gestor de atendimento ao cliente (customer service manager). Precisa de recolher informações dos clientes garantindo o seguinte: - Deve usar formulários baseados em entidades específicas. - Deve garantir que os dados estão ligados diretamente à entidade. - Deve poder partilhar os formulários de forma segura com os clientes. Qual componente deve utilizar para cada um dos seguintes requisitos (respectivamente)? 1. Recolher o feedback dos clientes (Customer feedback). 2. Utilizar informações de negócio existentes para capturar dados de forma segura (Leverage existing business information).",
+        "text": "Você é um gestor de atendimento ao cliente (customer service manager). Precisa de recolher informações dos clientes garantindo o seguinte: - Deve usar formulários baseados em entidades específicas. - Deve garantir que os dados estão ligados diretamente à entidade. - Deve poder compartilhar os formulários de forma segura com os clientes. Qual componente deve utilizar para cada um dos seguintes requisitos (respectivamente)? 1. Recolher o feedback dos clientes (Customer feedback). 2. Utilizar informações de negócio existentes para capturar dados de forma segura (Leverage existing business information).",
         "options": [
             "1. Dynamics 365 Customer Voice | 2. Portal do Power Apps (Power Pages)",
             "1. Portal do Power Apps (Power Pages) | 2. Microsoft Forms",
@@ -1119,12 +1119,12 @@ export const questionsData = [
         ],
         "correctAnswer": 0,
         "explanation": {
-            "intro": "Esta questão testa a sua capacidade de distinguir entre as ferramentas de recolha de dados viradas para o exterior na Power Platform.",
-            "papoReto": "Se só quer enviar um questionário para saber se o cliente gostou do atendimento (Avaliação/Feedback), a melhor ferramenta nativa é o Dynamics 365 Customer Voice. Mas se quer que o cliente aceda a uma área segura, veja as faturas dele e atualize dados vitais com base nas tabelas do sistema, tem de lhe dar um website a sério, autenticado. Para isso usamos o Portal do Power Apps (hoje chamado Power Pages).",
+            "intro": "Esta questão testa a sua capacidade de distinguir entre as ferramentas de coleta de dados viradas para o exterior na Power Platform.",
+            "papoReto": "Se só quer enviar um questionário para saber se o cliente gostou do atendimento (Avaliação/Feedback), a melhor ferramenta nativa é o Dynamics 365 Customer Voice. Mas se quer que o cliente acesse uma área segura, veja as faturas dele e atualize dados vitais com base nas tabelas do sistema, precisa dar um website a sério, autenticado. Para isso usamos o Portal do Power Apps (hoje chamado Power Pages).",
             "respostaCerta": "1. Dynamics 365 Customer Voice | 2. Portal do Power Apps (Power Pages)",
             "puloDoGato": "A palavra 'feedback' (ou 'survey' / questionário) é o gatilho automático para 'Dynamics 365 Customer Voice' (antigo Forms Pro). Já 'leveraging existing business information' num ambiente seguro com formulários baseados nas entidades do Dataverse remete exclusivamente a um 'Power Apps Portal' (Power Pages).",
             "cascasDeBanana": [
-                "Microsoft Forms: Embora recolha dados, não liga automaticamente e de forma robusta às entidades (tabelas) do Dynamics com a segurança exigida para processos de negócios complexos, além de não fornecer a área autenticada do Portal."
+                "Microsoft Forms: Embora coleta dados, não liga automaticamente e de forma robusta às entidades (tabelas) do Dynamics com a segurança exigida para processos de negócios complexos, além de não fornecer a área autenticada do Portal."
             ],
             "dicaOuro": "Inquéritos e Feedback = Dynamics 365 Customer Voice. Website autenticado ligado diretamente às tabelas do Dataverse = Power Apps Portal (Power Pages)."
         },
@@ -1143,7 +1143,7 @@ export const questionsData = [
         "correctAnswer": 1,
         "explanation": {
             "intro": "Uma questão sobre como esconder campos das pesquisas avançadas do Dataverse sem necessariamente removê-los do formulário.",
-            "papoReto": "Se não quer que os usuários consigam procurar ou criar relatórios usando um campo específico (por exemplo, um campo de 'Número de Calçado' num cliente), basta ir às propriedades de configuração desse campo exato na tabela e desligar a opção 'Searchable' (Pesquisável). Ele desaparece do tela de filtros avançados magicamente.",
+            "papoReto": "Se não quer que os usuários consigam procurar ou criar relatórios usando um campo específico (por exemplo, um campo de 'Número de Calçado' num cliente), basta ir às propriedades de configuração desse campo exato na tabela e desligar a opção 'Searchable' (Pesquisável). Ele desaparece da tela de filtros avançados magicamente.",
             "respostaCerta": "A propriedade 'Pesquisável' (Searchable) no formulário de Propriedades do Campo (Field Properties).",
             "puloDoGato": "A propriedade 'Searchable' (Pesquisável) no Dataverse não apaga o campo da base de dados nem o esconde dos formulários na interface. O seu único objetivo é ocultar o campo das listas pendentes (dropdowns) quando os usuários tentam criar filtros na Localização Avançada (Advanced Find) ou noutros criadores de consultas (Query Builders).",
             "cascasDeBanana": [
@@ -1156,7 +1156,7 @@ export const questionsData = [
     },
     {
         "id": "q51_topic1",
-        "text": "Você está a desenhar um aplicativo de tela (canvas app) que se liga ao Common Data Service (Dataverse). Precisa de configurar o aplicativo para cumprir os requisitos e garantir que ele fica disponível offline. Que funções Power Fx deve implementar para cada requisito, respectivamente? 1. Passar valores do tela atual ao mover-se para outro tela. 2. Exibir dados a um usuário quando o aplicativo está offline.",
+        "text": "Você está projetando um aplicativo de tela (canvas app) que se liga ao Common Data Service (Dataverse). Precisa configurar o aplicativo para cumprir os requisitos e garantir que ele fica disponível offline. Que funções Power Fx deve implementar para cada requisito, respectivamente? 1. Passar valores da tela atual ao mover-se para outra tela. 2. Exibir dados a um usuário quando o aplicativo está offline.",
         "options": [
             "1. Back() | 2. SaveData()",
             "1. Navigate() | 2. LoadData()",
@@ -1166,22 +1166,22 @@ export const questionsData = [
         "correctAnswer": 1,
         "explanation": {
             "intro": "Esta questão aborda duas funcionalidades centrais dos Canvas Apps: navegação com passagem de contexto e funcionalidades offline nativas.",
-            "papoReto": "Quando quer saltar do 'Tela A' para o 'Tela B' num Canvas App e levar um dado consigo (tipo o ID do cliente), utiliza a função Navigate. Se o usuário ficar sem internet (offline) e quiser que ele veja os dados que foram previamente gravados na cache do celular, tem de pedir à app para 'carregar os dados' com a função LoadData.",
+            "papoReto": "Quando quer saltar do 'Tela A' para o 'Tela B' num Canvas App e levar um dado consigo (tipo o ID do cliente), utiliza a função Navigate. Se o usuário ficar sem internet (offline) e quiser que ele veja os dados que foram previamente gravados na cache do celular, precisa pedir à app para 'carregar os dados' com a função LoadData.",
             "respostaCerta": "1. Navigate() | 2. LoadData()",
-            "puloDoGato": "A função `Maps` aceita um argumento de contexto opcional (UpdateContextRecord), que é o método exato para passar variáveis entre telas (ex: `Maps(EcraDetalhes, ScreenTransition.None, {IDCliente: 123})`). Para as aplicações offline, usamos `SaveData` para gravar informações na cache local do dispositivo e `LoadData` para puxar (exibir) essas coleções de volta ao tela quando estamos sem rede.",
+            "puloDoGato": "A função `Maps` aceita um argumento de contexto opcional (UpdateContextRecord), que é o método exato para passar variáveis entre telas (ex: `Maps(EcraDetalhes, ScreenTransition.None, {IDCliente: 123})`). Para as aplicações offline, usamos `SaveData` para gravar informações na cache local do dispositivo e `LoadData` para puxar (exibir) essas coleções de volta aa tela quando estamos sem rede.",
             "cascasDeBanana": [
-                "Back(): Regressa ao tela anterior, mas NÃO permite passar novas variáveis de contexto.",
+                "Back(): Regressa aa tela anterior, mas NÃO permite passar novas variáveis de contexto.",
                 "ShowDataOffline(): É uma função inventada que não existe na linguagem Power Fx.",
                 "SaveData() para exibir: O SaveData serve para *guardar* o arquivo localmente, não para o *exibir* (LoadData)."
             ],
-            "dicaOuro": "Passar dados para novo tela = Navigate. Mostrar dados guardados offline = LoadData. Guardar dados para o offline = SaveData."
+            "dicaOuro": "Passar dados para nova tela = Navigate. Mostrar dados guardados offline = LoadData. Guardar dados para o offline = SaveData."
         },
         "difficulty": "intermediario",
         "domain": "Microsoft Dataverse"
     },
     {
         "id": "q52_topic1",
-        "text": "Tem um aplicativo de tela (canvas app) que permite aos usuários visualizar, selecionar e comprar produtos. O aplicativo utiliza um controle de Galeria (Gallery) para exibir os produtos e caixas de seleção (checkboxes) para os usuários os selecionarem. Quando os usuários selecionam itens do catálogo, eles movem-se para outro tela para concluir a compra. Os usuários devem conseguir limpar todas as seleções de produtos ao clicarem num botão 'Limpar Seleções'. Como deve configurar a ação deste botão?",
+        "text": "Tem um aplicativo de tela (canvas app) que permite aos usuários visualizar, selecionar e comprar produtos. O aplicativo utiliza um controle de Galeria (Gallery) para exibir os produtos e caixas de seleção (checkboxes) para os usuários os selecionarem. Quando os usuários selecionam itens do catálogo, eles movem-se para outra tela para concluir a compra. Os usuários devem conseguir limpar todas as seleções de produtos ao clicarem num botão 'Limpar Seleções'. Como deve configurar a ação deste botão?",
         "options": [
             "Utilizar a função Reset() e passar o controle da galeria como parâmetro: Reset(Gallery1).",
             "Utilizar a função Reload() e passar a galeria como parâmetro.",
@@ -1195,7 +1195,7 @@ export const questionsData = [
             "respostaCerta": "Utilizar a função Reset() e passar o controle da galeria como parâmetro: Reset(Gallery1).",
             "puloDoGato": "No Power Fx, a função `Reset(Control)` descarta todas as alterações feitas pelo usuário num controle e restaura os seus valores padrão (default). Quando o Reset é invocado para uma Galeria inteira (`Reset(Gallery1)`), a plataforma reinicia todos os controles dentro da galeria (incluindo as checkboxes) para o seu valor inicial (que normalmente é 'false' / desmarcado). Esta é a forma mais performática sem ter de usar ciclos for.",
             "cascasDeBanana": [
-                "Usar Clear() na coleção: O `Clear(Colecao)` apagaria os dados nos bastidores (memória), mas NÃO tiraria o 'visto' visual da checkbox que o usuário marcou na galeria no tela. Para forçar a limpeza visual, teria de usar o Reset de qualquer forma.",
+                "Usar Clear() na coleção: O `Clear(Colecao)` apagaria os dados nos bastidores (memória), mas NÃO tiraria o 'visto' visual da checkbox que o usuário marcou na galeria na tela. Para forçar a limpeza visual, teria de usar o Reset de qualquer forma.",
                 "Usar Reload(): Essa função não existe para este contexto em Power Fx."
             ],
             "dicaOuro": "Limpar o estado visual de todos os controles inseridos numa Galeria com um só clique = Reset(NomeDaGaleria)."
@@ -1228,7 +1228,7 @@ export const questionsData = [
     },
     {
         "id": "q54_topic1",
-        "text": "Você é um administrador do Dynamics 365 Customer Service. Um usuário precisa de conseguir visualizar as publicações do sistema (system posts) e as atividades (activities) num dashboard. Tem de criar o dashboard para o usuário. Que componentes deve utilizar para cada requisito? Selecione a combinação correta na ordem: 1. Exibir publicações do sistema (Display system posts). 2. Exibir atividades (Display activities).",
+        "text": "Você é um administrador do Dynamics 365 Customer Service. Um usuário precisa de conseguir visualizar as publicações do sistema (system posts) e as atividades (activities) num dashboard. Precisa criar o dashboard para o usuário. Que componentes deve utilizar para cada requisito? Selecione a combinação correta na ordem: 1. Exibir publicações do sistema (Display system posts). 2. Exibir atividades (Display activities).",
         "options": [
             "1. Linha do Tempo (Timeline) | 2. Listas (Lists)",
             "1. Insights da Organização (Organization Insights) | 2. Relações (Relationship Insights)",
@@ -1252,7 +1252,7 @@ export const questionsData = [
     },
     {
         "id": "q55_topic1",
-        "text": "Uma empresa está a implementar o Power Apps e o Power Automate. Vários componentes são criados dentro do Power Apps, Microsoft Dataverse e Power Automate. Estes componentes têm de ser promovidos do ambiente de desenvolvimento (development environment) para o ambiente de testes de aceitação do usuário (UAT) num único pacote de solução (solution package). Precisa de criar o pacote de solução para a promoção. Onde deve criar o pacote?",
+        "text": "Uma empresa está implementando o Power Apps e o Power Automate. Vários componentes são criados dentro do Power Apps, Microsoft Dataverse e Power Automate. Estes componentes precisam ser promovidos do ambiente de desenvolvimento (development environment) para o ambiente de testes de aceitação do usuário (UAT) num único pacote de solução (solution package). Precisa criar o pacote de solução para a promoção. Onde deve criar o pacote?",
         "options": [
             "Azure DevOps",
             "Designer do Power Apps (Maker Portal / Power Apps designer)",
@@ -1266,7 +1266,7 @@ export const questionsData = [
             "respostaCerta": "Designer do Power Apps (Maker Portal / Power Apps designer)",
             "puloDoGato": "As Soluções (Solutions) são os contentores usados para transportar componentes entre ambientes. São criadas, populadas e exportadas exclusivamente na seção 'Soluções' do Maker Portal (Power Apps designer).",
             "cascasDeBanana": [
-                "Azure DevOps: O DevOps é uma ferramenta excelente usada para automatizar (pipelines CI/CD) a movimentação do pacote, mas o pacote em si tem de existir e ser criado primeiramente no Maker Portal.",
+                "Azure DevOps: O DevOps é uma ferramenta excelente usada para automatizar (pipelines CI/CD) a movimentação do pacote, mas o pacote em si precisa existir e ser criado primeiramente no Maker Portal.",
                 "Centro de administração da Power Platform: Serve para gerenciar os ambientes físicos (criar, copiar, fazer backup), não para desenhar ou agrupar os pacotes de Solução que vão lá dentro."
             ],
             "dicaOuro": "Criar ou Exportar pacotes de Solução (Solution Packages) = Power Apps Designer (Maker Portal / make.powerapps.com)."
@@ -1276,7 +1276,7 @@ export const questionsData = [
     },
     {
         "id": "q56_topic1",
-        "text": "Uma empresa está a criar uma solução no Power Apps para uma instalação de produção. A solução atual está em Inglês. Os componentes personalizados têm de ser traduzidos para vários idiomas. Você precisa de extrair (exportar) o texto para tradução. Em que local pode atingir este objetivo?",
+        "text": "Uma empresa está criando uma solução no Power Apps para uma instalação de produção. A solução atual está em Inglês. Os componentes personalizados precisam ser traduzidos para vários idiomas. Você precisa extrair (exportar) o texto para tradução. Em que local pode atingir este objetivo?",
         "options": [
             "Nas tabelas (tables) individuais no aplicativo web.",
             "No ambiente selecionado dentro do Microsoft Power Platform admin center.",
@@ -1300,7 +1300,7 @@ export const questionsData = [
     },
     {
         "id": "q57_topic1",
-        "text": "[Atenção: Variação da Q53] Tem um aplicativo de tela (canvas app) que permite aos usuários visualizar, selecionar e comprar produtos. O aplicativo utiliza um controle de Galeria (Gallery) para exibir os produtos e caixas de seleção (checkboxes) para os usuários os selecionarem. Quando os usuários selecionam itens do catálogo, eles movem-se para outro tela para concluir a compra. Os usuários devem conseguir limpar todas as seleções de produtos ao clicarem num botão. Como deve configurar a ação deste botão?",
+        "text": "[Atenção: Variação da Q53] Tem um aplicativo de tela (canvas app) que permite aos usuários visualizar, selecionar e comprar produtos. O aplicativo utiliza um controle de Galeria (Gallery) para exibir os produtos e caixas de seleção (checkboxes) para os usuários os selecionarem. Quando os usuários selecionam itens do catálogo, eles movem-se para outra tela para concluir a compra. Os usuários devem conseguir limpar todas as seleções de produtos ao clicarem num botão. Como deve configurar a ação deste botão?",
         "options": [
             "Utilizar a função Reload(Control) e passar a galeria como parâmetro.",
             "Utilizar a função Reset(Control) e passar a caixa de seleção (checkbox) como parâmetro para limpar as seleções.",
@@ -1312,9 +1312,9 @@ export const questionsData = [
             "intro": "Uma ótima oportunidade para revermos o mesmo conceito testado na questão 53. A Microsoft sabe que as coleções geram confusão visual no Power Apps.",
             "papoReto": "Mais uma vez: o usuário marcou 10 produtos numa lista (Galeria) com aquelas 'caixinhas de seleção'. O usuário desiste e clica em 'Limpar'. A forma mais limpa, rápida e correta de excluir todos os 'vistos' visuais das caixinhas numa só pancada é dizer à galeria inteira: 'Faz Reset para o estado inicial'.",
             "respostaCerta": "Utilizar a fórmula Reset() e passar o controle da galeria (gallery control) como parâmetro à fórmula.",
-            "puloDoGato": "No Power Fx, a função `Reset(NomeDaGaleria)` restaura todos os controles dentro dessa galeria aos seus valores predefinidos (default). Como o padrão de uma checkbox é estar desmarcada (false), todas perdem o visto imediatamente. É infinitamente mais performático do que tentar manipular coleções manualmente apenas para atualizar o aspeto visual no tela.",
+            "puloDoGato": "No Power Fx, a função `Reset(NomeDaGaleria)` restaura todos os controles dentro dessa galeria aos seus valores predefinidos (default). Como o padrão de uma checkbox é estar desmarcada (false), todas perdem o visto imediatamente. É infinitamente mais performático do que tentar manipular coleções manualmente apenas para atualizar o aspeto visual na tela.",
             "cascasDeBanana": [
-                "Limpar a Coleção (Clear): Tal como explicado na Q53, limpar a coleção de dados não desmarca visualmente a checkbox que o usuário clicou no tela. Teria de usar o Reset na mesma para excluir a marca visual.",
+                "Limpar a Coleção (Clear): Tal como explicado na Q53, limpar a coleção de dados não desmarca visualmente a checkbox que o usuário clicou na tela. Teria de usar o Reset na mesma para excluir a marca visual.",
                 "Reset(Checkbox): O Reset afeta apenas o controle passado como parâmetro. Se passar apenas o controle Checkbox de uma linha específica, não vai limpar as das outras linhas. Ao passar a Galeria inteira, resolve tudo."
             ],
             "dicaOuro": "Limpar o estado visual de todos os controles numa Galeria inteira (como Checkboxes e TextInputs) com um só clique = Reset(NomeDaGaleria)."
@@ -1324,7 +1324,7 @@ export const questionsData = [
     },
     {
         "id": "q58_topic1",
-        "text": "Um cliente regista eventos utilizando uma entidade personalizada (custom entity). A entidade personalizada inclui um campo personalizado para o 'local' (venue) dos eventos. O cliente tem de conseguir visualizar os eventos agrupados por local num formato de calendário. Você precisa garantir que todos os eventos são apresentados por local no calendário. Em que componente deve adicionar o controle (Calendar control)?",
+        "text": "Um cliente regista eventos utilizando uma entidade personalizada (custom entity). A entidade personalizada inclui um campo personalizado para o 'local' (venue) dos eventos. O cliente precisa conseguir visualizar os eventos agrupados por local num formato de calendário. Você precisa garantir que todos os eventos são apresentados por local no calendário. Em que componente deve adicionar o controle (Calendar control)?",
         "options": [
             "Formulário (Form)",
             "Subgrade (Subgrid)",
@@ -1348,7 +1348,7 @@ export const questionsData = [
     },
     {
         "id": "q59_topic1",
-        "text": "Você está a criar um aplicativo de tela (canvas app). Um usuário irá clicar em um botão em cada tela de uma aplicação Power Apps para avançar para o tela seguinte. Você precisa de implementar a ação que direciona o usuário para o próximo tela. Qual evento (propriedade) deve manipular?",
+        "text": "Você está criando um aplicativo de tela (canvas app). Um usuário irá clicar em um botão em cada tela de uma aplicação Power Apps para avançar para a tela seguinte. Você precisa implementar a ação que direciona o usuário para o próxima tela. Qual evento (propriedade) deve manipular?",
         "options": [
             "ScreenTransition",
             "OnSelect",
@@ -1364,7 +1364,7 @@ export const questionsData = [
             "cascasDeBanana": [
                 "ScreenTransition: Isto é um parâmetro usado *dentro* da função Navigate (ex: ScreenTransition.Fade), mas não é um evento/propriedade do botão.",
                 "OnCheck: É a propriedade disparada quando uma caixa de seleção (Checkbox) ou Toggle é marcada, não um botão de avanço padrão.",
-                "OnLoad: Não existe nos botões do Power Apps (o mais próximo seria o OnVisible no nível do tela)."
+                "OnLoad: Não existe nos botões do Power Apps (o mais próximo seria o OnVisible no nível da tela)."
             ],
             "dicaOuro": "Clicar num botão no Canvas App = Evento OnSelect."
         },
@@ -1385,7 +1385,7 @@ export const questionsData = [
             "intro": "ATENÇÃO: Muitos gabaritos na internet mostram a resposta errada para esta pergunta. Vamos focar-nos no funcionamento real e técnico do Power Fx para não cair em rasteiras.",
             "papoReto": "1º: A função 'Set' cria variáveis GLOBAIS. Se é global, funciona em qualquer tela? Sim! 2º: O 'Set' criou uma coleção? Não. Ele criou uma variável global que guarda uma pequena tabela (array). Coleções criam-se com 'Collect' ou 'ClearCollect'. 3º: Pode usar a função 'Update' nela? Não. A função 'Update' serve para modificar dados em Coleções ou Fontes de Dados, não em variáveis globais.",
             "respostaCerta": "1. Sim | 2. Não | 3. Não",
-            "puloDoGato": "Regra de essencial do Power Fx: `Set()` cria variáveis Globais (acessíveis em toda a app). `UpdateContext()` cria variáveis Locais (acessíveis só no tela atual). `Collect()` cria Coleções. O código `[\"a\", \"b\"]` gera uma tabela de uma única coluna (single-column table), mas como foi guardada via `Set`, é tecnicamente uma variável global a armazenar uma tabela, e não uma Collection na definição estrita da plataforma (não aparece na aba 'Collections' e não aceita funções exclusivas de coleções).",
+            "puloDoGato": "Regra de essencial do Power Fx: `Set()` cria variáveis Globais (acessíveis em toda a app). `UpdateContext()` cria variáveis Locais (acessíveis só na tela atual). `Collect()` cria Coleções. O código `[\"a\", \"b\"]` gera uma tabela de uma única coluna (single-column table), mas como foi guardada via `Set`, é tecnicamente uma variável global a armazenar uma tabela, e não uma Collection na definição estrita da plataforma (não aparece na aba 'Collections' e não aceita funções exclusivas de coleções).",
             "cascasDeBanana": [
                 "Confiar nos gabaritos vazados que dizem 'Não, Não, Sim'. Isso indicaria que a variável não seria global (falso, pois usou Set) e que poderia usar o Update (falso, pois o Update pede uma Collection ou Data Source)."
             ],
@@ -1398,7 +1398,7 @@ export const questionsData = [
         "id": "q61_topic1",
         "text": "Você é um programador do Dynamics 365 Customer Service. Um vendedor cria um gráfico (chart) pessoal no sistema. Você precisa garantir que esse gráfico fica disponível para ser visualizado por todos os usuários da equipe desse vendedor. O que deve fazer?",
         "options": [
-            "Partilhar (Share) o gráfico com a equipe.",
+            "Comcompartilhar (Share) o gráfico com a equipe.",
             "Atribuir (Assign) o gráfico a cada pessoa da equipe.",
             "Exportar o gráfico do usuário para o Power BI e importá-lo como uma visualização.",
             "Exportar o gráfico para ser importado como um gráfico de usuário noutras contas."
@@ -1406,21 +1406,21 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Esta questão explora as capacidades de colaboração e visualização de dados (dashboards e gráficos) no Dynamics 365 / Dataverse.",
-            "papoReto": "Se um vendedor montou um gráfico de vendas espetacular e quer que os colegas da equipe o consigam ver e usar, ele não precisa de dar o gráfico aos outros (Atribuir) nem de fazer malabarismos a exportar arquivos. Ele só precisa de clicar no gráfico e escolher 'Partilhar' (Share) com a equipe. Simples e direto.",
-            "respostaCerta": "Partilhar (Share) o gráfico com a equipe.",
-            "puloDoGato": "Os Gráficos Pessoais (User Charts) e Vistas Pessoais (Personal Views) pertencem a quem os cria (são user-owned). O proprietário pode partilhá-los (Share) facilmente com outros usuários ou equipes do Dataverse. Partilhar concede direitos de leitura (ou outros, se especificados) sem alterar a propriedade do registro.",
+            "papoReto": "Se um vendedor montou um gráfico de vendas espetacular e quer que os colegas da equipe o consigam ver e usar, ele não precisa de dar o gráfico aos outros (Atribuir) nem de fazer malabarismos a exportar arquivos. Ele só precisa de clicar no gráfico e escolher 'Comcompartilhar' (Share) com a equipe. Simples e direto.",
+            "respostaCerta": "Comcompartilhar (Share) o gráfico com a equipe.",
+            "puloDoGato": "Os Gráficos Pessoais (User Charts) e Vistas Pessoais (Personal Views) pertencem a quem os cria (são user-owned). O proprietário pode compartilhá-los (Share) facilmente com outros usuários ou equipes do Dataverse. Comcompartilhar concede direitos de leitura (ou outros, se especificados) sem alterar a propriedade do registro.",
             "cascasDeBanana": [
                 "Atribuir (Assign): O 'Assign' muda o dono (proprietário) do gráfico. Se o vendedor A atribuir o gráfico à equipe, ele deixa de ser o dono individual do gráfico, o que não é o objetivo (ele só quer que os outros vejam).",
-                "Exportar/Importar: Uma solução absurdamente trabalhosa para um problema que o sistema resolve nativamente com o botão 'Partilhar'."
+                "Exportar/Importar: Uma solução absurdamente trabalhosa para um problema que o sistema resolve nativamente com o botão 'Comcompartilhar'."
             ],
-            "dicaOuro": "Permitir que outros vejam os seus gráficos/vistas pessoais = Partilhar (Share). Transferir a propriedade do seu gráfico para outra pessoa = Atribuir (Assign)."
+            "dicaOuro": "Permitir que outros vejam os seus gráficos/vistas pessoais = Comcompartilhar (Share). Transferir a propriedade do seu gráfico para outra pessoa = Atribuir (Assign)."
         },
         "difficulty": "iniciante",
         "domain": "Ambientes do Microsoft Power Platform"
     },
     {
         "id": "q62_topic1",
-        "text": "Você está a criar um aplicativo (model-driven app). Você precisa criar o mapa do site (Site Map) para o aplicativo. Quais são as três ações que deve executar em sequência para construir a navegação? Selecione a ordem correta:",
+        "text": "Você está criando um aplicativo (model-driven app). Você precisa criar o mapa do site (Site Map) para o aplicativo. Quais são as três ações que deve executar em sequência para construir a navegação? Selecione a ordem correta:",
         "options": [
             "1. Adicionar um grupo (Add a group) -> 2. Adicionar uma área (Add an area) -> 3. Adicionar uma subárea (Add a subarea)",
             "1. Adicionar uma área (Add an area) -> 2. Adicionar uma subárea (Add a subarea) -> 3. Adicionar uma visualização (Add a view)",
@@ -1432,7 +1432,7 @@ export const questionsData = [
             "intro": "Uma questão visual e arquitetónica sobre como construir o menu lateral (Site Map) de um aplicativo orientado por modelo.",
             "papoReto": "Construir o menu de um Model-driven App é como construir uma casa. Primeiro compra o terreno (Área). Dentro do terreno, constrói as divisões (Grupos). E dentro das divisões, coloca os móveis (Subáreas - que são os links reais para as tabelas ou dashboards).",
             "respostaCerta": "1. Adicionar uma área (Add an area) -> 2. Adicionar um grupo (Add a group) -> 3. Adicionar uma subárea (Add a subarea)",
-            "puloDoGato": "O Site Map Designer exige uma hierarquia estrita: Area > Group > Subarea. A 'Área' é o seletor principal no fundo do tela (ex: Vendas vs Serviço). O 'Grupo' é o título do menu (ex: Clientes). A 'Subárea' é o link clicável (ex: Contas, Contatos). Não é possível adicionar uma subárea sem ter primeiro um grupo, nem um grupo sem ter uma área.",
+            "puloDoGato": "O Site Map Designer exige uma hierarquia estrita: Area > Group > Subarea. A 'Área' é o seletor principal no fundo da tela (ex: Vendas vs Serviço). O 'Grupo' é o título do menu (ex: Clientes). A 'Subárea' é o link clicável (ex: Contas, Contatos). Não é possível adicionar uma subárea sem ter primeiro um grupo, nem um grupo sem ter uma área.",
             "cascasDeBanana": [
                 "Adicionar uma visualização (Add a view): As vistas (views) são adicionadas nas configurações da Entidade (Tabela) dentro do App Designer, e não na estrutura esqueleto de navegação do Site Map."
             ],
@@ -1443,7 +1443,7 @@ export const questionsData = [
     },
     {
         "id": "q63_topic1",
-        "text": "Você está a configurar um novo portal do Power Apps (Power Pages). Mantém as funções da web (web roles) predefinidas: uma para usuários autenticados e outra para usuários anónimos. Você concede a função de Usuárioes Anónimos aos usuários. Um usuário de teste relata que consegue acessar à página inicial (home page), mas não consegue visualizar uma página vinculada a partir da página inicial. Você precisa determinar o motivo pelo qual o usuário de teste não consegue visualizar a página do portal. Qual é a causa do problema?",
+        "text": "Você está configurando um novo portal do Power Apps (Power Pages). Mantém as funções da web (web roles) predefinidas: uma para usuários autenticados e outra para usuários anónimos. Você concede a função de Usuárioes Anónimos aos usuários. Um usuário de teste relata que consegue acessar a página inicial (home page), mas não consegue visualizar uma página vinculada a partir da página inicial. Você precisa determinar o motivo pelo qual o usuário de teste não consegue visualizar a página do portal. Qual é a causa do problema?",
         "options": [
             "A configuração para tornar a página 'disponível para todos' (available to everyone) está desmarcada.",
             "As permissões herdadas (Inherited permissions) não estão ativadas para a página vinculada.",
@@ -1458,7 +1458,7 @@ export const questionsData = [
             "puloDoGato": "No Power Pages Design Studio, cada página web tem configurações de permissão. Se a opção 'Page available to everyone' for desmarcada, a página passa a exigir permissões específicas (Page Permissions) vinculadas a Web Roles de usuários autenticados. Logo, os anónimos perdem o acesso a essa sub-página específica, mesmo que tenham acedido à Home.",
             "cascasDeBanana": [
                 "Usuárioes Autenticados não têm permissão (Opção C): O enunciado foca-se num usuário de teste a acessar como 'Anónimo', logo, o que acontece com o papel de Autenticados é irrelevante para este teste específico.",
-                "Modo de manutenção (Opção D): Se estivesse em modo de manutenção, o usuário nem a página Home conseguiria ver (veria apenas o tela de manutenção)."
+                "Modo de manutenção (Opção D): Se estivesse em modo de manutenção, o usuário nem a página Home conseguiria ver (veria apenas a tela de manutenção)."
             ],
             "dicaOuro": "Página anónima com erro de acesso isolado = A opção 'Disponível para todos' (Available to everyone) foi desativada nessa página."
         },
@@ -1467,7 +1467,7 @@ export const questionsData = [
     },
     {
         "id": "q64_topic1",
-        "text": "Você está a criar um novo portal do Power Apps (Power Pages) para uma pequena empresa. O portal é um site interno. Apenas usuários autenticados podem acessar ao conteúdo. Você precisa configurar a autenticação e as permissões. Qual componente deve configurar para cada requisito, respectivamente? 1. Necessário para cada usuário autenticado antes que a segurança lhe possa ser atribuída. 2. Necessário para que usuários autenticados acedam a páginas restritas do portal.",
+        "text": "Você está criando um novo portal do Power Apps (Power Pages) para uma pequena empresa. O portal é um site interno. Apenas usuários autenticados podem acessar o conteúdo. Você precisa configurar a autenticação e as permissões. Qual componente deve configurar para cada requisito, respectivamente? 1. Necessário para cada usuário autenticado antes que a segurança lhe possa ser atribuída. 2. Necessário para que usuários autenticados acessem a páginas restritas do portal.",
         "options": [
             "1. Registro da tabela Contato (Contact table record) | 2. Função web (Web role)",
             "1. Usuário Local (Local user) | 2. Registro da tabela Contato (Contact table record)",
@@ -1490,7 +1490,7 @@ export const questionsData = [
     },
     {
         "id": "q65_topic1",
-        "text": "Você cria um portal para fornecer um website para os clientes. O negócio exige que um tema personalizado seja aplicado à interface do portal. Você precisa de identificar os locais para realizar configurações específicas. Qual opção de configuração deve usar para cada requisito, respectivamente? 1. Gerar/Aplicar o tema padrão (Standard theme generated). 2. Configurar o URL para acessar ao site (URL to access the site).",
+        "text": "Você cria um portal para fornecer um website para os clientes. O negócio exige que um tema personalizado seja aplicado à interface do portal. Você precisa identificar os locais para realizar configurações específicas. Qual opção de configuração deve usar para cada requisito, respectivamente? 1. Gerar/Aplicar o tema padrão (Standard theme generated). 2. Configurar o URL para acessar o site (URL to access the site).",
         "options": [
             "1. Estúdio dos Portais (Portals Studio) | 2. Centro de administração de portais do Power Apps (Power Apps portals admin center)",
             "1. Aplicação de Gestão do Portal (Portal management app) | 2. Estúdio dos Portais (Portals Studio)",
@@ -1523,7 +1523,7 @@ export const questionsData = [
         "correctAnswer": 2,
         "explanation": {
             "intro": "Esta é a continuação prática do conceito ensinado na Questão 67, focada no desenvolvimento de apps internas.",
-            "papoReto": "Se lhe pedirem para criar uma App que lista as pessoas que têm login no seu site/portal de clientes, a que tabela é que a sua App se tem de ligar? À tabela 'Contato' (Contact). O portal guarda todos os seus membros como contatos comuns no Dataverse.",
+            "papoReto": "Se lhe pedirem para criar uma App que lista as pessoas que têm login no seu site/portal de clientes, a que tabela é que a sua App se precisa conectar? À tabela 'Contato' (Contact). O portal guarda todos os seus membros como contatos comuns no Dataverse.",
             "respostaCerta": "Criar o aplicativo utilizando a tabela Contato (Contact) como fonte de dados.",
             "puloDoGato": "O requisito explícito da pergunta é 'criar um novo canvas app' que liste os 'usuários do portal'. Como sabemos que a identidade de um usuário de portal no Dataverse reside na tabela Contact, o Canvas App deve utilizar a tabela Contact como a sua fonte de dados primária.",
             "cascasDeBanana": [
@@ -1547,7 +1547,7 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Questão clássica de configuração de Autenticação em Portais. Teste direto aos conceitos de External Login e Open Registration.",
-            "papoReto": "A questão diz: 'Podem entrar com o Hotmail?' Sim, isso é login externo ('External sign-in: Sim'). A questão diz também: 'Eles podem entrar e o sistema cria a conta sozinhos sem precisar de convite do administrador?' Sim, qualquer pessoa na internet com um Hotmail pode registar-se. A porta está aberta ('Open registration: Sim').",
+            "papoReto": "A questão diz: 'Podem entrar com o Hotmail?' Sim, isso é login externo ('External sign-in: Sim'). A questão diz também: 'Eles podem entrar e o sistema cria a conta sozinhos sem precisar de convite do administrador?' Sim, qualquer pessoa na internet com um Hotmail pode registrar-se. A porta está aberta ('Open registration: Sim').",
             "respostaCerta": "1. Sim | 2. Sim",
             "puloDoGato": "No Power Pages: 'External sign-in' = Permitir provedores de identidade que não sejam o login local do site (como Azure AD B2C, Microsoft Account, LinkedIn, etc). 'Open registration' = Se estiver ativado (Yes), qualquer usuário autenticado externamente é automaticamente adicionado como Contato sem precisar de um convite prévio do CRM. É ideal para portais de consumo público.",
             "cascasDeBanana": [
@@ -1560,7 +1560,7 @@ export const questionsData = [
     },
     {
         "id": "q68_topic1",
-        "text": "Está a configurar a autenticação de um portal do Power Apps (Power Pages) destinado apenas a usuários internos e parceiros pré-aprovados. Não quer que qualquer pessoa na internet consiga criar uma conta livremente, nem quer permitir logins através de redes sociais (como o Facebook ou Google). Como deve configurar as opções 'Registro Aberto' (Open Registration) e 'Início de Sessão Externo' (External Sign-in)? (Selecione a combinação correta)",
+        "text": "Está configurando a autenticação de um portal do Power Apps (Power Pages) destinado apenas a usuários internos e parceiros pré-aprovados. Não quer que qualquer pessoa na internet consiga criar uma conta livremente, nem quer permitir logins através de redes sociais (como o Facebook ou Google). Como deve configurar as opções 'Registro Aberto' (Open Registration) e 'Início de Sessão Externo' (External Sign-in)? (Selecione a combinação correta)",
         "options": [
             "Registro Aberto: Não | Início de Sessão Externo: Não",
             "Registro Aberto: Sim | Início de Sessão Externo: Sim",
@@ -1585,7 +1585,7 @@ export const questionsData = [
         "id": "q69_topic1",
         "text": "A sua empresa criou um portal do Power Apps (Power Pages) e precisa garantir que o portal corresponde exatamente à identidade visual da marca (branding). Um web designer forneceu-lhe um arquivo CSS personalizado com os estilos da empresa. Como deve aplicar este arquivo CSS personalizado ao portal?",
         "options": [
-            "Aceder ao Estúdio dos Portais (Portals Studio / Design Studio), abrir o painel de Temas (Themes) e fazer o upload do arquivo CSS personalizado.",
+            "Acessar o Estúdio dos Portais (Portals Studio / Design Studio), abrir o painel de Temas (Themes) e fazer o upload do arquivo CSS personalizado.",
             "No Power Platform Admin Center, selecionar o portal e carregar o arquivo no separador de Branding.",
             "Abrir a Aplicação de Gestão do Portal (Portal Management app) e colar o código CSS na página inicial.",
             "Criar um Fluxo do Power Automate para injetar o CSS no cabeçalho do portal."
@@ -1594,7 +1594,7 @@ export const questionsData = [
         "explanation": {
             "intro": "Questão prática sobre personalização avançada de Interface de Usuário (UI) no Power Pages / Portais.",
             "papoReto": "Tem um arquivo CSS pronto? Não precisa de complicar. Abre o estúdio de design do portal, vai à seção onde escolhe as cores (Temas) e clica em 'Carregar CSS'. O portal assume logo o estilo por cima do que já existe.",
-            "respostaCerta": "Aceder ao Estúdio dos Portais (Portals Studio / Design Studio), abrir o painel de Temas (Themes) e fazer o upload do arquivo CSS personalizado.",
+            "respostaCerta": "Acessar o Estúdio dos Portais (Portals Studio / Design Studio), abrir o painel de Temas (Themes) e fazer o upload do arquivo CSS personalizado.",
             "puloDoGato": "No Design Studio do Power Pages (antigo Portals Studio), o espaço de trabalho 'Estilo' (Styling / Themes workspace) permite nativamente fazer o upload de arquivos `.css` personalizados. Ele substitui ou complementa o Bootstrap padrão (theme.css) usado pelo portal.",
             "cascasDeBanana": [
                 "Aplicação de Gestão do Portal (Portal Management app): Embora permita adicionar 'Web Files' (Arquivos Web) manuais, a forma direta, moderna e correta exigida pela Microsoft para aplicar *Temas CSS globais* é o upload via Design Studio.",
@@ -1617,9 +1617,9 @@ export const questionsData = [
         "correctAnswer": 2,
         "explanation": {
             "intro": "Modelação básica e fundamental de dados no Dataverse, avaliando propriedades estruturais que NÃO podem ser alteradas depois de a tabela ser criada.",
-            "papoReto": "Quem é o dono do projeto? Se é uma pessoa específica (o Gestor de Projeto), a propriedade tem de ser 'Usuário ou Equipe'. Como é que eu guardo os e-mails do Outlook e as tarefas colados à ficha deste projeto? Tenho de ligar a opção 'Ativar para atividades'. Pronto, as duas caixas estão verificadas!",
+            "papoReto": "Quem é o dono do projeto? Se é uma pessoa específica (o Gestor de Projeto), a propriedade precisa ser 'Usuário ou Equipe'. Como é que eu guardo os e-mails do Outlook e as tarefas colados à ficha deste projeto? Tenho de ligar a opção 'Ativar para atividades'. Pronto, as duas caixas estão verificadas!",
             "respostaCerta": "Propriedade: Usuário ou Equipe (User or team) | Ativar: Ativar para atividades (Enable for activities).",
-            "puloDoGato": "'Ownership' (Propriedade) define o modelo de segurança. Se precisa de acesso baseado no dono (Owner) ou na sua Unidade de Negócios (BU), tem de ser 'User or team'. Para permitir que a tabela receba e agrupe atividades relacionadas (via campo 'Regarding' / 'Referente a'), DEVE marcar a caixa 'Enable for activities'. Atenção: ambas as definições são permanentes!",
+            "puloDoGato": "'Ownership' (Propriedade) define o modelo de segurança. Se precisa de acesso baseado no dono (Owner) ou na sua Unidade de Negócios (BU), precisa ser 'User or team'. Para permitir que a tabela receba e agrupe atividades relacionadas (via campo 'Regarding' / 'Referente a'), DEVE marcar a caixa 'Enable for activities'. Atenção: ambas as definições são permanentes!",
             "cascasDeBanana": [
                 "Fazer desta tabela uma tabela de Atividades (Make this table an activity table): ISTO É UMA ARMADILHA CLÁSSICA! Ligar esta opção transformaria o próprio 'Projeto' num tipo de atividade (como se fosse um e-mail ou um compromisso na agenda), em vez de ser uma tabela de negócio que *recebe* atividades."
             ],
@@ -1630,7 +1630,7 @@ export const questionsData = [
     },
     {
         "id": "q71_topic1",
-        "text": "Está a criar um canvas app e um model-driven app para gerenciar contas de clientes. O canvas app requer uma regra de negócios (business rule) para definir a coluna 'Tipo de Negócio' como 'Grande' se o tamanho do cliente for superior a um valor específico. O model-driven app requer uma regra de negócios para recomendar a reavaliação da classificação da conta quando esta for suspensa por crédito apenas neste formulário específico do aplicativo. Qual o escopo (scope) que deve configurar para cada regra de negócios, respectivamente?",
+        "text": "Está criando um canvas app e um model-driven app para gerenciar contas de clientes. O canvas app requer uma regra de negócios (business rule) para definir a coluna 'Tipo de Negócio' como 'Grande' se o tamanho do cliente for superior a um valor específico. O model-driven app requer uma regra de negócios para recomendar a reavaliação da classificação da conta quando esta for suspensa por crédito apenas neste formulário específico do aplicativo. Qual o escopo (scope) que deve configurar para cada regra de negócios, respectivamente?",
         "options": [
             "1. Tabela (Table/Entity) | 2. Formulário Específico (Specific form)",
             "1. Todos os Formulários (All forms) | 2. Tabela (Table)",
@@ -1640,9 +1640,9 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Uma excelente questão para diferenciar como as Regras de Negócios se aplicam dependendo do tipo de aplicativo e da necessidade.",
-            "papoReto": "Se a regra vai rodar num Canvas App, ela tem de rodar no motor da base de dados (no servidor), logo o escopo é 'Tabela'. Se a regra é para rodar *apenas* num tela/formulário específico de um Model-driven app, o escopo é 'Formulário Específico'.",
+            "papoReto": "Se a regra vai rodar num Canvas App, ela precisa rodar no motor da base de dados (no servidor), logo o escopo é 'Tabela'. Se a regra é para rodar *apenas* num tela/formulário específico de um Model-driven app, o escopo é 'Formulário Específico'.",
             "respostaCerta": "1. Tabela (Table/Entity) | 2. Formulário Específico (Specific form)",
-            "puloDoGato": "Canvas apps não interpretam regras de negócios aplicadas à Interface de Usuário (como 'Todos os Formulários'). Para um Canvas App respeitar uma Business Rule, o escopo TEM de ser 'Entity' (Tabela), pois assim a regra é validada no lado do servidor antes de gravar o dado. Para o model-driven app, como o requisito diz 'apenas neste aplicativo' (referindo-se a um formulário dedicado), aplica-se ao 'Formulário Específico'.",
+            "puloDoGato": "Canvas apps não interpretam regras de negócios aplicadas à Interface de Usuário (como 'Todos os Formulários'). Para um Canvas App respeitar uma Business Rule, o escopo PRECISA ser 'Entity' (Tabela), pois assim a regra é validada no lado do servidor antes de gravar o dado. Para o model-driven app, como o requisito diz 'apenas neste aplicativo' (referindo-se a um formulário dedicado), aplica-se ao 'Formulário Específico'.",
             "cascasDeBanana": [
                 "Todos os Formulários (All forms): Usar isto para o Canvas App não funcionaria. Usar isto para o Model-driven app violaria a regra de aplicar a reavaliação *apenas* àquele formulário específico."
             ],
@@ -1653,7 +1653,7 @@ export const questionsData = [
     },
     {
         "id": "q72_topic1",
-        "text": "Planeia criar fluxos de interface de usuário (UI flows / Power Automate Desktop) para automatizar vários processos de negócio baseados na web que atualmente executa manualmente. Precisa de garantir que os usuários conseguem criar e executar estes fluxos. Quais os três componentes que deve instalar e configurar nos dispositivos dos usuários?",
+        "text": "Planeja criar fluxos de interface de usuário (UI flows / Power Automate Desktop) para automatizar vários processos de negócio baseados na web que atualmente executa manualmente. Precisa garantir que os usuários conseguem criar e executar estes fluxos. Quais os três componentes que deve instalar e configurar nos dispositivos dos usuários?",
         "options": [
             "Power Automate Desktop, Última versão do Microsoft Edge, Gateway de dados no local (On-premises data gateway).",
             "Selenium IDE, Última versão do Mozilla Firefox, Gateway de dados no local (On-premises data gateway).",
@@ -1676,21 +1676,21 @@ export const questionsData = [
     },
     {
         "id": "q73_topic1",
-        "text": "Está a desenhar um fluxo de interface de usuário (UI flow / Desktop flow) para automatizar um software legado (legacy software). Precisa de capturar (preparar) dados do tela do software legado para os transferir para uma lista do Microsoft SharePoint. Quais são as quatro ações que deve executar em sequência para capturar a informação do tela antigo?",
+        "text": "Está projetando um fluxo de interface de usuário (UI flow / Desktop flow) para automatizar um software legado (legacy software). Precisa capturar (preparar) dados da tela do software legado para os transferir para uma lista do Microsoft SharePoint. Quais são as quatro ações que deve executar em sequência para capturar a informação da tela antigo?",
         "options": [
-            "1. Iniciar a gravação do fluxo -> 2. No menu Outputs, escolher 'Selecionar texto no tela' -> 3. Selecionar a informação a passar para o SharePoint -> 4. Inserir um nome e descrição para o output.",
+            "1. Iniciar a gravação do fluxo -> 2. No menu Outputs, escolher 'Selecionar texto na tela' -> 3. Selecionar a informação a passar para o SharePoint -> 4. Inserir um nome e descrição para o output.",
             "1. Iniciar a gravação do fluxo -> 2. Selecionar a informação a passar para o SharePoint -> 3. Copiar e colar o texto na janela de definição de output -> 4. Inserir um nome e descrição.",
-            "1. No menu Outputs, escolher 'Selecionar texto no tela' -> 2. Iniciar a gravação do fluxo -> 3. Selecionar a informação -> 4. Parar a gravação.",
-            "1. Inserir nome e descrição do output -> 2. Iniciar a gravação -> 3. Selecionar informação no tela -> 4. Copiar e colar o texto."
+            "1. No menu Outputs, escolher 'Selecionar texto na tela' -> 2. Iniciar a gravação do fluxo -> 3. Selecionar a informação -> 4. Parar a gravação.",
+            "1. Inserir nome e descrição do output -> 2. Iniciar a gravação -> 3. Selecionar informação na tela -> 4. Copiar e colar o texto."
         ],
         "correctAnswer": 0,
         "explanation": {
             "intro": "Uma questão sobre a operação prática do gravador do Power Automate Desktop (RPA).",
-            "papoReto": "Vai ensinar o computador a copiar um texto de um programa velho. Primeiro, clica em 'Gravar' (Start recording). Depois, diz à ferramenta que quer extrair e guardar um texto que está no tela (Outputs > Select text on screen). A seguir, com o rato, faz a seleção da área que tem a informação. Por fim, dá um nome a esse pedaço de texto (ex: 'NomeDoCliente') para poder usá-lo mais à frente e mandar para o SharePoint.",
-            "respostaCerta": "1. Iniciar a gravação do fluxo -> 2. No menu Outputs, escolher 'Selecionar texto no tela' -> 3. Selecionar a informação a passar para o SharePoint -> 4. Inserir um nome e descrição para o output.",
+            "papoReto": "Vai ensinar o computador a copiar um texto de um programa velho. Primeiro, clica em 'Gravar' (Start recording). Depois, diz à ferramenta que quer extrair e guardar um texto que está na tela (Outputs > Select text on screen). A seguir, com o rato, faz a seleção da área que tem a informação. Por fim, dá um nome a esse pedaço de texto (ex: 'NomeDoCliente') para poder usá-lo mais à frente e mandar para o SharePoint.",
+            "respostaCerta": "1. Iniciar a gravação do fluxo -> 2. No menu Outputs, escolher 'Selecionar texto na tela' -> 3. Selecionar a informação a passar para o SharePoint -> 4. Inserir um nome e descrição para o output.",
             "puloDoGato": "A captura de dados em fluxos RPA (Desktop flows) para uso posterior na cloud (SharePoint, Dataverse, etc.) é feita definindo 'Outputs' (Saídas). Durante a gravação, você sinaliza ao gravador que uma determinada área da interface do usuário contém um texto que você quer ler. O gravador gera uma variável de output dinamicamente.",
             "cascasDeBanana": [
-                "Copiar e colar o texto na janela de definição de output: Errado. Em RPA, você não 'copia e cola' manualmente para definir a estrutura; você usa a ferramenta de seleção visual de elementos da interface (UI elements) para que o robô saiba onde tem de ler o dado na próxima vez que correr."
+                "Copiar e colar o texto na janela de definição de output: Errado. Em RPA, você não 'copia e cola' manualmente para definir a estrutura; você usa a ferramenta de seleção visual de elementos da interface (UI elements) para que o robô saiba onde precisa ler o dado na próxima vez que correr."
             ],
             "dicaOuro": "Gravar ações RPA -> Avisar que quer um Output -> Clicar no elemento visual -> Nomear a variável de Output."
         },
@@ -1722,21 +1722,21 @@ export const questionsData = [
     },
     {
         "id": "q75_topic1",
-        "text": "Você está a criar um novo fluxo de processo empresarial (BPF) para qualificar leads. Você cria uma 'Ação' (Action / Processo clássico), mas repara que ela não está disponível para ser selecionada dentro do 'Passo de Ação' (Action Step) do seu BPF. Você precisa de disponibilizar a ação para o Action Step. Quais são as DUAS configurações que deve realizar?",
+        "text": "Você está criando um novo fluxo de processo empresarial (BPF) para qualificar leads. Você cria uma 'Ação' (Action / Processo clássico), mas repara que ela não está disponível para ser selecionada dentro do 'Passo de Ação' (Action Step) do seu BPF. Você precisa disponibilizar a ação para o Action Step. Quais são as DUAS configurações que deve realizar?",
         "options": [
-            "A) Garantir que a entidade da ação corresponde à entidade da respetiva fase do BPF. E B) Adicionar pelo menos um passo à ação.",
-            "A) Garantir que a entidade da ação corresponde à entidade da respetiva fase do BPF. E B) Selecionar 'Executar como um processo a pedido' (Run as an on demand process) na Ação.",
+            "A) Garantir que a entidade da ação corresponde à entidade da respectiva fase do BPF. E B) Adicionar pelo menos um passo à ação.",
+            "A) Garantir que a entidade da ação corresponde à entidade da respectiva fase do BPF. E B) Selecionar 'Executar como um processo a pedido' (Run as an on demand process) na Ação.",
             "A) Selecionar 'Executar como um processo a pedido' na Ação. E B) Ativar (Activate) a ação.",
             "A) Ativar a ação. E B) Adicionar pelo menos um passo à ação."
         ],
         "correctAnswer": 1,
         "explanation": {
             "intro": "Questão de troubleshooting ao tentar ligar um Processo Clássico (Ação/Workflow) a um Fluxo de Processo Empresarial (BPF).",
-            "papoReto": "Criou uma ação e quer colocá-la como botão no seu BPF? Se não aparece na lista, é porque falhou em duas regras de essencial: 1) O botão está na fase do 'Lead'? Então a Ação também tem de ter o 'Lead' como entidade principal. 2) O botão é clicado 'quando o usuário quer', ou seja, a Ação tem de estar configurada para correr 'A Pedido' (On Demand).",
-            "respostaCerta": "A) Garantir que a entidade da ação corresponde à entidade da respetiva fase do BPF. E B) Selecionar 'Executar como um processo a pedido' (Run as an on demand process) na Ação.",
-            "puloDoGato": "Para um workflow clássico ou 'Ação' aparecer num 'Action Step' (Passo de Ação) de um BPF, ele tem de partilhar a mesma entidade primária da fase (stage) onde está a ser inserido, e a opção 'Run as an on demand process' (Executar como processo a pedido) DEVE estar obrigatoriamente ativada nas propriedades do processo.",
+            "papoReto": "Criou uma ação e quer colocá-la como botão no seu BPF? Se não aparece na lista, é porque falhou em duas regras de essencial: 1) O botão está na fase do 'Lead'? Então a Ação também precisa ter o 'Lead' como entidade principal. 2) O botão é clicado 'quando o usuário quer', ou seja, a Ação precisa estar configurada para correr 'A Pedido' (On Demand).",
+            "respostaCerta": "A) Garantir que a entidade da ação corresponde à entidade da respectiva fase do BPF. E B) Selecionar 'Executar como um processo a pedido' (Run as an on demand process) na Ação.",
+            "puloDoGato": "Para um workflow clássico ou 'Ação' aparecer num 'Action Step' (Passo de Ação) de um BPF, ele precisa compartilhar a mesma entidade primária da fase (stage) onde está sendo inserido, e a opção 'Run as an on demand process' (Executar como processo a pedido) DEVE estar obrigatoriamente ativada nas propriedades do processo.",
             "cascasDeBanana": [
-                "Ativar a ação (Activate): É verdade que um processo tem de estar ativo para ser *utilizado*, mas mesmo antes de o ativar, se ele for On Demand e da mesma entidade, ele já aparece disponível para ser *selecionado* durante a configuração do BPF no editor. O bloqueio de visibilidade resolve-se com o On Demand e o match de entidades."
+                "Ativar a ação (Activate): É verdade que um processo precisa estar ativo para ser *utilizado*, mas mesmo antes de o ativar, se ele for On Demand e da mesma entidade, ele já aparece disponível para ser *selecionado* durante a configuração do BPF no editor. O bloqueio de visibilidade resolve-se com o On Demand e o match de entidades."
             ],
             "dicaOuro": "Processos não aparecem no BPF? Verifique: 1) Mesma Entidade. 2) Marcado como 'On Demand'."
         },
@@ -1745,7 +1745,7 @@ export const questionsData = [
     },
     {
         "id": "q76_topic1",
-        "text": "Você planeia automatizar vários processos diferentes utilizando o Power Automate (RPA / UI Flows). Cada processo tem características únicas. Precisa de recomendar o tipo de fluxo para cada processo. Selecione a combinação correta para os seguintes processos, respectivamente: 1. Aceder a dados de uma aplicação web interna (sem API REST nativa) como parte de uma tarefa em lote noturna (nightly batch job). 2. Aceder a dados de um site público (sem API) usando um processo através de uma fila a pedido (on-demand queue).",
+        "text": "Você planeja automatizar vários processos diferentes utilizando o Power Automate (RPA / UI Flows). Cada processo tem características únicas. Precisa de recomendar o tipo de fluxo para cada processo. Selecione a combinação correta para os seguintes processos, respectivamente: 1. Acessar a dados de uma aplicação web interna (sem API REST nativa) como parte de uma tarefa em lote noturna (nightly batch job). 2. Acessar a dados de um site público (sem API) usando um processo através de uma fila a pedido (on-demand queue).",
         "options": [
             "1. Fluxo de IU Assistido (Attended UI flow) | 2. Fluxo de IU Não Assistido (Unattended UI flow)",
             "1. Fluxo de IU Não Assistido (Unattended UI flow) | 2. Fluxo de IU Assistido (Attended UI flow)",
@@ -1755,7 +1755,7 @@ export const questionsData = [
         "correctAnswer": 1,
         "explanation": {
             "intro": "Esta questão testa a distinção entre os dois modos de operação dos Fluxos de Interface de Usuário (RPA / Desktop Flows).",
-            "papoReto": "Se é um robô a correr de madrugada (nightly batch job) sem ninguém a olhar para o tela, é 'Não Assistido' (Unattended). Se é um robô que dispara 'a pedido' (on-demand) para ajudar um operador a ir buscar dados a um site público no momento em que ele precisa, é 'Assistido' (Attended).",
+            "papoReto": "Se é um robô a correr de madrugada (nightly batch job) sem ninguém a olhar para a tela, é 'Não Assistido' (Unattended). Se é um robô que dispara 'a pedido' (on-demand) para ajudar um operador a ir buscar dados a um site público no momento em que ele precisa, é 'Assistido' (Attended).",
             "respostaCerta": "1. Fluxo de IU Não Assistido (Unattended UI flow) | 2. Fluxo de IU Assistido (Attended UI flow)",
             "puloDoGato": "UI Flows (atualmente Power Automate Desktop) resolvem a falta de APIs interagindo diretamente com a interface. O modo 'Unattended' (Não Assistido) executa em máquinas virtuais ou PCs bloqueados sem intervenção humana, ideal para tarefas agendadas ('nightly batch'). O modo 'Attended' (Assistido) executa na máquina do usuário ativo, ideal para cenários iniciados a pedido ('on-demand').",
             "cascasDeBanana": [
@@ -1768,7 +1768,7 @@ export const questionsData = [
     },
     {
         "id": "q77_topic1",
-        "text": "[Nota: Esta é uma variação da Questão 4] Você cria fluxos de trabalho (workflows) para automatizar processos de negócios. Precisa de criar um fluxo de trabalho que envie e-mails automaticamente com base num modelo de mala direta (mail merge template). O fluxo de trabalho deve conter as seguintes configurações: 1. Executar imediatamente. 2. Validar quando uma condição é cumprida. 3. Executar uma ação quando a condition é cumprida. Selecione as opções de configuração corretas na ordem solicitada:",
+        "text": "[Nota: Esta é uma variação da Questão 4] Você cria fluxos de trabalho (workflows) para automatizar processos de negócios. Precisa criar um fluxo de trabalho que envie e-mails automaticamente com base num modelo de mala direta (mail merge template). O fluxo de trabalho deve conter as seguintes configurações: 1. Executar imediatamente. 2. Validar quando uma condição é cumprida. 3. Executar uma ação quando a condition é cumprida. Selecione as opções de configuração corretas na ordem solicitada:",
         "options": [
             "1. Configurar o fluxo de trabalho para executar agora (run now) | 2. Assunto contém dados | 3. Enviar um e-mail",
             "1. Aprovar o fluxo de trabalho | 2. Publicar fluxo de trabalho | 3. Ver gráfico",
@@ -1792,7 +1792,7 @@ export const questionsData = [
     },
     {
         "id": "q78_topic1",
-        "text": "Você está a desenvolver um aplicativo de tela (canvas app). Precisa de aplicar regras de negócios (business rules) ao aplicativo sem escrever código. Quais as três ações que pode utilizar? (Selecione a combinação correta que apresenta as três ações válidas para um Canvas App)",
+        "text": "Você está desenvolvendo um aplicativo de tela (canvas app). Precisa de aplicar regras de negócios (business rules) ao aplicativo sem escrever código. Quais as três ações que pode utilizar? (Selecione a combinação correta que apresenta as três ações válidas para um Canvas App)",
         "options": [
             "Validar dados e mostrar mensagens de erro | Definir níveis de obrigatoriedade de campos | Definir valores de campos.",
             "Mostrar ou ocultar campos | Ativar ou desativar campos | Validar dados e mostrar mensagens de erro.",
@@ -1802,7 +1802,7 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Uma questão extremamente comum no exame para testar as limitações das Business Rules quando aplicadas a Canvas Apps.",
-            "papoReto": "Num Canvas App, as Regras de Negócios não conseguem mexer na interface visual (o tela). Ou seja, elas NÃO conseguem esconder (hide), mostrar (show), bloquear (disable) ou desbloquear (enable) campos. Isso tem de ser feito com fórmulas no próprio Canvas. O que a Regra de Negócios consegue fazer num Canvas App? Apenas regras de DADOS: dizer se o campo é obrigatório, meter um valor por defeito lá dentro, ou atirar um erro se o dado for inválido.",
+            "papoReto": "Num Canvas App, as Regras de Negócios não conseguem mexer na interface visual (a tela). Ou seja, elas NÃO conseguem esconder (hide), mostrar (show), bloquear (disable) ou desbloquear (enable) campos. Isso precisa ser feito com fórmulas no próprio Canvas. O que a Regra de Negócios consegue fazer num Canvas App? Apenas regras de DADOS: dizer se o campo é obrigatório, meter um valor por defeito lá dentro, ou atirar um erro se o dado for inválido.",
             "respostaCerta": "Validar dados e mostrar mensagens de erro | Definir níveis de obrigatoriedade de campos | Definir valores de campos.",
             "puloDoGato": "As Regras de Negócios no Dataverse, quando ativadas com o escopo 'Entity' (Entidade), funcionam nos Canvas Apps apenas no nível do servidor/backend. Ações que manipulam o DOM/Interface de Usuário (como Mostrar/Ocultar colunas, Ativar/Desativar colunas, ou Criar Recomendações Visuais) SÓ funcionam nativamente em Model-driven apps.",
             "cascasDeBanana": [
@@ -1816,7 +1816,7 @@ export const questionsData = [
     },
     {
         "id": "q79_topic1",
-        "text": "Uma empresa planeia utilizar o Power Automate para aumentar a eficiência dos colaboradores. Você precisa recomendar os tipos de fluxos que a empresa deve usar. Qual tipo de fluxo deve recomendar para as seguintes tarefas, respectivamente? 1. Executar ações repetitivas em um aplicativo existente que NÃO possui uma API. 2. Enviar um e-mail a um contato no dia do seu aniversário.",
+        "text": "Uma empresa planeja utilizar o Power Automate para aumentar a eficiência dos colaboradores. Você precisa recomendar os tipos de fluxos que a empresa deve usar. Qual tipo de fluxo deve recomendar para as seguintes tarefas, respectivamente? 1. Executar ações repetitivas em um aplicativo existente que NÃO possui uma API. 2. Enviar um e-mail a um contato no dia do seu aniversário.",
         "options": [
             "1. Fluxo de Desktop (Desktop flow) | 2. Fluxo Agendado (Scheduled flow)",
             "1. Fluxo Automatizado (Automated flow) | 2. Fluxo Instantâneo (Instant flow)",
@@ -1839,7 +1839,7 @@ export const questionsData = [
     },
     {
         "id": "q80_topic1",
-        "text": "Uma empresa está a criar um Fluxo de Processo Empresarial (BPF) para analisar a probabilidade de um cliente comprar um produto. As classificações vão de 0 a 100. As probabilidades atribuídas são: - 0-35: Baixa (Low) - 36-60: Média (Medium) - 60-75: Alta (High) - Mais de 75 (75+): Muito Alta (Very High) Você precisa definir os passos do BPF sabendo que *toda a lógica deve ser incluída numa única instrução de avaliação (single evaluation statement)*. Que passo deve usar para os intervalos 0-35, 36-60 e 75+ respectivamente?",
+        "text": "Uma empresa está criando um Fluxo de Processo Empresarial (BPF) para analisar a probabilidade de um cliente comprar um produto. As classificações vão de 0 a 100. As probabilidades atribuídas são: - 0-35: Baixa (Low) - 36-60: Média (Medium) - 60-75: Alta (High) - Mais de 75 (75+): Muito Alta (Very High) Você precisa definir os passos do BPF sabendo que *toda a lógica deve ser incluída numa única instrução de avaliação (single evaluation statement)*. Que passo deve usar para os intervalos 0-35, 36-60 e 75+ respectivamente?",
         "options": [
             "1. Ação Padrão (Default Action) | 2. Ramificação Condicional (Conditional Branch) | 3. Ramificação Condicional (Conditional Branch)",
             "1. Verificar Condição (Check Condition) | 2. Ação Padrão (Default Action) | 3. Ramificação Condicional (Conditional Branch)",
@@ -1849,7 +1849,7 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Esta é uma questão sobre lógica de ramificação (Branching Logic) dentro dos Fluxos de Processo Empresarial (BPF).",
-            "papoReto": "Se estamos a criar uma condição grande com vários 'E se...' (If... Else If...), a regra final, aquela que sobra quando nenhuma das outras é verdadeira, chama-se 'Ação Padrão' (Default Action). Neste caso, as pontuações mais altas vão sendo apanhadas pelas Ramificações Condicionais. O que sobrar (o fundo do poço, 0-35), cai na Ação Padrão.",
+            "papoReto": "Se estamos criando uma condição grande com vários 'E se...' (If... Else If...), a regra final, aquela que sobra quando nenhuma das outras é verdadeira, chama-se 'Ação Padrão' (Default Action). Neste caso, as pontuações mais altas vão sendo apanhadas pelas Ramificações Condicionais. O que sobrar (o fundo do poço, 0-35), cai na Ação Padrão.",
             "respostaCerta": "1. Ação Padrão (Default Action) | 2. Ramificação Condicional (Conditional Branch) | 3. Ramificação Condicional (Conditional Branch)",
             "puloDoGato": "No design de BPFs, quando se adiciona uma Condição, é possível criar lógicas complexas (If / Else If / Else). As cláusulas intermédias ('Else If' > 75, > 60, > 35) são construídas usando 'Conditional Branches'. O caminho que é executado caso nenhuma condição anterior seja satisfeita (o 'Else' puro) é modelado com a 'Default Action' (Ação Padrão).",
             "cascasDeBanana": [
@@ -1862,7 +1862,7 @@ export const questionsData = [
     },
     {
         "id": "q81_topic1",
-        "text": "Você está a criar uma solução na Power Platform. Precisa de ajudar os usuários finais a compreender quais as ações a tomar a seguir e garantir que a interação do usuário ocorre em passos geríveis. Quais as ações que deve executar? Selecione a combinação correta para os seguintes requisitos, respectivamente: 1. Guiar o usuário sobre as ações a tomar. 2. Garantir que a interação do usuário ocorre em passos geríveis.",
+        "text": "Você está criando uma solução na Power Platform. Precisa ajudar os usuários finais a compreender quais as ações a tomar a seguir e garantir que a interação do usuário ocorre em passos gerenciáveis. Quais as ações que deve executar? Selecione a combinação correta para os seguintes requisitos, respectivamente: 1. Guiar o usuário sobre as ações a tomar. 2. Garantir que a interação do usuário ocorre em passos gerenciáveis.",
         "options": [
             "1. Configurar fluxos de processo empresarial (business process flows) | 2. Configurar cada fase (stage) com as ações que precisam de ser concluídas.",
             "1. Configurar fluxos de trabalho (workflows) | 2. Configurar a linha do tempo (timeline) ou o formulário.",
@@ -1872,20 +1872,20 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Esta questão foca no propósito conceptual dos Fluxos de Processo Empresarial (Business Process Flows - BPFs).",
-            "papoReto": "Se quer pegar num processo complexo (como vender um carro) e dividi-lo em partes fáceis para o usuário não se perder, cria aquela barrinha no topo do tela (Fluxo de Processo Empresarial). Para garantir que ele faz as coisas certas aos poucos, divide essa barra em 'Fases' (Stages) e, dentro de cada fase, coloca as 'Tarefas' (Steps/Actions) obrigatórias.",
+            "papoReto": "Se quer pegar num processo complexo (como vender um carro) e dividi-lo em partes fáceis para o usuário não se perder, cria aquela barrinha no topo da tela (Fluxo de Processo Empresarial). Para garantir que ele faz as coisas certas aos poucos, divide essa barra em 'Fases' (Stages) e, dentro de cada fase, coloca as 'Tarefas' (Steps/Actions) obrigatórias.",
             "respostaCerta": "1. Configurar fluxos de processo empresarial (business process flows) | 2. Configurar cada fase (stage) com as ações que precisam de ser concluídas.",
-            "puloDoGato": "Os Business Process Flows servem exatamente para 'guiar o usuário' (guide the user). Eles são divididos em 'Stages' (Fases - ex: Qualificar, Propor, Fechar) e cada Stage é composto por 'Steps' ou 'Data Steps' (Passos geríveis), garantindo que o usuário preenche a informação correta na hora certa.",
+            "puloDoGato": "Os Business Process Flows servem exatamente para 'guiar o usuário' (guide the user). Eles são divididos em 'Stages' (Fases - ex: Qualificar, Propor, Fechar) e cada Stage é composto por 'Steps' ou 'Data Steps' (Passos gerenciáveis), garantindo que o usuário preenche a informação correta na hora certa.",
             "cascasDeBanana": [
-                "Configurar a linha do tempo (timeline): A timeline serve para registar o histórico de atividades (e-mails, notas, tarefas), não para criar um caminho estruturado de etapas obrigatórias de negócio."
+                "Configurar a linha do tempo (timeline): A timeline serve para registrar o histórico de atividades (e-mails, notas, tarefas), não para criar um caminho estruturado de etapas obrigatórias de negócio."
             ],
-            "dicaOuro": "Palavras-chave: 'Guiar o usuário' + 'Passos/Fases geríveis' = Business Process Flow (BPF) > Stages > Steps."
+            "dicaOuro": "Palavras-chave: 'Guiar o usuário' + 'Passos/Fases gerenciáveis' = Business Process Flow (BPF) > Stages > Steps."
         },
         "difficulty": "intermediario",
         "domain": "Fluxos em nuvem do Microsoft Power Automate"
     },
     {
         "id": "q82_topic1",
-        "text": "Você está a desenvolver um aplicativo. Tem de acionar uma notificação móvel sempre que uma hashtag específica for publicada no Twitter (X). A notificação enviará um e-mail com os detalhes para a equipe de redes sociais da empresa. Precisa de criar uma ligação ao serviço do Twitter e construir a solução. Quais são as quatro ações que deve realizar em sequência?",
+        "text": "Você está desenvolvendo um aplicativo. Precisa acionar uma notificação móvel sempre que uma hashtag específica for publicada no Twitter (X). A notificação enviará um e-mail com os detalhes para a equipe de redes sociais da empresa. Precisa criar uma ligação ao serviço do Twitter e construir a solução. Quais são as quatro ações que deve realizar em sequência?",
         "options": [
             "1. Iniciar sessão no Power Automate e criar um novo fluxo em branco -> 2. Selecionar o conector do Twitter e usar as credenciais do usuário -> 3. Criar um gatilho (trigger) para pesquisar novas publicações com a hashtag -> 4. Criar uma ação para enviar um e-mail.",
             "1. Criar um gatilho para enviar um e-mail -> 2. Iniciar sessão no Power Automate -> 3. Selecionar o conector do Twitter -> 4. Criar uma ação para pesquisar a hashtag.",
@@ -1918,7 +1918,7 @@ export const questionsData = [
         "correctAnswer": 1,
         "explanation": {
             "intro": "Esta é uma daquelas questões de 'decoração de menu' que testa se o candidato já navegou a fundo nas configurações clássicas de sistema do Dynamics/Dataverse.",
-            "papoReto": "Sabe aquele botão 'Power Automate' (antigo Flow) que aparece por defeito no topo das vistas e formulários nos Model-driven apps? Se a sua empresa não quiser que os usuários cliquem lá, tem de ir às definições antigas do sistema, no separador 'Personalização' (Customizations) e desmarcar a caixa 'Mostrar botão Flow'.",
+            "papoReto": "Sabe aquele botão 'Power Automate' (antigo Flow) que aparece por defeito no topo das vistas e formulários nos Model-driven apps? Se a sua empresa não quiser que os usuários cliquem lá, precisa ir às definições antigas do sistema, no separador 'Personalização' (Customizations) e desmarcar a caixa 'Mostrar botão Flow'.",
             "respostaCerta": "A seção de Personalizações nas Definições do Sistema (The Customizations section of System Settings)",
             "puloDoGato": "Para ocultar o botão 'Flow' (agora muitas vezes referido como 'Power Automate') globalmente na Interface Unificada, o administrador deve acessar às Definições Avançadas > Definições do Sistema (System Settings) > Separador Personalizações (Customizations tab) e definir 'Enable Microsoft Flow' ou 'Show Microsoft Flow button' para Não (No).",
             "cascasDeBanana": [
@@ -1932,7 +1932,7 @@ export const questionsData = [
     },
     {
         "id": "q84_topic1",
-        "text": "Você configura e testa um fluxo de interface de usuário (UI flow / Desktop flow). Planeia executar o fluxo como um fluxo agendado (scheduled flow). O fluxo tem de correr num dispositivo Windows 10. Como parte da automação, o fluxo deve iniciar sessão no Windows 10 com as credenciais de uma conta de usuário chamada User1. Você precisa garantir que o fluxo corre fora das horas de ponta e não requer intervenção física do usuário (unattended). O que deve fazer?",
+        "text": "Você configura e testa um fluxo de interface de usuário (UI flow / Desktop flow). Planeja executar o fluxo como um fluxo agendado (scheduled flow). O fluxo precisa executar num dispositivo Windows 10. Como parte da automação, o fluxo deve iniciar sessão no Windows 10 com as credenciais de uma conta de usuário chamada User1. Você precisa garantir que o fluxo corre fora das horas de ponta e não requer intervenção física do usuário (unattended). O que deve fazer?",
         "options": [
             "Garantir que a conta User1 tem uma sessão de usuário ativa no dispositivo.",
             "Garantir que todas as sessões de usuário têm a sessão terminada (signed out).",
@@ -1942,21 +1942,21 @@ export const questionsData = [
         "correctAnswer": 1,
         "explanation": {
             "intro": "Esta questão avalia os rigorosos pré-requisitos para correr um robô RPA no modo 'Não Assistido' (Unattended).",
-            "papoReto": "Se o robô (Power Automate Desktop) vai trabalhar de madrugada sozinho, ele precisa de 'ligar o tela' e fazer o login com o usuário e a password dele. Se alguém tiver deixado a sessão aberta (mesmo que bloqueada com o tela preto), o robô não consegue entrar e o fluxo falha. A máquina tem de estar completamente 'limpa' no tela de login inicial.",
+            "papoReto": "Se o robô (Power Automate Desktop) vai trabalhar de madrugada sozinho, ele precisa de 'ligar a tela' e fazer o login com o usuário e a password dele. Se alguém tiver deixado a sessão aberta (mesmo que bloqueada com a tela preto), o robô não consegue entrar e o fluxo falha. A máquina precisa estar completamente 'limpa' na tela de login inicial.",
             "respostaCerta": "Garantir que todas as sessões de usuário têm a sessão terminada (signed out).",
             "puloDoGato": "Para que um fluxo de ambiente de trabalho (Desktop Flow) corra em modo Unattended, o On-premises Data Gateway precisa de fazer o login na máquina do zero. Se existir *qualquer* sessão com o status 'Sign in' (iniciada ou bloqueada), o serviço aborta a execução.",
             "cascasDeBanana": [
                 "Exceto sessões bloqueadas (Locked sessions): Uma sessão bloqueada continua a consumir recursos de um perfil de usuário e impede o robô de assumir o controle total para injetar credenciais.",
-                "Sessão ativa do User1: Isso seria para o modo 'Assistido' (Attended), onde o usuário já está logado a ver o tela."
+                "Sessão ativa do User1: Isso seria para o modo 'Assistido' (Attended), onde o usuário já está logado a ver a tela."
             ],
-            "dicaOuro": "Modo Unattended RPA = A máquina TEM de ter todas as sessões com 'Sign Out' (Sessão Terminada)."
+            "dicaOuro": "Modo Unattended RPA = A máquina PRECISA ter todas as sessões com 'Sign Out' (Sessão Terminada)."
         },
         "difficulty": "iniciante",
         "domain": "Fluxos em nuvem do Microsoft Power Automate"
     },
     {
         "id": "q85_topic1",
-        "text": "Uma empresa planeia enviar e-mails de escalonamento (escalation) a todos os clientes com faturas em atraso. Você está a criar um fluxo do Microsoft Power Automate para determinar se deve enviar um e-mail de escalonamento. O sistema tem de enviar um alerta para todas as faturas que tenham sete dias ou mais de atraso. Você precisa configurar o fluxo. Qual expressão deve utilizar?",
+        "text": "Uma empresa planeja enviar e-mails de escalonamento (escalation) a todos os clientes com faturas em atraso. Você está criando um fluxo do Microsoft Power Automate para determinar se deve enviar um e-mail de escalonamento. O sistema precisa enviar um alerta para todas as faturas que tenham sete dias ou mais de atraso. Você precisa configurar o fluxo. Qual expressão deve utilizar?",
         "options": [
             "@greaterOrEquals(triggerOutputs()?['OverdueDate'], 7)",
             "'OverdueDate' >= 7 || triggerBody(); false",
@@ -1991,7 +1991,7 @@ export const questionsData = [
             "intro": "Alerta de conceito vital! Esta é exatamente a mesma regra que vimos na Questão 78, mas aplicada à transição de fases (Stage Exit/Entry).",
             "papoReto": "Sempre que quiser enfiar um Workflow Clássico para dentro da barra do Business Process Flow (seja num botão Action Step ou para disparar sozinho quando muda de fase), o sistema de segurança do Dynamics obriga a que esse Workflow tenha a caixa 'A Pedido' (On Demand) ativada. Ponto final.",
             "respostaCerta": "Disponível para executar (Available to run): Como um processo a pedido (As an on demand process)",
-            "puloDoGato": "Para que um fluxo de trabalho (Workflow) fique disponível no editor do Fluxo de Processo Empresarial (BPF) como um 'Workflow Step' (seja Trigger de Entry ou Trigger de Exit de uma Stage), ele DEVE ser marcado como 'Run as an on demand process' e partilhar a mesma entidade da fase (stage) onde está a ser configurado.",
+            "puloDoGato": "Para que um fluxo de trabalho (Workflow) fique disponível no editor do Fluxo de Processo Empresarial (BPF) como um 'Workflow Step' (seja Trigger de Entry ou Trigger de Exit de uma Stage), ele DEVE ser marcado como 'Run as an on demand process' e compartilhar a mesma entidade da fase (stage) onde está sendo configurado.",
             "cascasDeBanana": [
                 "Executar em segundo plano (Run in the background): Embora os workflows associados a BPFs possam correr em background, essa marcação isoladamente não o faz aparecer no editor do BPF. Apenas o 'On Demand' destranca essa funcionalidade."
             ],
@@ -2012,7 +2012,7 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Esta questão avalia a sua experiência básica com a ferramenta Power Automate Desktop (PAD) para automação robótica (RPA).",
-            "papoReto": "Como é que se ensina um robô a fazer tarefas no seu PC? Tem duas formas oficiais: Ou clica no botão 'Gravar' (Recorder) e deixa o sistema filmar onde você clica e o que você escreve; Ou vai à caixa de ferramentas do lado esquerdo, pega nos blocos já feitos (tipo Lego) de 'Abrir Excel', 'Clicar Botão', 'Enviar Email', e arrasta para o meio do tela.",
+            "papoReto": "Como é que se ensina um robô a fazer tarefas no seu PC? Tem duas formas oficiais: Ou clica no botão 'Gravar' (Recorder) e deixa o sistema filmar onde você clica e o que você escreve; Ou vai à caixa de ferramentas do lado esquerdo, pega nos blocos já feitos (tipo Lego) de 'Abrir Excel', 'Clicar Botão', 'Enviar Email', e arrasta para o meio da tela.",
             "respostaCerta": "1. Gravar eventos de rato e teclado E 2. Usar ações pré-construídas (pre-built actions).",
             "puloDoGato": "O Power Automate Desktop permite desenhar fluxos manualmente arrastando e soltando 'pre-built actions' (centenas de ações de arquivos, UI, Web, Excel, etc.) do painel esquerdo, OU usando o 'Recorder' (gravador de Desktop/Web) para capturar automaticamente os cliques do rato e eventos do teclado. Os dois métodos são frequentemente usados em conjunto.",
             "cascasDeBanana": [
@@ -2025,7 +2025,7 @@ export const questionsData = [
     },
     {
         "id": "q88_topic1",
-        "text": "Você está a usar o Power Automate para criar uma lista de clientes a partir de um arquivo do Microsoft Excel. A lista deve conter clientes que cumpram UM dos seguintes critérios: - Vendas (sales) inferiores a 500.000 € - Clientes que têm o crédito suspenso (credit hold). Você precisa criar uma condição para filtrar a lista de clientes. Como deve completar a condição de filtro (expressão WDL)? Selecione as duas partes corretas, respectivamente: @[ _____ ](less(item()?['sales'], 500000), [ _____ ])",
+        "text": "Você está usando o Power Automate para criar uma lista de clientes a partir de um arquivo do Microsoft Excel. A lista deve conter clientes que cumpram UM dos seguintes critérios: - Vendas (sales) inferiores a 500.000 € - Clientes que têm o crédito suspenso (credit hold). Você precisa criar uma condição para filtrar a lista de clientes. Como deve completar a condição de filtro (expressão WDL)? Selecione as duas partes corretas, respectivamente: @[ _____ ](less(item()?['sales'], 500000), [ _____ ])",
         "options": [
             "1. and | 2. equals(item()?['credithold'], 'true')",
             "1. or | 2. equals(item()?['credithold'], 'true')",
@@ -2059,7 +2059,7 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Alerta máximo de repetição! Este conceito já foi testado nas Questões 7 e 74. A Microsoft não quer mesmo que se esqueça disto.",
-            "papoReto": "Quantas vezes a Microsoft quer que saiba isto? Se a regra vai rodar num Canvas App, o Canvas App não entende os 'Formulários' clássicos do Dynamics. Para a regra funcionar lá, tem de ser atirada diretamente para o 'motor' da base de dados. O nome desse escopo é 'Tabela' (antigamente chamado 'Entidade').",
+            "papoReto": "Quantas vezes a Microsoft quer que saiba isto? Se a regra vai rodar num Canvas App, o Canvas App não entende os 'Formulários' clássicos do Dynamics. Para a regra funcionar lá, precisa ser atirada diretamente para o 'motor' da base de dados. O nome desse escopo é 'Tabela' (antigamente chamado 'Entidade').",
             "respostaCerta": "Tabela (Table / Entity)",
             "puloDoGato": "Regras de negócio com escopo 'All Forms' ou 'Specific Form' funcionam exclusivamente no lado do cliente (client-side) dentro de Model-driven apps. Para que a lógica corra no servidor (server-side) e seja respeitada por Canvas Apps, Portais (Power Pages) ou integrações por API, o escopo TEM obrigatoriamente de ser 'Table' (Entity).",
             "cascasDeBanana": [
@@ -2082,7 +2082,7 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Questão clássica de ALM (Application Lifecycle Management) sobre como mover estrutura (metadados) versus mover dados transacionais entre ambientes.",
-            "papoReto": "Se é estrutura da casa (como uma Tabela Nova ou o Menu/Site Map), você empacota isso numa 'Solução' e manda para o outro ambiente. Mas as Soluções não transportam os móveis (os dados normais)! Para passar as linhas e registros que inseriu na tabela, tem de usar uma carrinha de mudanças específica chamada 'Configuration Migration tool'.",
+            "papoReto": "Se é estrutura da casa (como uma Tabela Nova ou o Menu/Site Map), você empacota isso numa 'Solução' e manda para o outro ambiente. Mas as Soluções não transportam os móveis (os dados normais)! Para passar as linhas e registros que inseriu na tabela, precisa usar uma carrinha de mudanças específica chamada 'Configuration Migration tool'.",
             "respostaCerta": "1. Solução | 2. Ferramenta de Migração da Configuração (Configuration Migration tool) | 3. Solução",
             "puloDoGato": "Soluções no Dataverse são usadas unicamente para mover metadados e estrutura (Tabelas, Campos, Vistas, Dashboards, Site Maps, Fluxos, etc.). Os *dados transacionais/cadastrais* reais dentro dessas tabelas NÃO viajam dentro da solução. Para mover registros de configuração ou dados de base entre ambientes de forma relacional, a Microsoft fornece a 'Configuration Migration tool'.",
             "cascasDeBanana": [
@@ -2095,7 +2095,7 @@ export const questionsData = [
     },
     {
         "id": "q91_topic1",
-        "text": "Uma empresa planeia adicionar outro idioma a um ambiente do Microsoft Dataverse. Foram adicionados ou modificados vários componentes no ambiente. Você precisa garantir que esses componentes sejam traduzidos. Qual método deve utilizar para cada tipo de componente? Selecione a combinação correta, respectivamente, para: 1. Vista (View) 2. Modelo de e-mail (Email template) 3. Relatório (Report)",
+        "text": "Uma empresa planeja adicionar outro idioma a um ambiente do Microsoft Dataverse. Foram adicionados ou modificados vários componentes no ambiente. Você precisa garantir que esses componentes sejam traduzidos. Qual método deve utilizar para cada tipo de componente? Selecione a combinação correta, respectivamente, para: 1. Vista (View) 2. Modelo de e-mail (Email template) 3. Relatório (Report)",
         "options": [
             "1. Exportar e reimportar texto traduzido | 2. Criar uma versão separada para cada idioma | 3. Utilizar rótulos incorporados (embedded labels)",
             "1. Utilizar rótulos incorporados | 2. Exportar e reimportar texto traduzido | 3. Criar uma versão separada para cada idioma",
@@ -2105,7 +2105,7 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Uma ótima questão prática sobre a tradução e localização de diferentes tipos de componentes no Dataverse.",
-            "papoReto": "Para traduzir as tabelas e telas do sistema (Vistas), nós exportamos um arquivo mágico (Excel), traduzimos, e reimportamos. Mas os Modelos de E-mail não suportam essa magia, logo temos de criar 'à mão' uma versão do e-mail para PT, outra para EN, etc. Já para os velhos Relatórios do SSRS, a tradução tem de estar colada (incorporada) no próprio arquivo do relatório.",
+            "papoReto": "Para traduzir as tabelas e telas do sistema (Vistas), nós exportamos um arquivo mágico (Excel), traduzimos, e reimportamos. Mas os Modelos de E-mail não suportam essa magia, logo temos de criar 'à mão' uma versão do e-mail para PT, outra para EN, etc. Já para os velhos Relatórios do SSRS, a tradução precisa estar colada (incorporada) no próprio arquivo do relatório.",
             "respostaCerta": "1. Exportar e reimportar texto traduzido | 2. Criar uma versão separada para cada idioma | 3. Utilizar rótulos incorporados (embedded labels)",
             "puloDoGato": "Vistas (Views) fazem parte dos metadados da Solução, por isso suportam a funcionalidade nativa 'Export/Import Translations'. Os Modelos de E-mail (Email templates) são tratados como registros de dados (data records) com a sua própria flag de idioma, pelo que deve criar um template separado por idioma. Relatórios antigos baseados em SSRS (Reports) não integram nativamente com as traduções do Dataverse, exigindo rótulos incorporados no RDL ou múltiplas versões.",
             "cascasDeBanana": [
@@ -2128,7 +2128,7 @@ export const questionsData = [
         "correctAnswer": 2,
         "explanation": {
             "intro": "A questão de essencial sobre como restringir de forma absoluta o acesso a dados no Dataverse.",
-            "papoReto": "Se quer proibir de vez que alguém veja uma coluna (mesmo que tente fazer filtros espertos ou exportar para o Excel), não basta esconder no tela (Regra de Negócios) nem tirar da pesquisa. Tem de colocar um 'cadeado' na própria coluna da base de dados! Isso chama-se Segurança no nível da coluna (Column-level security).",
+            "papoReto": "Se quer proibir de vez que alguém veja uma coluna (mesmo que tente fazer filtros espertos ou exportar para o Excel), não basta esconder na tela (Regra de Negócios) nem tirar da pesquisa. Precisa colocar um 'cadeado' na própria coluna da base de dados! Isso chama-se Segurança no nível da coluna (Column-level security).",
             "respostaCerta": "Utilizar segurança no nível da coluna (Column-level security) para remover o acesso de leitura a todos os usuários.",
             "puloDoGato": "Column-level security (antigo Field Level Security) restringe o acesso aos dados (Leitura, Criação, Atualização) diretamente no motor do Dataverse. Quando o acesso de leitura é revogado, a coluna desaparece magicamente de Vistas, Localização Avançada, Relatórios, Filtros e Formulários para todos os usuários não autorizados.",
             "cascasDeBanana": [
@@ -2142,7 +2142,7 @@ export const questionsData = [
     },
     {
         "id": "q93_topic1",
-        "text": "Uma empresa utiliza o Power Apps. Você cria uma tabela personalizada (custom table) e configura um relacionamento de tabela filha (child table) com a tabela Contato (Contact). Você precisa configurar o comportamento em cascata (cascading behavior) para cada ação. Que comportamento deve utilizar para cada ação, respectivamente? 1. O registro da tabela personalizada (pai) é eliminado. 2. O registro da tabela personalizada (pai) é partilhado.",
+        "text": "Uma empresa utiliza o Power Apps. Você cria uma tabela personalizada (custom table) e configura um relacionamento de tabela filha (child table) com a tabela Contato (Contact). Você precisa configurar o comportamento em cascata (cascading behavior) para cada ação. Que comportamento deve utilizar para cada ação, respectivamente? 1. O registro da tabela personalizada (pai) é eliminado. 2. O registro da tabela personalizada (pai) é compartilhado.",
         "options": [
             "1. Tudo em Cascata (Cascade All) | 2. Restringir (Restrict)",
             "1. Restringir (Restrict) | 2. Nenhuma em Cascata (Cascade None)",
@@ -2152,7 +2152,7 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Questão sobre os comportamentos em cascata (Cascading Behaviors) dos relacionamentos no Dataverse.",
-            "papoReto": "Se excluir o 'Pai', o que acontece aos 'Filhos'? Para este requisito (e de acordo com o gabarito de ações da Microsoft), se a tabela personalizada for apagada, tudo vai junto (Cascade All / Tudo em Cascata). Se a tabela personalizada for partilhada com alguém, não queremos partilhar automaticamente os contatos filhos (Restrict / Restringir).",
+            "papoReto": "Se excluir o 'Pai', o que acontece aos 'Filhos'? Para este requisito (e de acordo com o gabarito de ações da Microsoft), se a tabela personalizada for apagada, tudo vai junto (Cascade All / Tudo em Cascata). Se a tabela personalizada for compartilhada com alguém, não queremos compartilhar automaticamente os contatos filhos (Restrict / Restringir).",
             "respostaCerta": "1. Tudo em Cascata (Cascade All) | 2. Restringir (Restrict)",
             "puloDoGato": "Em relacionamentos 1:N, o comportamento de eliminação 'Cascade All' (Tudo em cascata) garante que os registros filhos são eliminados quando o pai é eliminado, mantendo a base de dados limpa. O comportamento de partilha 'Restrict' (Restringir) impede que a ação de partilha do registro pai conceda automaticamente acesso aos registros filhos associados, garantindo a segurança dos Contatos.",
             "cascasDeBanana": [
@@ -2165,7 +2165,7 @@ export const questionsData = [
     },
     {
         "id": "q94_topic1",
-        "text": "Planeia adicionar um aplicativo do Power Apps ao Microsoft Teams. Um ambiente do Microsoft Dataverse for Teams ainda não foi aprovisionado (provisioned). Você precisa criar um ambiente do Dataverse for Teams. Quais são as DUAS ações que pode executar para que o ambiente seja criado?",
+        "text": "Planeja adicionar um aplicativo do Power Apps ao Microsoft Teams. Um ambiente do Microsoft Dataverse for Teams ainda não foi aprovisionado (provisioned). Você precisa criar um ambiente do Dataverse for Teams. Quais são as DUAS ações que pode executar para que o ambiente seja criado?",
         "options": [
             "A) Criar um novo ambiente no Power Platform Admin Center. E B) Criar um novo aplicativo no Teams.",
             "A) Criar uma política de permissão de aplicativos no Teams admin center. E B) Criar um novo ambiente no Power Platform Admin Center.",
@@ -2188,7 +2188,7 @@ export const questionsData = [
     },
     {
         "id": "q95_topic1",
-        "text": "Uma empresa utiliza o Power Apps com o Microsoft Dataverse. A empresa ativou a auditoria (auditing) na base de dados do Dataverse. A empresa está a atingir a capacidade máxima de armazenamento e precisa selecionar alguns dados de auditoria. Quais as três opções de eliminação (deletion options) que deve usar? (Selecione a combinação com as 3 opções corretas)",
+        "text": "Uma empresa utiliza o Power Apps com o Microsoft Dataverse. A empresa ativou a auditoria (auditing) na base de dados do Dataverse. A empresa está atingindo a capacidade máxima de armazenamento e precisa selecionar alguns dados de auditoria. Quais as três opções de eliminação (deletion options) que deve usar? (Selecione a combinação com as 3 opções corretas)",
         "options": [
             "Entre duas datas especificadas, Por tabela e Por coluna.",
             "Por registro (by record), Por tabela (by table) e Mais antigo que uma data especificada (older than a specified date).",
@@ -2221,9 +2221,9 @@ export const questionsData = [
         "correctAnswer": 3,
         "explanation": {
             "intro": "Configuração de regras de deteção de duplicados focadas na importação de dados em massa.",
-            "papoReto": "Quando se carrega um arquivo Excel/CSV com milhares de linhas para o Dataverse, queremos que o sistema deite fora automaticamente os repetidos. Mas para o sistema saber que tem de fazer essa vigia durante uma importação, a própria Regra de Deteção de Duplicados precisa de ter a caixa 'Durante a importação de dados' ativada nas suas propriedades. Sem isso, a regra fica padrão durante a importação.",
+            "papoReto": "Quando se carrega um arquivo Excel/CSV com milhares de linhas para o Dataverse, queremos que o sistema deite fora automaticamente os repetidos. Mas para o sistema saber que precisa fazer essa vigia durante uma importação, a própria Regra de Deteção de Duplicados precisa de ter a caixa 'Durante a importação de dados' ativada nas suas propriedades. Sem isso, a regra fica padrão durante a importação.",
             "respostaCerta": "Ativar a opção 'Durante a importação de dados' (During data import).",
-            "puloDoGato": "Uma regra de deteção de duplicados no Dataverse tem gatilhos específicos (quando deve ser executada). Para que a regra atue no 'Data Import Wizard' e descarte registros duplicados automaticamente (desde que o usuário escolha não permitir duplicados no assistente), a regra DEVE obrigatoriamente ter a propriedade 'During data import' selecionada no tela de configuração da regra.",
+            "puloDoGato": "Uma regra de deteção de duplicados no Dataverse tem gatilhos específicos (quando deve ser executada). Para que a regra atue no 'Data Import Wizard' e descarte registros duplicados automaticamente (desde que o usuário escolha não permitir duplicados no assistente), a regra DEVE obrigatoriamente ter a propriedade 'During data import' selecionada na tela de configuração da regra.",
             "cascasDeBanana": [
                 "Desativar a opção Permitir Duplicados (Allow Duplicates): Esta é uma opção do Assistente de Importação (Import Wizard), mas a pergunta pede o que deve ser configurado *na própria regra* (rule) de deteção de duplicados que você acabou de criar."
             ],
@@ -2244,7 +2244,7 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Uma questão fundamental sobre a modelação e apresentação de dados básica no Dataverse.",
-            "papoReto": "Se precisa de um sítio novo para o usuário escrever e guardar o número de telefone, tem de criar um campo novo na base de dados (uma Coluna). Se quer ver uma lista no tela apenas com os clientes que têm esse campo vazio, tem de criar um filtro gravado dessa tabela (uma Vista).",
+            "papoReto": "Se precisa de um lugar novo para o usuário escrever e guardar o número de telefone, precisa criar um campo novo na base de dados (uma Coluna). Se quer ver uma lista na tela apenas com os clientes que têm esse campo vazio, precisa criar um filtro gravado dessa tabela (uma Vista).",
             "respostaCerta": "1. Coluna (Column) | 2. Vista (View)",
             "puloDoGato": "Para recolher um novo ponto de dados num formulário, adicionamos uma 'Column' (anteriormente chamada de Field/Campo) à tabela. Para apresentar um subconjunto de registros com base em critérios de filtragem (ex: 'Telefone Alternativo Não Contém Dados'), configuramos uma 'View' (Vista).",
             "cascasDeBanana": [
@@ -2257,7 +2257,7 @@ export const questionsData = [
     },
     {
         "id": "q98_topic1",
-        "text": "Você está a criar um model-driven app para um help desk de peças de automóveis. Um agente utiliza um formulário para recolher informações sobre os automóveis dos clientes em duas tabelas personalizadas: 'Cliente' (Client) e 'Automóvel' (Automobile). O formulário deve pré-preencher (prepopulate) a seguinte informação sobre o cliente a partir da tabela Cliente: Primeiro Nome, Último Nome. O agente deve conseguir introduzir a seguinte informação na tabela Automóvel: Marca do automóvel, Modelo do automóvel. O que deve configurar para cada requisito, respectivamente? 1. Pré-preencher as informações do cliente. 2. Introduzir as informações do automóvel.",
+        "text": "Você está criando um model-driven app para um help desk de peças de automóveis. Um agente utiliza um formulário para recolher informações sobre os automóveis dos clientes em duas tabelas personalizadas: 'Cliente' (Client) e 'Automóvel' (Automobile). O formulário deve pré-preencher (prepopulate) a seguinte informação sobre o cliente a partir da tabela Cliente: Primeiro Nome, Último Nome. O agente deve conseguir introduzir a seguinte informação na tabela Automóvel: Marca do automóvel, Modelo do automóvel. O que deve configurar para cada requisito, respectivamente? 1. Pré-preencher as informações do cliente. 2. Introduzir as informações do automóvel.",
         "options": [
             "1. Fluxo de Dados (Dataflow) | 2. Vista (View)",
             "1. Chave Alternativa (Alternate key) | 2. Conector (Connector)",
@@ -2303,7 +2303,7 @@ export const questionsData = [
     },
     {
         "id": "q100_topic1",
-        "text": "Uma empresa utiliza um ambiente Microsoft Power Platform e planeia implementar um aplicativo Power Apps. A aplicação deve cumprir os seguintes requisitos: - Auditar toda a atividade do usuário e reter os logs de auditoria apenas por um ano. - Remover anualmente os produtos que foram criados há mais de um ano. Você precisa configurar os processos automatizados. Qual configuração deve utilizar para cada requisito, respectivamente? 1. Retenção de logs de auditoria. 2. Remoção de produtos.",
+        "text": "Uma empresa utiliza um ambiente Microsoft Power Platform e planeja implementar um aplicativo Power Apps. A aplicação deve cumprir os seguintes requisitos: - Auditar toda a atividade do usuário e reter os logs de auditoria apenas por um ano. - Remover anualmente os produtos que foram criados há mais de um ano. Você precisa configurar os processos automatizados. Qual configuração deve utilizar para cada requisito, respectivamente? 1. Retenção de logs de auditoria. 2. Remoção de produtos.",
         "options": [
             "1. Auditoria de Tabela (Table auditing) | 2. Auditoria de Ambiente (Environment auditing)",
             "1. Auditoria de Ambiente (Environment auditing) | 2. Trabalho de eliminação em massa (Bulk deletion job)",
@@ -2336,7 +2336,7 @@ export const questionsData = [
         "correctAnswer": 3,
         "explanation": {
             "intro": "Questão sobre manipulação de texto e interface em Canvas Apps.",
-            "papoReto": "Quer fazer 'magia' com o texto no tela (tipo transformar 123456789 em *****6789)? No Canvas App, a ferramenta para isso são as fórmulas. E o nome da linguagem dessas fórmulas é Power Fx.",
+            "papoReto": "Quer fazer 'magia' com o texto na tela (tipo transformar 123456789 em *****6789)? No Canvas App, a ferramenta para isso são as fórmulas. E o nome da linguagem dessas fórmulas é Power Fx.",
             "respostaCerta": "Power Fx",
             "puloDoGato": "As Business Rules em Canvas Apps são muito limitadas (só mexem em obrigatoriedade, valores simples e erros). Para fazer manipulação de strings (usar funções como `Right`, `Len` ou `Concatenate`) e criar máscaras dinâmicas de exibição, a única solução é utilizar expressões Power Fx diretamente nas propriedades do controle.",
             "cascasDeBanana": [
@@ -2350,7 +2350,7 @@ export const questionsData = [
     },
     {
         "id": "q102_topic1",
-        "text": "Uma empresa utiliza o Power Apps e planeia criar um aplicativo de tela (canvas app) que utilize um design responsivo. Quais as duas ações que deve executar como parte da solução? (Selecione as duas ações corretas)",
+        "text": "Uma empresa utiliza o Power Apps e planeja criar um aplicativo de tela (canvas app) que utilize um design responsivo. Quais as duas ações que deve executar como parte da solução? (Selecione as duas ações corretas)",
         "options": [
             "A) Desativar a definição 'Dimensionar para ajustar' (Scale to fit) E B) Configurar as propriedades de altura e largura utilizando fórmulas.",
             "A) Ativar a definição 'Bloquear orientação' E B) Configurar a altura e largura usando as alças de arrastamento manuais.",
@@ -2360,11 +2360,11 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Conceitos fundamentais para criar Apps que funcionam bem tanto no celular como no PC.",
-            "papoReto": "Para a App ser responsiva (esticar e encolher conforme o tela), a primeira coisa a fazer é 'cortar as amarras': desativamos o 'Scale to fit' (Dimensionar para ajustar), senão ela só faz zoom. Depois, em vez de dizer que um botão tem 100 pixels de largura, dizemos que ele tem 'Largura do Tela / 2' usando fórmulas.",
+            "papoReto": "Para a App ser responsiva (esticar e encolher conforme a tela), a primeira coisa a fazer é 'cortar as amarras': desativamos o 'Scale to fit' (Dimensionar para ajustar), senão ela só faz zoom. Depois, em vez de dizer que um botão tem 100 pixels de largura, dizemos que ele tem 'Largura do Tela / 2' usando fórmulas.",
             "respostaCerta": "A) Desativar a definição 'Dimensionar para ajustar' (Scale to fit) E B) Configurar as propriedades de altura e largura utilizando fórmulas.",
             "puloDoGato": "O 'Scale to fit' força a app a manter um aspeto de imagem fixa, criando barras pretas nas laterais. Ao desativá-lo, a app ocupa o espaço real disponível. A responsividade real é obtida ligando as propriedades `Width` e `Height` dos controles a variáveis ou propriedades do `Parent` (ex: `Parent.Width`), o que exige o uso de fórmulas Power Fx.",
             "cascasDeBanana": [
-                "Bloquear orientação (Lock orientation): Isto impede a responsividade, pois obriga o usuário a usar o celular sempre na mesma posição, ignorando a adaptação do tela."
+                "Bloquear orientação (Lock orientation): Isto impede a responsividade, pois obriga o usuário a usar o celular sempre na mesma posição, ignorando a adaptação da tela."
             ],
             "dicaOuro": "Design Responsivo em Canvas App = Scale to fit OFF + Fórmulas no Width/Height."
         },
@@ -2392,18 +2392,18 @@ export const questionsData = [
     },
     {
         "id": "q104_topic1",
-        "text": "Você constrói um aplicativo Power Apps para exibir um catálogo de produtos para os usuários. Os usuários devem ter permissão para visualizar o aplicativo no Microsoft Teams através do Dataverse for Teams. Você deve especificar quem pode acessar ao aplicativo. O que deve fazer?",
+        "text": "Você constrói um aplicativo Power Apps para exibir um catálogo de produtos para os usuários. Os usuários devem ter permissão para visualizar o aplicativo no Microsoft Teams através do Dataverse for Teams. Você deve especificar quem pode acessar o aplicativo. O que deve fazer?",
         "options": [
-            "Partilhar o aplicativo com um grupo de segurança utilizando o Portal do Criador (Maker portal).",
+            "Comcompartilhar o aplicativo com um grupo de segurança utilizando o Portal do Criador (Maker portal).",
             "Publicar o aplicativo num portal SharePoint.",
             "Enviar um e-mail com um link que convida a abrir o aplicativo no Teams.",
-            "Partilhar o aplicativo com um grupo de segurança no Teams (Share the app with a security group in Teams)."
+            "Comcompartilhar o aplicativo com um grupo de segurança no Teams (Share the app with a security group in Teams)."
         ],
         "correctAnswer": 3,
         "explanation": {
-            "intro": "Questão sobre a governação e partilha de aplicações dentro do ecossistema Microsoft Teams.",
+            "intro": "Questão sobre a governança e partilha de aplicações dentro do ecossistema Microsoft Teams.",
             "papoReto": "Se a App foi feita 'dentro' do Teams (usando o Dataverse for Teams), a gestão de quem a vê é feita no próprio Teams. Não precisa de ir ao Portal do Criador externo; você partilha com a equipe ou com grupos de segurança diretamente na interface do Teams para que os membros vejam o catálogo.",
-            "respostaCerta": "Partilhar o aplicativo com um grupo de segurança no Teams.",
+            "respostaCerta": "Comcompartilhar o aplicativo com um grupo de segurança no Teams.",
             "puloDoGato": "No Dataverse for Teams, o modelo de segurança é simplificado e integrado. Embora possa usar o Maker Portal para certas tarefas, a recomendação para aplicações de catálogo destinadas a usuários do Teams é utilizar a funcionalidade de partilha interna do Teams, associando a App a grupos de segurança que já existam no ambiente da colaboração.",
             "cascasDeBanana": [
                 "Maker portal: Embora tecnicamente possível para apps standalone, a filosofia do Dataverse for Teams foca na gestão via Teams.",
@@ -2416,7 +2416,7 @@ export const questionsData = [
     },
     {
         "id": "q105_topic1",
-        "text": "Você está a criar um aplicativo de tela (canvas app) e precisa de realizar operações com coleções de dados. Selecione a função Power Fx correta para cada requisito: 1. Criar uma nova variável de coleção (Create a new collection variable). 2. Remover todos os valores da tabela de uma coleção (Remove table values from a collection).",
+        "text": "Você está criando um aplicativo de tela (canvas app) e precisa realizar operações com coleções de dados. Selecione a função Power Fx correta para cada requisito: 1. Criar uma nova variável de coleção (Create a new collection variable). 2. Remover todos os valores da tabela de uma coleção (Remove table values from a collection).",
         "options": [
             "1. Set | 2. Clear",
             "1. Collect | 2. Clear",
@@ -2440,7 +2440,7 @@ export const questionsData = [
     },
     {
         "id": "q106_topic1",
-        "text": "Está a configurar uma nova tabela no Dataverse e precisa definir os tipos de coluna corretos para os seguintes requisitos: 1. Dados de texto com 100 caracteres, renderizados como um controle de múltiplas linhas (multi-line). 2. Dados de texto até 8.000 caracteres, renderizados como múltiplas linhas. 3. Controle de entrada que guarda uma referência a uma Conta ou um Contato. 4. Lista de opções predefinidas onde o usuário escolhe apenas uma.",
+        "text": "Está configurando uma nova tabela no Dataverse e precisa definir os tipos de coluna corretos para os seguintes requisitos: 1. Dados de texto com 100 caracteres, renderizados como um controle de múltiplas linhas (multi-line). 2. Dados de texto até 8.000 caracteres, renderizados como múltiplas linhas. 3. Controle de entrada que guarda uma referência a uma Conta ou um Contato. 4. Lista de opções predefinidas onde o usuário escolhe apenas uma.",
         "options": [
             "1. Text Area | 2. Multiline Text | 3. Customer | 4. Choice",
             "1. Multiline Text | 2. Text Area | 3. Lookup | 4. Choice",
@@ -2464,7 +2464,7 @@ export const questionsData = [
     },
     {
         "id": "q107_topic1",
-        "text": "Você planeia implementar um aplicativo orientado por modelo (model-driven app). A empresa irá introduzir dados através da app e tem os seguintes requisitos: - Os usuários devem conseguir pesquisar dados dentro da app. - Os usuários devem conseguir pesquisar dados da app a partir de fora da app (ex: no Bing ou Office.com). Que soluções de pesquisa deve configurar para cada requisito, respectivamente?",
+        "text": "Você planeja implementar um aplicativo orientado por modelo (model-driven app). A empresa irá introduzir dados através da app e tem os seguintes requisitos: - Os usuários devem conseguir pesquisar dados dentro da app. - Os usuários devem conseguir pesquisar dados da app a partir de fora da app (ex: no Bing ou Office.com). Que soluções de pesquisa deve configurar para cada requisito, respectivamente?",
         "options": [
             "1. Pesquisa Categorizada | 2. Pesquisa de Relevância",
             "1. Pesquisa do Dataverse (Dataverse Search) | 2. Microsoft Search",
@@ -2488,11 +2488,11 @@ export const questionsData = [
     },
     {
         "id": "q108_topic1",
-        "text": "Você construiu um canvas app. Planeia tornar a app disponível no Microsoft Teams para que todos os colaboradores a possam utilizar. Precisa de adicionar a app ao Teams. Quais as três ações que deve executar em sequência? (Selecione a ordem correta)",
+        "text": "Você construiu um canvas app. Planeja tornar a app disponível no Microsoft Teams para que todos os colaboradores a possam utilizar. Precisa de adicionar a app ao Teams. Quais as três ações que deve executar em sequência? (Selecione a ordem correta)",
         "options": [
             "1. Iniciar sessão no Maker Portal -> 2. Selecionar e baixar a Power App -> 3. Adicionar a app ao Teams.",
             "1. Iniciar sessão no Power Platform Admin Center -> 2. Selecionar a app -> 3. Publicar no Teams.",
-            "1. Iniciar sessão no Teams Admin Center -> 2. Carregar o pacote da app -> 3. Partilhar com a equipe.",
+            "1. Iniciar sessão no Teams Admin Center -> 2. Carregar o pacote da app -> 3. Comcompartilhar com a equipe.",
             "1. Abrir o Power Apps Studio -> 2. Guardar a app como arquivo zip -> 3. Enviar por e-mail para o administrador do Teams."
         ],
         "correctAnswer": 0,
@@ -2514,20 +2514,20 @@ export const questionsData = [
         "id": "q109_topic1",
         "text": "Uma empresa utiliza o Microsoft Dataverse for Teams. Você precisa configurar os acessos para os usuários que necessitam de utilizar a app e os seus dados. Que ações deve realizar para cada requisito, respectivamente? 1. Acesso aos dados (Access to the data). 2. Acesso ao aplicativo (Access to the app).",
         "options": [
-            "1. Criar uma função de segurança e atribuir permissões por tabela | 2. Partilhar com um grupo de segurança.",
-            "1. Partilhar os dados e atribuir permissões | 2. Publicar a app num canal do Teams.",
-            "1. Atribuir um conjunto de permissões para cada usuário | 2. Partilhar com usuários individuais.",
+            "1. Criar uma função de segurança e atribuir permissões por tabela | 2. Comcompartilhar com um grupo de segurança.",
+            "1. Comcompartilhar os dados e atribuir permissões | 2. Publicar a app num canal do Teams.",
+            "1. Atribuir um conjunto de permissões para cada usuário | 2. Comcompartilhar com usuários individuais.",
             "1. Criar uma função de segurança | 2. Publicar a app num canal do Teams."
         ],
         "correctAnswer": 0,
         "explanation": {
             "intro": "Gestão de segurança e permissões no modelo simplificado do Dataverse for Teams.",
             "papoReto": "Mesmo sendo no Teams, as regras de dados são parecidas com o Dataverse grande: para ver o que está nas tabelas, precisa de uma 'Função de Segurança' (Security Role) com as permissões certas. Para conseguir abrir o ícone da App, o melhor é partilhá-la com um 'Grupo de Segurança' onde os membros da equipe já estejam.",
-            "respostaCerta": "1. Criar uma função de segurança e atribuir permissões por tabela | 2. Partilhar com um grupo de segurança.",
+            "respostaCerta": "1. Criar uma função de segurança e atribuir permissões por tabela | 2. Comcompartilhar com um grupo de segurança.",
             "puloDoGato": "Embora o Dataverse for Teams tenha uma interface de permissões simplificada, por baixo do capot ele utiliza Security Roles. A gestão de acesso à aplicação em larga escala deve ser sempre feita através de Grupos de Segurança para facilitar a administração.",
             "cascasDeBanana": [
-                "Publicar num canal do Teams: Isto torna a app *visível* como uma aba, mas não garante que o usuário tem *permissão* de segurança para a abrir ou ler os dados se não tiver sido partilhada corretamente.",
-                "Partilhar com usuários individuais: Funciona para 2 ou 3 pessoas, mas a Microsoft recomenda sempre Grupos de Segurança para cumprir o requisito de forma profissional."
+                "Publicar num canal do Teams: Isto torna a app *visível* como uma aba, mas não garante que o usuário tem *permissão* de segurança para a abrir ou ler os dados se não tiver sido compartilhada corretamente.",
+                "Comcompartilhar com usuários individuais: Funciona para 2 ou 3 pessoas, mas a Microsoft recomenda sempre Grupos de Segurança para cumprir o requisito de forma profissional."
             ],
             "dicaOuro": "Segurança de Dados = Security Roles. Segurança de App = Security Groups."
         },
@@ -2545,7 +2545,7 @@ export const questionsData = [
         ],
         "correctAnswer": 0,
         "explanation": {
-            "intro": "Questão sobre a escolha de modelos prontos (padr�o) do Power Pages para acelerar o desenvolvimento.",
+            "intro": "Questão sobre a escolha de modelos prontos (padrão) do Power Pages para acelerar o desenvolvimento.",
             "papoReto": "A Microsoft criou modelos que já vêm com tabelas e páginas prontas. O modelo de 'Instituição Financeira' já tem a lógica de marcar reuniões (agendamento). O de 'Programa Pós-Escola' foca em inscrever alunos em atividades (registro). E se quer total liberdade para meter o branding da empresa do zero, começa com uma 'Página em Branco'.",
             "respostaCerta": "1. Financial Institution | 2. After school program | 3. Blank page",
             "puloDoGato": "O modelo 'Financial Institution' inclui uma funcionalidade pré-configurada de agendamento de consultas. O 'After School Program' é o modelo padrão para cenários de inscrição e registro de usuários em cursos ou eventos. A 'Blank Page' fornece a estrutura mínima necessária para que o branding personalizado seja aplicado sem ter de 'limpar' designs anteriores.",
@@ -2559,7 +2559,7 @@ export const questionsData = [
     },
     {
         "id": "q111_topic1",
-        "text": "Você está a modificar uma tabela num ambiente Microsoft Power Platform. Configura um formulário com as seguintes colunas: 'País/Região' (Country/region - tipo Escolhas), 'Posse de Passaporte' (Passport ownership - tipo Escolha Sim/Não) e 'Data de validade do passaporte' (Passport expiration date - tipo Texto). O formulário deve: - Preencher a coluna 'País/Região' como 'EUA' quando o idioma escolhido for Inglês. - Mostrar a coluna 'Data de validade' apenas se o usuário selecionar 'Sim' na posse de passaporte. Que componentes deve utilizar para cumprir os requisitos com o mínimo esforço? (Selecione a combinação correta)",
+        "text": "Você está modificando uma tabela num ambiente Microsoft Power Platform. Configura um formulário com as seguintes colunas: 'País/Região' (Country/region - tipo Escolhas), 'Posse de Passaporte' (Passport ownership - tipo Escolha Sim/Não) e 'Data de validade do passaporte' (Passport expiration date - tipo Texto). O formulário deve: - Preencher a coluna 'País/Região' como 'EUA' quando o idioma escolhido for Inglês. - Mostrar a coluna 'Data de validade' apenas se o usuário selecionar 'Sim' na posse de passaporte. Que componentes deve utilizar para cumprir os requisitos com o mínimo esforço? (Selecione a combinação correta)",
         "options": [
             "País/Região: Fórmula (Formula) | Data de validade: Regra de Negócio (Business Rule)",
             "País/Região: Power Automate | Data de validade: Regra de Negócio",
@@ -2569,21 +2569,21 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Esta questão testa as novas colunas de fórmula (Power Fx) vs. as tradicionais Regras de Negócio.",
-            "papoReto": "Se quer que um campo mude de valor sozinho baseado numa lógica simples ('Se for inglês, põe EUA'), a forma mais moderna e rápida é usar uma coluna de 'Fórmula'. Para esconder ou mostrar campos no tela (visibilidade dinâmica), a ferramenta padrão 'sem código' continua a ser a Regra de Negócio.",
+            "papoReto": "Se quer que um campo mude de valor sozinho baseado numa lógica simples ('Se for inglês, põe EUA'), a forma mais moderna e rápida é usar uma coluna de 'Fórmula'. Para esconder ou mostrar campos na tela (visibilidade dinâmica), a ferramenta padrão 'sem código' continua a ser a Regra de Negócio.",
             "respostaCerta": "País/Região: Fórmula (Formula) | Data de validade: Regra de Negócio (Business Rule)",
             "puloDoGato": "As colunas de tipo 'Formula' permitem usar Power Fx diretamente no Dataverse para calcular valores. É mais eficiente que uma Business Rule para *preenchimento* de dados. No entanto, as fórmulas não conseguem controlar a *visibilidade* de outros campos; isso é a especialidade das Business Rules (ação Show/Hide field).",
             "cascasDeBanana": [
                 "Usar Power Automate: Funciona, mas não é o 'mínimo esforço' para algo que uma fórmula de coluna resolve instantaneamente.",
                 "Usar JavaScript: Exige código, o que viola o princípio de 'mínimo esforço' e no-code da prova."
             ],
-            "dicaOuro": "Cálculo/Lógica de valor no campo = Coluna de Fórmula. Mostrar/Esconder campos no tela = Regra de Negócio."
+            "dicaOuro": "Cálculo/Lógica de valor no campo = Coluna de Fórmula. Mostrar/Esconder campos na tela = Regra de Negócio."
         },
         "difficulty": "avancado",
         "domain": "Fluxos em nuvem do Microsoft Power Automate"
     },
     {
         "id": "q112_topic1",
-        "text": "Você tem um aplicativo de tela (canvas app). O aplicativo deve armazenar dados numa variável que esteja disponível APENAS para o tela atual. Quais as duas funções que pode utilizar para este objetivo? (Cada resposta correta apresenta uma solução completa)",
+        "text": "Você tem um aplicativo de tela (canvas app). O aplicativo deve armazenar dados numa variável que esteja disponível APENAS para a tela atual. Quais as duas funções que pode utilizar para este objetivo? (Cada resposta correta apresenta uma solução completa)",
         "options": [
             "A) UpdateContext E B) Navigate",
             "A) Set E B) UpdateContext",
@@ -2593,11 +2593,11 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Questão vital sobre o âmbito (scope) das variáveis em Canvas Apps.",
-            "papoReto": "Variável que só funciona num tela é como um post-it colado na página: chama-se Variável de Contexto. Você cria esse post-it com a função 'UpdateContext'. Mas sabia que quando você viaja de um tela para o outro com a função 'Navigate', também pode levar um post-it novo para colar no tela de destino? Por isso as duas estão certas.",
+            "papoReto": "Variável que só funciona num tela é como um post-it colado na página: chama-se Variável de Contexto. Você cria esse post-it com a função 'UpdateContext'. Mas sabia que quando você viaja de um tela para o outro com a função 'Navigate', também pode levar um post-it novo para colar na tela de destino? Por isso as duas estão certas.",
             "respostaCerta": "A) UpdateContext E B) Navigate",
-            "puloDoGato": "A função `UpdateContext` cria variáveis de contexto (locais ao tela). O que muitos esquecem é que a função `Maps` tem um terceiro parâmetro opcional que permite passar um registro de contexto para o tela de destino, criando ou atualizando variáveis locais lá.",
+            "puloDoGato": "A função `UpdateContext` cria variáveis de contexto (locais aa tela). O que muitos esquecem é que a função `Maps` tem um terceiro parâmetro opcional que permite passar um registro de contexto para a tela de destino, criando ou atualizando variáveis locais lá.",
             "cascasDeBanana": [
-                "Set: O `Set` cria variáveis GLOBAIS. Se usar Set, o dado estará disponível em todos os telas da app, o que viola o requisito de estar disponível 'apenas para o tela atual'.",
+                "Set: O `Set` cria variáveis GLOBAIS. Se usar Set, o dado estará disponível em todos os telas da app, o que viola o requisito de estar disponível 'apenas para a tela atual'.",
                 "Collect: Cria coleções (tabelas), que por padrão são globais na app."
             ],
             "dicaOuro": "Variável Global = Set. Variável Local (apenas um tela) = UpdateContext ou Navigate."
@@ -2607,7 +2607,7 @@ export const questionsData = [
     },
     {
         "id": "q113_topic1",
-        "text": "Você planeia criar um aplicativo de tela (canvas app) com vários telas. O aplicativo precisa de armazenar dados temporários enquanto está a ser executado e tem os seguintes requisitos: 1. Cada tela deve manter uma cópia separada dos dados e passar os mesmos para outro tela. 2. O aplicativo deve ser capaz de atualizar linhas separadas de uma tabela de forma independente. Que tipo de variável deve utilizar para cada requisito, respectivamente?",
+        "text": "Você planeja criar um aplicativo de tela (canvas app) com vários telas. O aplicativo precisa armazenar dados temporários enquanto está sendo executado e tem os seguintes requisitos: 1. Cada tela deve manter uma cópia separada dos dados e passar os mesmos para outra tela. 2. O aplicativo deve ser capaz de atualizar linhas separadas de uma tabela de forma independente. Que tipo de variável deve utilizar para cada requisito, respectivamente?",
         "options": [
             "1. Variável de contexto (Context variable) | 2. Coleção (Collection)",
             "1. Variável global (Global variable) | 2. Variável de contexto",
@@ -2619,9 +2619,9 @@ export const questionsData = [
             "intro": "Esta questão aprofunda os tipos de armazenamento temporário no Power Apps Canvas.",
             "papoReto": "Post-it colado na página (tela) que pode ser passado para a próxima? Variável de Contexto. Uma tabela inteira guardada na memória para editar linha a linha? Coleção.",
             "respostaCerta": "1. Variável de contexto (Context variable) | 2. Coleção (Collection)",
-            "puloDoGato": "A variável de contexto (`UpdateContext`) é específica de um tela, mas a função `Maps` permite passar esses valores para o tela seguinte. Para manipular conjuntos de dados (tabelas) onde se pretende adicionar ou atualizar linhas individuais sem afetar a fonte de dados original imediatamente, utilizamos as `Collections`.",
+            "puloDoGato": "A variável de contexto (`UpdateContext`) é específica de um tela, mas a função `Maps` permite passar esses valores para a tela seguinte. Para manipular conjuntos de dados (tabelas) onde se pretende adicionar ou atualizar linhas individuais sem afetar a fonte de dados original imediatamente, utilizamos as `Collections`.",
             "cascasDeBanana": [
-                "Variável Global (Set): Funciona em toda a App, mas o requisito 1 foca especificamente no isolamento por tela e passagem de dados entre eles, o que aponta para o contexto do tela."
+                "Variável Global (Set): Funciona em toda a App, mas o requisito 1 foca especificamente no isolamento por tela e passagem de dados entre eles, o que aponta para o contexto da tela."
             ],
             "dicaOuro": "Dados de um só tela = Context. Dados em formato de tabela/lista = Collection."
         },
@@ -2630,7 +2630,7 @@ export const questionsData = [
     },
     {
         "id": "q114_topic1",
-        "text": "Você planeia criar um aplicativo de tela (canvas app) para gerenciar ordens de serviço. Precisa de configurar os seguintes requisitos: 1. Enviar um e-mail automático assim que um registro for guardado. 2. Mostrar a coluna 'Expiração' apenas se a data de criação do registro for superior a 30 dias. Que funcionalidades deve utilizar para cada requisito?",
+        "text": "Você planeja criar um aplicativo de tela (canvas app) para gerenciar ordens de serviço. Precisa configurar os seguintes requisitos: 1. Enviar um e-mail automático assim que um registro for guardado. 2. Mostrar a coluna 'Expiração' apenas se a data de criação do registro for superior a 30 dias. Que funcionalidades deve utilizar para cada requisito?",
         "options": [
             "1. Fluxo do Power Automate (Power Automate flow) | 2. Fórmula (Formula)",
             "1. Regra de Negócio (Business Rule) | 2. Fórmula",
@@ -2653,7 +2653,7 @@ export const questionsData = [
     },
     {
         "id": "q115_topic1",
-        "text": "Uma empresa está a implementar a Power Platform. Um dos aplicativos exige um layout de controles personalizado (pixel-perfect) sem utilizar código. O outro aplicativo será utilizado principalmente por usuários externos (clientes). Que tipos de aplicativo deve recomendar, respectivamente?",
+        "text": "Uma empresa está implementando a Power Platform. Um dos aplicativos exige um layout de controles personalizado (pixel-perfect) sem utilizar código. O outro aplicativo será utilizado principalmente por usuários externos (clientes). Que tipos de aplicativo deve recomendar, respectivamente?",
         "options": [
             "1. Aplicativo de tela (Canvas app) | 2. Portal do Power Apps (Power Pages)",
             "1. Aplicativo orientado por modelo (Model-driven app) | 2. Canvas app",
@@ -2676,7 +2676,7 @@ export const questionsData = [
     },
     {
         "id": "q116_topic1",
-        "text": "Uma empresa está a implementar soluções da Power Platform e necessita de informações sobre a linguagem Power Fx. Qual das seguintes é uma característica fundamental do Power Fx?",
+        "text": "Uma empresa está implementando soluções da Power Platform e necessita de informações sobre a linguagem Power Fx. Qual das seguintes é uma característica fundamental do Power Fx?",
         "options": [
             "É uma linguagem compilada para aplicativos nativos.",
             "Utiliza fórmulas semelhantes às fórmulas do Microsoft Excel.",
@@ -2699,7 +2699,7 @@ export const questionsData = [
     },
     {
         "id": "q117_topic1",
-        "text": "Uma empresa está a avaliar as capacidades do Dataverse e os cenários para utilização de tabelas virtuais (virtual tables). Qual é uma capacidade fundamental das tabelas virtuais?",
+        "text": "Uma empresa está avaliando as capacidades do Dataverse e os cenários para utilização de tabelas virtuais (virtual tables). Qual é uma capacidade fundamental das tabelas virtuais?",
         "options": [
             "As tabelas virtuais armazenam dados no ambiente do Dataverse.",
             "As tabelas virtuais recuperam dados de uma fonte de dados externa (external data source).",
@@ -2731,7 +2731,7 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Série sobre integridade de dados e prevenção de duplicados.",
-            "papoReto": "Se quer proibir (impedir fisicamente) que entrem nomes repetidos na base de dados, tem de pôr um cadeado no nível do banco de dados. A 'Chave Alternativa' faz exatamente isso: ela diz ao sistema que aquela combinação de colunas é única e não aceita duplicados de forma alguma.",
+            "papoReto": "Se quer proibir (impedir fisicamente) que entrem nomes repetidos na base de dados, precisa colocar um cadeado no nível do banco de dados. A 'Chave Alternativa' faz exatamente isso: ela diz ao sistema que aquela combinação de colunas é única e não aceita duplicados de forma alguma.",
             "respostaCerta": "Sim",
             "puloDoGato": "As Alternate Keys criam um índice de unicidade no SQL por baixo do Dataverse. Se alguém tentar inserir um registro que viole esta chave (mesmo via API ou Importação), o sistema bloqueia a transação com um erro. É o método mais forte de prevenção.",
             "dicaOuro": "Prevenir/Impedir duplicados de forma rigorosa = Alternate Key."
@@ -2835,7 +2835,7 @@ export const questionsData = [
         "correctAnswer": 2,
         "explanation": {
             "intro": "Esta questão foca nas melhores práticas de distribuição de soluções (ALM) e o uso de editores (publishers).",
-            "papoReto": "Se você está a fazer um produto para instalar na casa dos outros (terceiros), você tem de mandar isso \"empacotado e selado\", ou seja, Gerenciado (Managed). E para que todo mundo saiba que foi a sua empresa que fez (e para os seus campos terem o seu prefixo único, tipo \"minhaempresa_\"), você tem de criar um Editor Personalizado, em vez de usar o prefixo genérico básico do sistema.",
+            "papoReto": "Se você está fazendo um produto para instalar na casa dos outros (terceiros), você precisa enviar isso \"empacotado e selado\", ou seja, Gerenciado (Managed). E para que todo mundo saiba que foi a sua empresa que fez (e para os seus campos terem o seu prefixo único, tipo \"minhaempresa_\"), você precisa criar um Editor Personalizado, em vez de usar o prefixo genérico básico do sistema.",
             "respostaCerta": "Solução gerenciada com editor personalizado (Managed solution with custom publisher)",
             "puloDoGato": "Ao empacotar soluções como Produtos de Terceiros (ISVs), deve-se obrigatoriamente usar soluções \"Managed\" (Gerenciadas) para evitar customizações indevidas no destino e permitir desinstalações limpas. Além disso, as boas práticas exigem OBRIGATORIAMENTE a criação de um Custom Publisher para manter a governança dos nomes lógicos dos componentes e evitar conflitos de prefixos no ambiente do cliente.",
             "cascasDeBanana": [
@@ -3634,7 +3634,7 @@ export const questionsData = [
     },
     {
         "id": "q157_topic1",
-        "text": "Uma empresa usa o Microsoft Dataverse. Os usuários geralmente precisam compartilhar registros unitários de uma mesma conta com diversos membros da equipe simultaneamente prestando atendimento. Você cria um \"Modelo de Equipe de Acesso\" (Access Team Template) para a tabela de conta visando começar a configurar um processo simplificado e enxuto de compartilhamento de registros. Na camada de design de formulários, o que você deve fazer agora para expor esse recurso?",
+        "text": "Uma empresa usa o Microsoft Dataverse. Os usuários geralmente precisam comcompartilhar registros unitários de uma mesma conta com diversos membros da equipe simultaneamente prestando atendimento. Você cria um \"Modelo de Equipe de Acesso\" (Access Team Template) para a tabela de conta visando começar a configurar um processo simplificado e enxuto de compartilhamento de registros. Na camada de design de formulários, o que você deve fazer agora para expor esse recurso?",
         "options": [
             "Adicione a sub-grade Usuários (Users subgrid) ao formulário da conta.",
             "Adicione a sub-grade expressa do \"Modelo de Equipe de Acesso\" ao formulário.",
@@ -3644,7 +3644,7 @@ export const questionsData = [
         "correctAnswer": 0,
         "explanation": {
             "intro": "Esta pergunta testa a implantação na prática de um dos conceitos mais granulares de segurança no Dataverse: as \"Equipes de Acesso\".",
-            "papoReto": "Compartilhar ficha por ficha num Call Center é pesado pro banco. A Microsoft criou o \"Access Team Template\" resolvendo isso: Você cadastra um template escondido, e lá na tela do cliente (Formulário), você coloca uma simples tabela secundária (Sub-grade) que aponta e lista os \"Usuários\". É mágica: todo operador que os vendedores adicionarem o nome ali ganha acesso automaticamente àquela ficha em tempo real com base no template! O pulo do gato? A subgrade NÃO SE CHAMA subgrade de modelo, ela é só uma \"subgrade de Usuários\" normal que você parametriza apontando para o seu modelo.",
+            "papoReto": "Comcompartilhar ficha por ficha num Call Center é pesado pro banco. A Microsoft criou o \"Access Team Template\" resolvendo isso: Você cadastra um template escondido, e lá na tela do cliente (Formulário), você coloca uma simples tabela secundária (Sub-grade) que aponta e lista os \"Usuários\". É mágica: todo operador que os vendedores adicionarem o nome ali ganha acesso automaticamente àquela ficha em tempo real com base no template! O pulo do gato? A subgrade NÃO SE CHAMA subgrade de modelo, ela é só uma \"subgrade de Usuários\" normal que você parametriza apontando para o seu modelo.",
             "respostaCerta": "Adicione a sub-grade Usuários (Users subgrid) ao formulário da conta.",
             "puloDoGato": "Após criar o Access Team Template (Modelo de Equipe de Acesso) e habilitar a Tabela, o passo obrigatório é modificar o Formulário Principal no Maker Portal inserindo uma Subgrade (Subgrid) convencional da entidade relacionada \"Users\", apenas setando as propriedades do controle dela para obedecerem e puxarem os membros atrelados ao Access Team Profile gravado no back-end.",
             "cascasDeBanana": [
@@ -3709,7 +3709,7 @@ export const questionsData = [
         "text": "Você cria um aplicativo orientado por modelo (Model-driven) encorpado, vital para uma organização de saúde estruturada. A organização tem dois tipos essenciais (e hierárquicos) de perfis corporativos: \"atendimento médico de emergência\" e \"equipe de apoio administrativo ao paciente\". Cada perfil de usuário requer urgentemente que eles usem e percebam layouts totalmente diferentes de colunas no Formulário mesmo quando abrem no mesmo aplicativo, evitando poluição. Como arquiteto da solução, você cria um formulário base por tipo de usuário. O que você deve fazer para engessar que os usuários vejam apenas o seu layout de formulário?",
         "options": [
             "Habilite o formulário e atribua às Funções de Segurança (Security roles) dos respectivos usuários.",
-            "Cofigure as propriedades de Compartilhar registros a depender do nível de acesso.",
+            "Cofigure as propriedades de Comcompartilhar registros a depender do nível de acesso.",
             "Altere a matriz da Ordem dos Formulários (Form Order) para que a ordem exiba primeiro.",
             "Compartilhe cada formulário avulso com ID de Grupos de Segurança do Entra ID."
         ],
@@ -3720,7 +3720,7 @@ export const questionsData = [
             "respostaCerta": "Habilite o formulário e atribua às Funções de Segurança (Security roles) dos respectivos usuários.",
             "puloDoGato": "No Application Lifecycle Management de Model-driven apps, Múltiplos formulários (Formulas form) são roteados e restringidos puramente atrelando permissões de uso de componente baseadas nas `Security Roles` (Funções de Segurança) do Microsoft Dataverse.",
             "cascasDeBanana": [
-                "Compartilhar os Registros de Paciente: Trata de quem enxerga a linha preenchida viva no banco, MAS se ele abrisse ele ainda veria o design do formulário errado.",
+                "Comcompartilhar os Registros de Paciente: Trata de quem enxerga a linha preenchida viva no banco, MAS se ele abrisse ele ainda veria o design do formulário errado.",
                 "Ordem do formulário: A ordem de precedência avisa quem abre primeiro por default, mas não restringe na UI seletora o usuário forçar alternância para um formulário proibido que estivesse disponível na lista.",
                 "Grupos de Segurança do Entra ID: Você não pluga Formulários diretos a M365 Groups sem mapear uma Role no meio pro Dataverse entender."
             ],
@@ -3837,10 +3837,10 @@ export const questionsData = [
         ],
         "correctAnswer": 0,
         "explanation": {
-            "intro": "Avalia o escopo profundo e as vantagens padr�o (de fábrica) envolvidas no licenciamento e governança de Dataflows vs Automate.",
+            "intro": "Avalia o escopo profundo e as vantagens padrão (de fábrica) envolvidas no licenciamento e governança de Dataflows vs Automate.",
             "papoReto": "Um Power Automate (Fluxo Programado) consegue fazer o agendamento de subir coisas? Sim. Ele avisa por e-mail se der erro? Sim, MAS você teria que botar peças e \"gambiarras\" (\"Catch-blocks\") para fazer o robô caçar a mensagem de erro da caixa e te mandar um e-mail do zero. Já O Dataflow! Puxa, é coisa fina! Ele já é um ETL corporativo imenso, agendável perfeitamente, que não apenas carrega os dados pro Dataverse como POSSUI UMA CAXINHA NAS CONFIGURAÇÕES (\"Enviar avisa em caso de Falha\"). Clicou nela, o sistema fará todo o relato analítico no seu e-mail automático. Dataflow leva o troféu.",
             "respostaCerta": "Fluxo de Dados (Dataflow)",
-            "puloDoGato": "A plataforma `Dataflows` carrega funcionalidades NATIVAS (padr�o - Built-in) orquestradas no Workspace Management para disparo de e-mails em cima de Falha de Refresh e Success Notification (Refresh settings). Desenvolver isso com o engine secundário de repetições (Cloud Flow) impõe Overhead de desenvolvimento (construir tratamentos de erro Condition / Scope Action em blocos de Catch) no Power Automate para atingir o mesmíssimo resultado.",
+            "puloDoGato": "A plataforma `Dataflows` carrega funcionalidades NATIVAS (padrão - Built-in) orquestradas no Workspace Management para disparo de e-mails em cima de Falha de Refresh e Success Notification (Refresh settings). Desenvolver isso com o engine secundário de repetições (Cloud Flow) impõe Overhead de desenvolvimento (construir tratamentos de erro Condition / Scope Action em blocos de Catch) no Power Automate para atingir o mesmíssimo resultado.",
             "cascasDeBanana": [
                 "Fluxos de Nuvem (Agendados): Precisariam construir programaticamente na unha o seu tratador de resiliência e envio dos detalhes de falha de parsing.",
                 "Fluxos Automatizados: Só rodam mediante gatilho vivo (ex: Se criar algo -> Faça assado) e não obedecem agendamentos diários ou de cronograma."
@@ -4078,7 +4078,7 @@ export const questionsData = [
             "respostaCerta": "Criador de Ambiente (Environment Maker)",
             "puloDoGato": "A security role `Environment Maker` capacita o indivíduo perante o locatário a provisionar recursos soltos e componentes Maker (criar de Aplicativos de Tela, criar Fluxos da Nuvem Power Automate) unicamente operando nos limites dos recursos consumíveis nativos existentes, mas impede explicitamente permissões destrutivas de engenharia do dataverse (DML e DDL pesados).",
             "cascasDeBanana": [
-                "Usuário Básico: Apenas consume ou abre aplicativos já compartilhados pelo Admin.",
+                "Usuário Básico: Apenas consume ou abre aplicativos já comcomcompartilhados pelo Admin.",
                 "System Customizer / Administrador: Liberam o canhão do Maker somado a edição violenta e aprofundada de entidades de esquema profundo. Um exagero e quebra da policy pra alguém que só quer criar um Canvas solto."
             ],
             "dicaOuro": "Deletar o bloqueio de \"Não consigo lançar a ui e Criar Fluxos/Apps de Tela base do zero neste Ambiente\" = Conceda a regra \"Criador de Ambiente\" (Environment Maker)."
@@ -4158,7 +4158,7 @@ export const questionsData = [
     },
     {
         "id": "q193_topic1",
-        "text": "O financeiro reprovou sua arquitetura e orçamento do Dynamics apontando os altíssimos picos insustentáveis de custos no Azure. Três meses investigando apontaram e revelaram o óbvio: a equipe comercial desavisada estava fazendo e subindo upload indiscriminadamente de milhares de anexos pesados massivos em PDF e Plantas Baixas amarrando-os cruamente aos Contatos de clientes. Qual recurso complementar gratuito e nativo de baixo custo Microsoft você deve sugerir a Pleno Pulmões a companhia ativar imediatamente para varrer esse lixo da base principal pesada?",
+        "text": "O financeiro reprovou sua arquitetura e orçamento do Dynamics apontando os altíssimos picos insustentáveis de custos no Azure. Três meses investigando apontaram e revelaram o óbvio: a equipe comercial desavisada estava fazendo e subindo upload indiscriminadamente de milhares de anexos pesados massivos em PDF e Plantas Baixas amarrando-os cruamente aos Contatos de clientes. Qual recurso complementar gratuito e nativo de baixo custo Microsoft você deve sugerenciar a Pleno Pulmões a companhia ativar imediatamente para varrer esse lixo da base principal pesada?",
         "options": [
             "Ativar a integração nativa com o portal arquivista Microsoft SharePoint (SharePoint Integration).",
             "Ativar a integração de rotina e salvamento com fluxos Microsoft OneDrive for Business.",
